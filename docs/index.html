@@ -1,362 +1,282 @@
-<html lang="en">
+--- layout: layouts/base.html title: Home tags: - page ---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reprovinci Frontend Toolkit 🚀</title>
-    <link rel="stylesheet" href="{{ " dist/css/frontend-toolkit.css " | url }}">
+<!-- Typography -->
+<section class="section-margins grid">
+    <div class="grid__container">
+        <h2 class="section-header">Typography</h2>
+        <p>The base typography is based on a scaling font size with a min and max size. The default font-size on the
+            <code>&lt;html&gt;</code> is
+            <code>clamp(14px, 2vw, 18px)</code>. Try scaling up and down this browser viewport and see the result.</p>
+        <h3>Text styles</h3>
+        <p>There 2 text stylings. Copy text, or body text, is in a
+            <code>.text</code> class which makes it possible to style the copy type apart from the UI type.</p>
+        <div class="flexgrid-2">
+            <div class="box">
+                <h2>Some text in the UI</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem aliquam.</p>
+            </div>
+            <div class="text box">
+                <h2>Some text as body copy</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem aliquam.</p>
+            </div>
+            <div class="box">
+                <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
+                <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
+                <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
+                <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
+                <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
+                <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
+            </div>
+            <div class="text box">
+                <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
+                <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
+                <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
+                <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
+                <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
+                <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- colors -->
+<section class="section-margins grid">
+    <div class="grid__container">
+        <h2>Colors</h2>
+        <div class="flexgrid-3">
+            <div class="colorset">
+                <h3>Defined Grayscales</h3>
+                <p><span class="bg-black"></span>black</p>
+                <p><span class="bg-gray-extra-dark"></span>gray-extra-dark</p>
+                <p><span class="bg-gray-dark"></span>gray-dark</p>
+                <p><span class="bg-gray"></span>gray</p>
+                <p><span class="bg-gray-light"></span>gray-light</p>
+                <p><span class="bg-gray-extra-light"></span>gray-extra-light</p>
+            </div>
+            <div class="colorset">
+                <h3>Defined colors</h3>
+                <p><span class="bg-blue"></span>blue</p>
+                <p><span class="bg-green"></span>green</p>
+                <p><span class="bg-white"></span>white</p>
+            </div>
+            <div class="colorset">
+                <h3>Applied colors</h3>
+                <p><span class="bg-primary"></span>primary</p>
+                <p><span class="bg-secondary"></span>secondary</p>
+                <p><span class="bg-loud"></span>loud</p>
+                <p><span class="bg-soft"></span>soft</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- grid -->
+<section id="grid" class="section-margins">
+    <div class="grid">
+        <div class="grid__container">
+            <h2 class="section-header">Grid</h2>
+            <p>A 24 column grid. Well, actually 24 + 4 outer columns: one for site padding and one to flex</p>
+        </div>
+    </div>
     <style type="text/css">
-        .section-header {
-            border-top: solid 1px #ccc;
-            padding-top: 1em;
-        }
-        
-        .space-block {
-            background: #ccc;
-            display: block;
-            width: 2em;
-        }
-        
-        .colorset span {
-            width: 4em;
-            height: 4em;
-            border: solid 1px #ccc;
-            display: inline-block;
-            margin-right: .5em;
-        }
-        
-        .colorset p {
+        .demogrid div {
+            background: rgba(255, 0, 0, .3);
+            font-size: 10px;
+            height: 3rem;
+            outline: solid 1px #fff;
+            overflow: hidden;
             display: flex;
             align-items: center;
-        }
-        
-        html {
-            padding-left: 220px;
-        }
-        
-        .nav {
-            position: fixed;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 220px;
-        }
-        
-        .nav * {
+            justify-content: center;
             color: #fff;
         }
         
-        .nav ul {
-            padding-left: 20px;
+        .demogrid div:nth-child(1),
+        .demogrid div:nth-last-child(1) {
+            background: rgba(0, 255, 0, .3);
         }
         
-        .nav a {
-            text-decoration: none;
+        .demogrid div:nth-child(2),
+        .demogrid div:nth-last-child(2) {
+            background: rgba(0, 0, 255, .3);
+        }
+        
+        .grid-placement-test div {
+            background: linear-gradient(to top right, hotpink, orange);
+            margin-bottom: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: .5em 0;
         }
     </style>
-</head>
+    <div class="demogrid grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>212</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+        <div>25</div>
+        <div>26</div>
+        <div>27</div>
+        <div>28</div>
+    </div>
+    <div class="grid mt-md grid-placement-test">
+        <div class="grid__container">.grid__container</div>
+        <div class="grid__extended">.grid__extended</div>
+        <div class="grid__full">.grid__full</div>
+        <div class="grid__left">.grid__left</div>
+        <div class="grid__right">.grid__right</div>
+        <div class="grid__left-extended">.grid__left-extended</div>
+        <div class="grid__right-extended">.grid__right-extended</div>
+        <div class="grid__left-full">.grid__left-full</div>
+        <div class="grid__right-full">.grid__right-full</div>
+    </div>
+</section>
 
-<body class="pt-xl">
-
-    <nav class="nav bg-gray-extra-dark px-md py-xl">
-        <h2 class="color-white h3">Index</h2>
-        <ul>
-            <li><a href="#typography">typography</a></li>
-            <li><a href="#colors">colors</a></li>
-            <li><a href="#grid">grid</a></li>
-            <li><a href="#layouts">layouts</a></li>
-            <li><a href="#box">box</a></li>
-            <li><a href="#spacing">spacing</a></li>
-        </ul>
-    </nav>
-
-    <!-- header -->
-    <header id="top" class="grid">
-        <div class="grid__container">
-            <h1>Reprovinci Frontend Toolkit 🚀</h1>
-            <p>The scaffolding we work with. It contains a responsive 24 column grid, setups for colors, typography, spacings and some prototyping classes. It is <em>not</em> a full fledged css framework. It only contains some layout classes. It's the start
-                of your own creativity 🎨</p>
+<!-- layouts -->
+<section class="section-margins grid">
+    <div class="grid__container">
+        <h2 class="section-header">Layouts</h2>
+        <p>We have various layouts that we use a lot. Ranging from simple card-lists to more creative collage like layouts that are nice to have at hand.</p>
+    </div>
+    <div class="grid__container">
+        <h3>Flexgrid 2</h3>
+        <div class="flexgrid-2">
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
         </div>
-    </header>
+        <h3>Flexgrid 3</h3>
+        <div class="flexgrid-3">
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
+        </div>
+        <h3>Flexgrid 4</h3>
+        <div class="flexgrid-4">
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
+            <div class="box flex-center">Lorem</div>
+        </div>
+    </div>
+</section>
 
-    <!-- Typography -->
-    <section id="typography" class="section-margins grid">
-        <div class="grid__container">
-            <h2 class="section-header">Typography</h2>
-            <p>The base typography is based on a scaling font size with a min and max size. The default font-size on the <code>&lt;html&gt;</code> is <code>clamp(14px, 2vw, 18px)</code>. Try scaling up and down this browser viewport and see the result.</p>
-            <h3>Text styles</h3>
-            <p>There 2 text stylings. Copy text, or body text, is in a <code>.text</code> class which makes it possible to style the copy type apart from the UI type.</p>
-            <div class="flexgrid-2">
-                <div class="box">
-                    <h2>Some text in the UI</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem
-                        aliquam.</p>
-                </div>
-                <div class="text box">
-                    <h2>Some text as body copy</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem
-                        aliquam.</p>
-                </div>
-                <div class="box">
-                    <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
-                    <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
-                    <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
-                    <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
-                    <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
-                    <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
-                </div>
-                <div class="text box">
-                    <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
-                    <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
-                    <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
-                    <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
-                    <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
-                    <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
-                </div>
+<!-- box -->
+<section id="box" class="section-margins grid">
+    <div class="grid__container">
+        <h2 class="section-header">Box</h2>
+        <p>Colored boxes to place attention on content. Default boxes are <code>.box--loud</code> and
+            <code>.box--soft</code>. Loud is color-primary by default.</p>
+        <div class="flexgrid-2">
+            <div class="box">
+                <h2>Soft box</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+            </div>
+            <div class="box--loud">
+                <h2>Loud box</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- colors -->
-    <section id="colors" class="section-margins grid">
-        <div class="grid__container">
-            <h2>Colors</h2>
-            <div class="flexgrid-3">
-                <div class="colorset">
-                    <h3>Defined Grayscales</h3>
-                    <p><span class="bg-black"></span><small>black<br><code>$color-black</code></small></p>
-                    <p><span class="bg-gray-extra-dark"></span><small>gray-extra-dark<br><code>$color-gray-extra-dark</code></small></p>
-                    <p><span class="bg-gray-dark"></span><small>gray-dark<br><code>$color-gray-dark</code></small></p>
-                    <p><span class="bg-gray"></span><small>gray<br><code>$color-gray</code></small></p>
-                    <p><span class="bg-gray-light"></span><small>gray-light<br><code>$color-gray-light</code></small></p>
-                    <p><span class="bg-gray-extra-light"></span><small>gray-extra-light<br><code>$color-gray-extra-light</code></small></p>
+<!-- spacing -->
+<section id="box" class="section-margins grid">
+    <div class="grid__container">
+        <h2 class="section-header">Spacing</h2>
+        <div class="flexgrid-2">
+            <div>
+                <p>The heights of these blocks represent the different spaces:</p>
+                <p style="display:flex; align-items: center;">
+                    <span class="space-block pt-xs mr-sm"></span> <code>space-xs</code>
+                </p>
+                <p style="display:flex; align-items: center;">
+                    <span class="space-block pt-sm mr-sm"></span> <code>space-sm</code>
+                </p>
+                <p style="display:flex; align-items: center;">
+                    <span class="space-block pt-md mr-sm"></span> <code>space-md</code>
+                </p>
+                <p style="display:flex; align-items: center;">
+                    <span class="space-block pt-lg mr-sm"></span> <code>space-lg</code>
+                </p>
+                <p style="display:flex; align-items: center;">
+                    <span class="space-block pt-xl mr-sm"></span> <code>space-xl</code>
+                </p>
+            </div>
+            <div>
+                <p>The margin between these blocks represent the different spaces:</p>
+                <p>
+                    <code>space-xs</code></p>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <span class="space-block pt-md mr-xs mb-xs"></span>
+                    <span class="space-block pt-md mr-xs mb-xs"></span>
+                    <span class="space-block pt-md mr-xs mb-xs"></span>
+                    <span class="space-block pt-md mr-xs mb-xs"></span>
                 </div>
-                <div class="colorset">
-                    <h3>Defined colors</h3>
-                    <p><span class="bg-blue"></span><small>blue<br><code>$color-blue</code></small></p>
-                    <p><span class="bg-green"></span><small>green<br><code>$color-green</code></small></p>
-                    <p><span class="bg-white"></span><small>white<br><code>$color-white</code></small></p>
+                </p>
+                <p>
+                    <code>space-sm</code></p>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <span class="space-block pt-md mr-sm mb-sm"></span>
+                    <span class="space-block pt-md mr-sm mb-sm"></span>
+                    <span class="space-block pt-md mr-sm mb-sm"></span>
+                    <span class="space-block pt-md mr-sm mb-sm"></span>
                 </div>
-                <div class="colorset">
-                    <h3>Applied colors</h3>
-                    <p><span class="bg-primary"></span><small>primary<br><code>$color-primary</code></small></p>
-                    <p><span class="bg-secondary"></span><small>secondary<br><code>$color-secondary</code></small></p>
-                    <p><span class="bg-loud"></span><small>loud<br><code>$color-loud</code></small></p>
-                    <p><span class="bg-soft"></span><small>soft<br><code>$color-soft</code></small></p>
+                </p>
+                <p>
+                    <code>space-md</code></p>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <span class="space-block pt-md mr-md mb-md"></span>
+                    <span class="space-block pt-md mr-md mb-md"></span>
+                    <span class="space-block pt-md mr-md mb-md"></span>
+                    <span class="space-block pt-md mr-md mb-md"></span>
                 </div>
+                </p>
+                <p>
+                    <code>space-lg</code></p>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <span class="space-block pt-md mr-lg mb-lg"></span>
+                    <span class="space-block pt-md mr-lg mb-lg"></span>
+                    <span class="space-block pt-md mr-lg mb-lg"></span>
+                    <span class="space-block pt-md mr-lg mb-lg"></span>
+                </div>
+                </p>
+                <p>
+                    <code>space-xl</code></p>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <span class="space-block pt-md mr-xl mb-xl"></span>
+                    <span class="space-block pt-md mr-xl mb-xl"></span>
+                    <span class="space-block pt-md mr-xl mb-xl"></span>
+                    <span class="space-block pt-md mr-xl mb-xl"></span>
+                </div>
+                </p>
             </div>
         </div>
-    </section>
-
-    <!-- grid -->
-    <section id="grid" id="grid" class="section-margins">
-        <div class="grid">
-            <div class="grid__container">
-                <h2 class="section-header">Grid</h2>
-                <p>A 24 column grid. Well, actually 24 + 4 outer columns: one for site padding and one to flex</p>
-            </div>
-        </div>
-        <style type="text/css">
-            .demogrid div {
-                background: rgba(255, 0, 0, .3);
-                font-size: 10px;
-                height: 3rem;
-                outline: solid 1px #fff;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-            }
-            
-            .demogrid div:nth-child(1),
-            .demogrid div:nth-last-child(1) {
-                background: rgba(0, 255, 0, .3);
-            }
-            
-            .demogrid div:nth-child(2),
-            .demogrid div:nth-last-child(2) {
-                background: rgba(0, 0, 255, .3);
-            }
-            
-            .grid-placement-test div {
-                background: linear-gradient(to top right, hotpink, orange);
-                margin-bottom: 1em;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-                padding: .5em 0;
-            }
-        </style>
-        <div class="demogrid grid">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-            <div>12</div>
-            <div>13</div>
-            <div>14</div>
-            <div>15</div>
-            <div>16</div>
-            <div>17</div>
-            <div>18</div>
-            <div>19</div>
-            <div>20</div>
-            <div>212</div>
-            <div>22</div>
-            <div>23</div>
-            <div>24</div>
-            <div>25</div>
-            <div>26</div>
-            <div>27</div>
-            <div>28</div>
-        </div>
-        <div class="grid mt-md grid-placement-test">
-            <div class="grid__container">.grid__container</div>
-            <div class="grid__extended">.grid__extended</div>
-            <div class="grid__full">.grid__full</div>
-            <div class="grid__left">.grid__left</div>
-            <div class="grid__right">.grid__right</div>
-            <div class="grid__left-extended">.grid__left-extended</div>
-            <div class="grid__right-extended">.grid__right-extended</div>
-            <div class="grid__left-full">.grid__left-full</div>
-            <div class="grid__right-full">.grid__right-full</div>
-        </div>
-    </section>
-
-    <!-- layouts -->
-    <section id="layouts" class="section-margins grid">
-        <div class="grid__container">
-            <h2 class="section-header">Layouts</h2>
-            <p>We have various layouts that we use a lot. Ranging from simple card-lists to more creative collage like layouts that are nice to have at hand.</p>
-        </div>
-        <div class="grid__container">
-            <h3>Flexgrid 2</h3>
-            <div class="flexgrid-2">
-                <div class="box flex-center">Lorem</div>
-                <div class="box flex-center">Lorem</div>
-            </div>
-            <h3>Flexgrid 3</h3>
-            <div class="flexgrid-3">
-                <div class="box flex-center">Lorem</div>
-                <div class="box flex-center">Lorem</div>
-                <div class="box flex-center">Lorem</div>
-            </div>
-            <h3>Flexgrid 4</h3>
-            <div class="flexgrid-4">
-                <div class="box flex-center">Lorem</div>
-                <div class="box flex-center">Lorem</div>
-                <div class="box flex-center">Lorem</div>
-                <div class="box flex-center">Lorem</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- box -->
-    <section id="box" class="section-margins grid">
-        <div class="grid__container">
-            <h2 class="section-header">Box</h2>
-            <p>Colored boxes to place attention on content. Default boxes are <code>.box--loud</code> and <code>.box--soft</code>. Loud is color-primary by default.</p>
-            <div class="flexgrid-2">
-                <div class="box">
-                    <h2>Soft box</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
-                </div>
-                <div class="box--loud">
-                    <h2>Loud box</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- spacing -->
-    <section id="spacing" id="box" class="section-margins grid">
-        <div class="grid__container">
-            <h2 class="section-header">Spacing</h2>
-            <div class="flexgrid-2">
-                <div>
-                    <p>The heights of these blocks represent the different spaces:</p>
-                    <p style="display:flex; align-items: center;">
-                        <span class="space-block pt-xs mr-sm"></span> <code>space-xs</code>
-                    </p>
-                    <p style="display:flex; align-items: center;">
-                        <span class="space-block pt-sm mr-sm"></span> <code>space-sm</code>
-                    </p>
-                    <p style="display:flex; align-items: center;">
-                        <span class="space-block pt-md mr-sm"></span> <code>space-md</code>
-                    </p>
-                    <p style="display:flex; align-items: center;">
-                        <span class="space-block pt-lg mr-sm"></span> <code>space-lg</code>
-                    </p>
-                    <p style="display:flex; align-items: center;">
-                        <span class="space-block pt-xl mr-sm"></span> <code>space-xl</code>
-                    </p>
-                </div>
-                <div>
-                    <p>The margin between these blocks represent the different spaces:</p>
-                    <p>
-                        <code>space-xs</code></p>
-                    <div style="display: flex; flex-wrap: wrap;">
-                        <span class="space-block pt-md mr-xs mb-xs"></span>
-                        <span class="space-block pt-md mr-xs mb-xs"></span>
-                        <span class="space-block pt-md mr-xs mb-xs"></span>
-                        <span class="space-block pt-md mr-xs mb-xs"></span>
-                    </div>
-                    </p>
-                    <p>
-                        <code>space-sm</code></p>
-                    <div style="display: flex; flex-wrap: wrap;">
-                        <span class="space-block pt-md mr-sm mb-sm"></span>
-                        <span class="space-block pt-md mr-sm mb-sm"></span>
-                        <span class="space-block pt-md mr-sm mb-sm"></span>
-                        <span class="space-block pt-md mr-sm mb-sm"></span>
-                    </div>
-                    </p>
-                    <p>
-                        <code>space-md</code></p>
-                    <div style="display: flex; flex-wrap: wrap;">
-                        <span class="space-block pt-md mr-md mb-md"></span>
-                        <span class="space-block pt-md mr-md mb-md"></span>
-                        <span class="space-block pt-md mr-md mb-md"></span>
-                        <span class="space-block pt-md mr-md mb-md"></span>
-                    </div>
-                    </p>
-                    <p>
-                        <code>space-lg</code></p>
-                    <div style="display: flex; flex-wrap: wrap;">
-                        <span class="space-block pt-md mr-lg mb-lg"></span>
-                        <span class="space-block pt-md mr-lg mb-lg"></span>
-                        <span class="space-block pt-md mr-lg mb-lg"></span>
-                        <span class="space-block pt-md mr-lg mb-lg"></span>
-                    </div>
-                    </p>
-                    <p>
-                        <code>space-xl</code></p>
-                    <div style="display: flex; flex-wrap: wrap;">
-                        <span class="space-block pt-md mr-xl mb-xl"></span>
-                        <span class="space-block pt-md mr-xl mb-xl"></span>
-                        <span class="space-block pt-md mr-xl mb-xl"></span>
-                        <span class="space-block pt-md mr-xl mb-xl"></span>
-                    </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-</body>
-
-</html>
+    </div>
+</section>

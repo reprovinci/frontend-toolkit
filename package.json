@@ -7,10 +7,11 @@
     "start": "npm-run-all --parallel eleventy sass",
     "eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
     "prod:eleventy": "ELEVENTY_ENV=production eleventy",
+    "prod:sass": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --no-source-map",
     "sass": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --watch",
     "dev": "gulp sass",
     "build": "gulp sass",
-    "deploy": "npm-run-all prod:eleventy gh-pages",
+    "deploy": "npm-run-all prod:sass prod:eleventy gh-pages",
     "gh-pages": "gh-pages -d _site"
   },
   "repository": {
