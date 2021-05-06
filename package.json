@@ -1,0 +1,36 @@
+{
+  "name": "frontend-toolkit",
+  "version": "0.1.0",
+  "description": "Frontend toolkit. Framework classes, grid, typography/colors/spacing setup.. the scaffolding we start with. 🚀",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reprovinci/frontend-toolkit.git"
+  },
+  "keywords": [
+    "frontend",
+    "framework",
+    "scss",
+    "grid",
+    "typography"
+  ],
+  "style": "dist/css/frontend-toolkit.css",
+  "sass": "src/scss/frontend-toolkit.scss",
+  "files": [
+    "dist/css/*.{css,map}",
+    "src/scss/**/*.scss"
+  ],
+  "contributors": [
+    "G. Lekkerkerker",
+    "C. Houdé",
+    "M.C. Brouwer"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reprovinci/frontend-toolkit/issues"
+  },
+  "homepage": "https://github.com/reprovinci/frontend-toolkit"
+}

@@ -1,0 +1,91 @@
+//
+// responsive 24 column grid
+// demo: https://codepen.io/mcbrwr/pen/gOPaEvK
+//
+
+// editable vars:
+$grid-container-width: $site-width;
+$grid-padding: $site-padding;
+$grid-split-breakpoint: $breakpoint-sm;
+
+// calculated vars:
+$grid-col-1: $grid-padding;
+$grid-col-2: minmax(0, calc(50% - #{$grid-container-width} / 2 - #{$grid-col-1}));
+
+//
+// the grid. lean & mean
+// the repeat() might not work on all browsers.. exchange with 24x 1fr, ugly but it works
+// 
+.grid {
+  display: grid;
+  grid-template-columns: $grid-col-1 $grid-col-2 repeat(24, 1fr) $grid-col-2 $grid-col-1;
+}
+// .grid($outer-wrapper-column: $outer-wrapper-column, $inner-wrapper-column: $inner-wrapper-column) {
+//   display: grid;
+//   grid-template-columns: $outer-wrapper-column $inner-wrapper-column repeat(24, 1fr) $inner-wrapper-column $outer-wrapper-column;
+// }
+
+// .grid {
+//   .grid();
+// }
+// .grid-alt {
+//   .grid(.25rem, 0);
+//   $media (min-width: 650px) {
+//     .grid($inner-wrapper-column, 4rem);
+//   }
+// }
+
+
+// //
+// // example shizzle
+// //
+// .item {
+//   outline: solid 1px #ccc;
+//   height: 50vh;
+//   background: rgba(255,0,0,.1);
+//   &:nth-child(1),
+//   &:nth-last-child(1) {
+//     background: rgba(0,255,0,.1);
+//   }
+//   &:nth-child(2),
+//   &:nth-last-child(2) {
+//     background: rgba(0,0,255,.1);
+//   }
+// }
+
+// //
+// // quick placement classes
+// //
+.grid__full {
+  grid-column: 1 / -1;
+}
+.grid__extended {
+  grid-column: 2 / -2; 
+}
+.grid__container {
+  grid-column: 3 / -3; 
+}
+.grid__left {
+  grid-column: 3 / -3;
+  @media screen and (min-width: $grid-split-breakpoint) {
+    grid-column: 3 / span 12;  
+  }
+}
+.grid__right {
+  grid-column: 3 / -3;
+  @media screen and (min-width: $grid-split-breakpoint) {
+    grid-column: 15 / span 12;
+  }
+}
+.grid__left-extended {
+  grid-column: 2 / span 13;
+}
+.grid__right-extended {
+  grid-column: 15 / span 13;
+}
+.grid__left-full {
+  grid-column: 1 / span 14;
+}
+.grid__right-full {
+  grid-column: 15 / span 14;
+}

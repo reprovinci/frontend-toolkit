@@ -1,0 +1,27 @@
+// color-definitions
+$color-green: #6B7516; // dummy color, not really used, define colors in project
+$color-blue: #1D5566;  // dummy color, not really used, define colors in project
+
+// grayscale colors
+$color-white: #fff;
+$color-black: #333;
+$color-gray-extra-light: #f3f3f3;
+$color-gray-light: #ddd;
+$color-gray: #aaa;
+$color-gray-dark: #888;
+$color-gray-extra-dark: #333;
+
+// color applications
+$font-color: $color-black;
+$color-primary: $color-blue;
+$color-secondary: $color-blue;
+
+// color loud, for loud attention backgrounds
+$color-loud: $color-primary;
+$color-loud__text: #fff;
+$color-loud__headings: #fff;
+
+// color soft, for soft backgrounds
+$color-soft: #f3f3f3;
+$color-soft__text: $font-color;
+$color-soft__headings: $font-color;

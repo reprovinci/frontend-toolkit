@@ -1,0 +1,14 @@
+// the base setup
+html {
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+  color: $font-color;
+  -webkit-font-smoothing: antialiased;
+  font-size: $font-size-html;
+  scroll-behavior: smooth;
+}
+
+// selected text color
+::selection {
+  background: rgba($color-secondary,.2); text-shadow: none; 
+}
