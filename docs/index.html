@@ -25,12 +25,43 @@
       display: flex;
       align-items: center;
     }
+    html {
+      padding-left: 300px;
+    }
+    .nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 300px;
+    }
+    .nav * {
+      color: #fff;
+    }
+    .nav ul {
+      padding-left: 20px;
+    }
+    .nav a {
+      text-decoration: none;
+    }
   </style>
 </head>
 <body class="pt-xl">
 
+  <nav class="nav bg-gray-extra-dark px-md py-xl">
+    <h2 class="color-white h3">Navigation</h2>
+    <ul>
+      <li><a href="#typography">typography</a></li>
+      <li><a href="#colors">colors</a></li>
+      <li><a href="#grid">grid</a></li>
+      <li><a href="#layouts">layouts</a></li>
+      <li><a href="#box">box</a></li>
+      <li><a href="#spacing">spacing</a></li>
+    </ul>
+  </nav>
+
   <!-- header -->
-  <header class="grid">
+  <header id="top" class="grid">
     <div class="grid__container">
       <h1>Reprovinci Frontend Toolkit 🚀</h1>
       <p>The scaffolding we work with. It contains a responsive 24 column grid, setups for colors, typography, spacings and some prototyping classes. It is <em>not</em> a full fledged css framework. It only contains some layout classes. It's the start of your own creativity 🎨</p>
@@ -38,7 +69,7 @@
   </header>
 
   <!-- Typography -->
-  <section class="section-margins grid">
+  <section id="typography" class="section-margins grid">
     <div class="grid__container">
       <h2 class="section-header">Typography</h2>
       <p>The base typography is based on a scaling font size with a min and max size. The default font-size on the <code>&lt;html&gt;</code> is <code>clamp(14px, 2vw, 18px)</code>. Try scaling up and down this browser viewport and see the result.</p>
@@ -75,7 +106,7 @@
 
 
   <!-- colors -->
-  <section class="section-margins grid">
+  <section id="colors" class="section-margins grid">
     <div class="grid__container">
       <h2>Colors</h2>
       <div class="flexgrid-3">
@@ -106,7 +137,7 @@
   </section>
 
   <!-- grid -->
-  <section id="grid" class="section-margins">
+  <section id="grid" id="grid" class="section-margins">
     <div class="grid">
       <div class="grid__container">
         <h2 class="section-header">Grid</h2>
@@ -175,7 +206,7 @@
   </section>
 
   <!-- layouts -->
-  <section class="section-margins grid">
+  <section id="layouts" class="section-margins grid">
     <div class="grid__container">
       <h2 class="section-header">Layouts</h2>
       <p>We have various layouts that we use a lot. Ranging from simple card-lists to more creative collage like layouts that are nice to have at hand.</p>
@@ -225,7 +256,7 @@
 
 
   <!-- spacing -->
-  <section id="box" class="section-margins grid">
+  <section id="spacing" id="box" class="section-margins grid">
     <div class="grid__container">
       <h2 class="section-header">Spacing</h2>
       <div class="flexgrid-2">
