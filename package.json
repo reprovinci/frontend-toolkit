@@ -6,8 +6,11 @@
   "scripts": {
     "start": "npm-run-all --parallel eleventy",
     "eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "prod:eleventy": "ELEVENTY_ENV=production eleventy",
     "dev": "gulp sass",
-    "build": "gulp sass"
+    "build": "gulp sass",
+    "deploy": "npm-run-all prod:eleventy gh-pages",
+    "gh-pages": "gh-pages -d _site"
   },
   "repository": {
     "type": "git",
