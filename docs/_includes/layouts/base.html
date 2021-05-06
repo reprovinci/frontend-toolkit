@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reprovinci Frontend Toolkit 🚀</title>
+  <link rel="stylesheet" href="{{ "dist/css/frontend-toolkit.css" | url }}">
+  <style type="text/css">
+      .section-header {
+          border-top: solid 1px #ccc;
+          padding-top: 1em;
+      }
+
+      .space-block {
+          background: #ccc;
+          display: block;
+          width: 2em;
+      }
+
+      .colorset span {
+          width: 4em;
+          height: 4em;
+          border: solid 1px #ccc;
+          display: inline-block;
+          margin-right: .5em;
+      }
+
+      .colorset p {
+          display: flex;
+          align-items: center;
+      }
+  </style>
+</head>
+<body class="pt-xl">
+
+<header class="grid">
+  <div class="grid__container">
+    <h1>Reprovinci Frontend Toolkit 🚀</h1>
+    <p>The scaffolding we work with. It contains a responsive 24 column grid, setups for colors, typography, spacings and some prototyping classes. It is
+      <em>not</em> a full fledged css framework. It only contains some layout classes. It's the start of your own creativity 🎨
+    </p>
+  </div>
+</header>
+
+{{ content | safe }}
+
+</body>
+</html>
