@@ -22,7 +22,7 @@ figure {
 
 .grid {
   display: grid;
-  grid-template-columns: 1rem minmax(0, calc(50% - 1100px / 2 - 1rem)) repeat(24, 1fr) minmax(0, calc(50% - 1100px / 2 - 1rem)) 1rem;
+  grid-template-columns: 3em minmax(0, calc(50% - 1100px / 2 - 3em)) repeat(24, 1fr) minmax(0, calc(50% - 1100px / 2 - 3em)) 3em;
 }
 
 .grid__full {

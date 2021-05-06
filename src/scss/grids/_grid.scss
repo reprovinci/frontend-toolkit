@@ -9,53 +9,17 @@ $grid-padding: $site-padding;
 $grid-split-breakpoint: $breakpoint-sm;
 
 // calculated vars:
-$grid-col-1: $grid-padding;
-$grid-col-2: minmax(0, calc(50% - #{$grid-container-width} / 2 - #{$grid-col-1}));
+$grid-spacer: minmax(0, calc(50% - #{$grid-container-width} / 2 - #{$grid-padding}));
 
-//
-// the grid. lean & mean
-// the repeat() might not work on all browsers.. exchange with 24x 1fr, ugly but it works
-// 
-.grid {
+@mixin grid($columns: 24, $c1: $grid-padding, $c2: $grid-spacer) {
   display: grid;
-  grid-template-columns: $grid-col-1 $grid-col-2 repeat(24, 1fr) $grid-col-2 $grid-col-1;
+  grid-template-columns: $c1 $c2 repeat(#{$columns}, 1fr) $c2 $c1;
 }
-// .grid($outer-wrapper-column: $outer-wrapper-column, $inner-wrapper-column: $inner-wrapper-column) {
-//   display: grid;
-//   grid-template-columns: $outer-wrapper-column $inner-wrapper-column repeat(24, 1fr) $inner-wrapper-column $outer-wrapper-column;
-// }
 
-// .grid {
-//   .grid();
-// }
-// .grid-alt {
-//   .grid(.25rem, 0);
-//   $media (min-width: 650px) {
-//     .grid($inner-wrapper-column, 4rem);
-//   }
-// }
+.grid {
+  @include grid;
+}
 
-
-// //
-// // example shizzle
-// //
-// .item {
-//   outline: solid 1px #ccc;
-//   height: 50vh;
-//   background: rgba(255,0,0,.1);
-//   &:nth-child(1),
-//   &:nth-last-child(1) {
-//     background: rgba(0,255,0,.1);
-//   }
-//   &:nth-child(2),
-//   &:nth-last-child(2) {
-//     background: rgba(0,0,255,.1);
-//   }
-// }
-
-// //
-// // quick placement classes
-// //
 .grid__full {
   grid-column: 1 / -1;
 }
