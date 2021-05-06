@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -189,7 +194,7 @@ html {
 }
 
 ::selection {
-  background: rgba(29, 85, 102, 0.2);
+  background: rgba(107, 117, 22, 0.2);
   text-shadow: none;
 }
 
@@ -326,15 +331,15 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 .color-gray-extra-dark {
-  color: #333;
+  color: #444;
 }
 
 .bg-gray-extra-dark {
-  background-color: #333;
+  background-color: #444;
 }
 
 .border-color-gray-extra-dark {
-  border-color: #333;
+  border-color: #444;
 }
 
 .color-primary {
@@ -350,15 +355,15 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 .color-secondary {
-  color: #1D5566;
+  color: #6B7516;
 }
 
 .bg-secondary {
-  background-color: #1D5566;
+  background-color: #6B7516;
 }
 
 .border-color-secondary {
-  border-color: #1D5566;
+  border-color: #6B7516;
 }
 
 .color-loud {
