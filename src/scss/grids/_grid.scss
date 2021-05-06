@@ -17,40 +17,64 @@ $grid-spacer: minmax(0, calc(50% - #{$grid-container-width} / 2 - #{$grid-paddin
   grid-template-columns: $c1 $c2 repeat(#{$columns}, 1fr) $c2 $c1;
 }
 
+// grid placement mixin
+// start counting at container borders
+@mixin grid-pos($col-start:1, $col-span:1, $row-start:none, $row-span:none) {
+    grid-column-start: ($col-start + 2);
+    grid-column-end: span $col-span;
+    @if $row-start != none {
+      grid-row-start: $row-start;
+    }
+    @if $row-span != none  {
+      grid-row-end: span $row-span;
+    }
+}
+//start counting at first column
+@mixin grid-abspos($col-start:1, $col-span:1, $row-start:none, $row-span:none) {
+    grid-column-start: $col-start;
+    grid-column-end: span $col-span;
+    @if $row-start != none  {
+      grid-row-start: $row-start;
+    }
+    @if $row-span != none  {
+      grid-row-end: span $row-span;
+    }
+}
+
 .grid {
   @include grid;
 }
 
 .grid__full {
-  grid-column: 1 / -1;
+  @include grid-abspos(1,28);
 }
 .grid__extended {
-  grid-column: 2 / -2; 
+  @include grid-abspos(2,26);
 }
 .grid__container {
-  grid-column: 3 / -3; 
+  @include grid-pos(1,24);
 }
 .grid__left {
-  grid-column: 3 / -3;
+  @include grid-pos(1,24);
   @media screen and (min-width: $grid-split-breakpoint) {
-    grid-column: 3 / span 12;  
+    @include grid-pos(1,12);
   }
 }
 .grid__right {
-  grid-column: 3 / -3;
+  @include grid-pos(1,24);
   @media screen and (min-width: $grid-split-breakpoint) {
-    grid-column: 15 / span 12;
+    @include grid-pos(13,12);
   }
 }
 .grid__left-extended {
-  grid-column: 2 / span 13;
+  @include grid-abspos(2,13);
 }
 .grid__right-extended {
-  grid-column: 15 / span 13;
+  @include grid-pos(13,13);
 }
 .grid__left-full {
-  grid-column: 1 / span 14;
+  @include grid-abspos(1,14);
 }
 .grid__right-full {
-  grid-column: 15 / span 14;
+  @include grid-pos(13,14);
 }

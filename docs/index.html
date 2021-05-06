@@ -111,10 +111,15 @@ tags:
             background: linear-gradient(to top right, hotpink, orange);
             margin-bottom: 1em;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             color: #fff;
             padding: .5em 0;
+        }
+        .grid-placement-test code {
+            font-size: .85em;
+            margin: .5em;
         }
     </style>
     <div class="demogrid grid">
@@ -148,15 +153,33 @@ tags:
         <div>28</div>
     </div>
     <div class="grid mt-md grid-placement-test">
-        <div class="grid__container"><code>.grid__container</code></div>
-        <div class="grid__extended"><code>.grid__extended</code></div>
-        <div class="grid__full"><code>.grid__full</code></div>
-        <div class="grid__left"><code>.grid__left</code></div>
-        <div class="grid__right"><code>.grid__right</code></div>
-        <div class="grid__left-extended"><code>.grid__left-extended</code></div>
-        <div class="grid__right-extended"><code>.grid__right-extended</code></div>
-        <div class="grid__left-full"><code>.grid__left-full</code></div>
-        <div class="grid__right-full"><code>.grid__right-full</code></div>
+        <div class="grid__container">
+            <code>.grid__container</code><code>@include grid-pos(1,24)</code>
+        </div>
+        <div class="grid__extended">
+            <code>.grid__extended</code><code>@include grid-abspos(2,26)</code>
+        </div>
+        <div class="grid__full">
+            <code>.grid__full</code><code>@include grid-abspos(1,28)</code>
+        </div>
+        <div class="grid__left">
+            <code>.grid__left</code><code>@include grid-pos(1,12)</code>
+        </div>
+        <div class="grid__right">
+            <code>.grid__right</code><code>@include grid-pos(13,12)</code>
+        </div>
+        <div class="grid__left-extended">
+            <code>.grid__left-extended</code><code>@include grid-abspos(2,13)</code>
+        </div>
+        <div class="grid__right-extended">
+            <code>.grid__right-extended</code><code>@include grid-pos(13,13)</code>
+        </div>
+        <div class="grid__left-full">
+            <code>.grid__left-full</code><code>@include grid-abspos(1,14)</code>
+        </div>
+        <div class="grid__right-full">
+            <code>.grid__right-full</code><code>@include grid-pos(13,14)</code>
+        </div>
     </div>
     <div class="grid">
       <div class="grid__container">

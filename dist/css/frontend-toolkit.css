@@ -26,49 +26,60 @@ figure {
 }
 
 .grid__full {
-  grid-column: 1/-1;
+  grid-column-start: 1;
+  grid-column-end: span 28;
 }
 
 .grid__extended {
-  grid-column: 2/-2;
+  grid-column-start: 2;
+  grid-column-end: span 26;
 }
 
 .grid__container {
-  grid-column: 3/-3;
+  grid-column-start: 3;
+  grid-column-end: span 24;
 }
 
 .grid__left {
-  grid-column: 3/-3;
+  grid-column-start: 3;
+  grid-column-end: span 24;
 }
 @media screen and (min-width: 768px) {
   .grid__left {
-    grid-column: 3/span 12;
+    grid-column-start: 3;
+    grid-column-end: span 12;
   }
 }
 
 .grid__right {
-  grid-column: 3/-3;
+  grid-column-start: 3;
+  grid-column-end: span 24;
 }
 @media screen and (min-width: 768px) {
   .grid__right {
-    grid-column: 15/span 12;
+    grid-column-start: 15;
+    grid-column-end: span 12;
   }
 }
 
 .grid__left-extended {
-  grid-column: 2/span 13;
+  grid-column-start: 2;
+  grid-column-end: span 13;
 }
 
 .grid__right-extended {
-  grid-column: 15/span 13;
+  grid-column-start: 15;
+  grid-column-end: span 13;
 }
 
 .grid__left-full {
-  grid-column: 1/span 14;
+  grid-column-start: 1;
+  grid-column-end: span 14;
 }
 
 .grid__right-full {
-  grid-column: 15/span 14;
+  grid-column-start: 15;
+  grid-column-end: span 14;
 }
 
 .flexgrid-2 {
