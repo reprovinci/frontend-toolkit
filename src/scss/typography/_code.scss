@@ -1,0 +1,15 @@
+
+pre {
+  border: $border;
+  padding: $space-md;
+  font-size: $font-size-sm;
+  background-image: linear-gradient(16deg, rgba(255,255,255,.2) 25%, rgba(0,0,0,.05) 25%, rgba(0,0,0,.05) 50%, rgba(255,255,255,.2) 50%, rgba(255,255,255,.2) 75%, rgba(0,0,0,.05) 75%, rgba(0,0,0,.05) 100%);
+  background-size: 21.77px 6.24px;
+}
+
+code {
+  background-image: linear-gradient(16deg, rgba(255,255,255,.2) 25%, rgba(0,0,0,.05) 25%, rgba(0,0,0,.05) 50%, rgba(255,255,255,.2) 50%, rgba(255,255,255,.2) 75%, rgba(0,0,0,.05) 75%, rgba(0,0,0,.05) 100%);
+  background-size: 21.77px 6.24px;
+  display: inline-block;
+  padding: 0 .5em;
+}

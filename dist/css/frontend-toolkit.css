@@ -22,7 +22,7 @@ figure {
 
 .grid {
   display: grid;
-  grid-template-columns: 3em minmax(0, calc(50% - 1100px / 2 - 3em)) repeat(24, 1fr) minmax(0, calc(50% - 1100px / 2 - 3em)) 3em;
+  grid-template-columns: 1rem minmax(0, calc(50% - 1100px / 2 - 1rem)) repeat(24, 1fr) minmax(0, calc(50% - 1100px / 2 - 1rem)) 1rem;
 }
 
 .grid__full {
@@ -183,6 +183,21 @@ figure {
   .flexgrid-4 > * {
     flex: 0 0 calc(25% - 2em);
   }
+}
+
+pre {
+  border: solid 1px #ddd;
+  padding: 1em;
+  font-size: 0.85rem;
+  background-image: linear-gradient(16deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 100%);
+  background-size: 21.77px 6.24px;
+}
+
+code {
+  background-image: linear-gradient(16deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.05) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0.05) 100%);
+  background-size: 21.77px 6.24px;
+  display: inline-block;
+  padding: 0 0.5em;
 }
 
 html {
@@ -719,3 +734,5 @@ h6, .h6 {
 .p-xl {
   padding: 4em !important;
 }
+
+/*# sourceMappingURL=frontend-toolkit.css.map */

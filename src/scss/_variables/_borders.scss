@@ -1,3 +1,5 @@
 // borders
-$border-color: $color-primary;
+$border-color: $color-gray-light;
 $border-width: 1px;
+$border-type: solid;
+$border: $border-type $border-width $border-color;

@@ -4,14 +4,15 @@
 //
 
 // editable vars:
+$grid-columns: 24;
 $grid-container-width: $site-width;
-$grid-padding: $site-padding;
 $grid-split-breakpoint: $breakpoint-sm;
 
-// calculated vars:
+// these vars need some care when changing: 1 needs to be flex, the other can be fixed
+$grid-padding: $site-padding;
 $grid-spacer: minmax(0, calc(50% - #{$grid-container-width} / 2 - #{$grid-padding}));
 
-@mixin grid($columns: 24, $c1: $grid-padding, $c2: $grid-spacer) {
+@mixin grid($columns: $grid-columns, $c1: $grid-padding, $c2: $grid-spacer) {
   display: grid;
   grid-template-columns: $c1 $c2 repeat(#{$columns}, 1fr) $c2 $c1;
 }

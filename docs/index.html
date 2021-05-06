@@ -6,7 +6,7 @@ tags:
 ---
 
 <!-- Typography -->
-<section class="section-margins grid">
+<section id="typography" class="section-margins grid">
     <div class="grid__container">
         <h2 class="section-header">Typography</h2>
         <p>The base typography is based on a scaling font size with a min and max size. The default font-size on the
@@ -46,7 +46,7 @@ tags:
 
 
 <!-- colors -->
-<section class="section-margins grid">
+<section id="colors" class="section-margins grid">
     <div class="grid__container">
         <h2>Colors</h2>
         <div class="flexgrid-3">
@@ -77,7 +77,7 @@ tags:
 </section>
 
 <!-- grid -->
-<section id="grid" class="section-margins">
+<section id="grid" id="grid" class="section-margins">
     <div class="grid">
         <div class="grid__container">
             <h2 class="section-header">Grid</h2>
@@ -148,41 +148,53 @@ tags:
         <div>28</div>
     </div>
     <div class="grid mt-md grid-placement-test">
-        <div class="grid__container">.grid__container</div>
-        <div class="grid__extended">.grid__extended</div>
-        <div class="grid__full">.grid__full</div>
-        <div class="grid__left">.grid__left</div>
-        <div class="grid__right">.grid__right</div>
-        <div class="grid__left-extended">.grid__left-extended</div>
-        <div class="grid__right-extended">.grid__right-extended</div>
-        <div class="grid__left-full">.grid__left-full</div>
-        <div class="grid__right-full">.grid__right-full</div>
+        <div class="grid__container"><code>.grid__container</code></div>
+        <div class="grid__extended"><code>.grid__extended</code></div>
+        <div class="grid__full"><code>.grid__full</code></div>
+        <div class="grid__left"><code>.grid__left</code></div>
+        <div class="grid__right"><code>.grid__right</code></div>
+        <div class="grid__left-extended"><code>.grid__left-extended</code></div>
+        <div class="grid__right-extended"><code>.grid__right-extended</code></div>
+        <div class="grid__left-full"><code>.grid__left-full</code></div>
+        <div class="grid__right-full"><code>.grid__right-full</code></div>
+    </div>
+    <div class="grid">
+      <div class="grid__container">
+        <h3>Grid columns</h3>
+        <p>The variable <code>$grid-columns</code> defines the amount of columns in the grid center. 24 is the default. Override it when needed.</p>
+        <h3>Grid mixin</h3>
+        <p>The grid is based on a mixin. If you need an alternative grid count on some places you can use the mixin:</p>
+        <pre>
+// @mixin grid($grid-columns, $grid-padding, $grid-spacer)
+.grid-with-12-columns {
+  @include grid(12);
+}
+        </pre>
+      </div>
     </div>
 </section>
 
 <!-- layouts -->
-<section class="section-margins grid">
+<section id="layouts" class="section-margins grid">
     <div class="grid__container">
         <h2 class="section-header">Layouts</h2>
         <p>We have various layouts that we use a lot. Ranging from simple card-lists to more creative collage like layouts that are nice to have at hand.</p>
     </div>
     <div class="grid__container">
-        <h3>Flexgrid 2</h3>
+        <h3>Flexgrid</h3>
+        <p><code>.flexgrid-2</code></p>
         <div class="flexgrid-2">
             <div class="box flex-center">Lorem</div>
             <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
         </div>
-        <h3>Flexgrid 3</h3>
+        <p><code>.flexgrid-3</code></p>
         <div class="flexgrid-3">
             <div class="box flex-center">Lorem</div>
             <div class="box flex-center">Lorem</div>
             <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
         </div>
-        <h3>Flexgrid 4</h3>
+        <p><code>.flexgrid-3</code></p>
         <div class="flexgrid-4">
-            <div class="box flex-center">Lorem</div>
             <div class="box flex-center">Lorem</div>
             <div class="box flex-center">Lorem</div>
             <div class="box flex-center">Lorem</div>
@@ -207,78 +219,76 @@ tags:
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
             </div>
         </div>
+        <h3>Box mixin</h3>
+        <p>If you need more box colors create them with the mixin:</p>
+        <pre>
+// @mixin box($bgcolor, $color) {
+.black-box {
+  @include box(black, hotpink);
+}
+        </pre>
     </div>
 </section>
 
 
 <!-- spacing -->
-<section id="box" class="section-margins grid">
+<section id="spacing" id="box" class="section-margins grid">
     <div class="grid__container">
         <h2 class="section-header">Spacing</h2>
         <div class="flexgrid-2">
             <div>
                 <p>The heights of these blocks represent the different spaces:</p>
                 <p style="display:flex; align-items: center;">
-                    <span class="space-block pt-xs mr-sm"></span> <code>space-xs</code>
+                    <span class="space-block pt-xs mr-sm"></span> <code>$space-xs</code>
                 </p>
                 <p style="display:flex; align-items: center;">
-                    <span class="space-block pt-sm mr-sm"></span> <code>space-sm</code>
+                    <span class="space-block pt-sm mr-sm"></span> <code>$space-sm</code>
                 </p>
                 <p style="display:flex; align-items: center;">
-                    <span class="space-block pt-md mr-sm"></span> <code>space-md</code>
+                    <span class="space-block pt-md mr-sm"></span> <code>$space-md</code>
                 </p>
                 <p style="display:flex; align-items: center;">
-                    <span class="space-block pt-lg mr-sm"></span> <code>space-lg</code>
+                    <span class="space-block pt-lg mr-sm"></span> <code>$space-lg</code>
                 </p>
                 <p style="display:flex; align-items: center;">
-                    <span class="space-block pt-xl mr-sm"></span> <code>space-xl</code>
+                    <span class="space-block pt-xl mr-sm"></span> <code>$space-xl</code>
                 </p>
             </div>
             <div>
                 <p>The margin between these blocks represent the different spaces:</p>
-                <p>
-                    <code>space-xs</code></p>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <span class="space-block pt-md mr-xs mb-xs"></span>
-                    <span class="space-block pt-md mr-xs mb-xs"></span>
-                    <span class="space-block pt-md mr-xs mb-xs"></span>
-                    <span class="space-block pt-md mr-xs mb-xs"></span>
+                <p><code>$space-xs</code></p>
+                <div style="display: flex;">
+                    <span class="space-block pt-md mr-xs mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mr-xs mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mb-xs" style="flex-grow: 1"></span>
                 </div>
                 </p>
-                <p>
-                    <code>space-sm</code></p>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <span class="space-block pt-md mr-sm mb-sm"></span>
-                    <span class="space-block pt-md mr-sm mb-sm"></span>
-                    <span class="space-block pt-md mr-sm mb-sm"></span>
-                    <span class="space-block pt-md mr-sm mb-sm"></span>
+                <p><code>$space-sm</code></p>
+                <div style="display: flex;">
+                    <span class="space-block pt-md mr-sm mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mr-sm mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mb-xs" style="flex-grow: 1"></span>
                 </div>
                 </p>
-                <p>
-                    <code>space-md</code></p>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <span class="space-block pt-md mr-md mb-md"></span>
-                    <span class="space-block pt-md mr-md mb-md"></span>
-                    <span class="space-block pt-md mr-md mb-md"></span>
-                    <span class="space-block pt-md mr-md mb-md"></span>
+                <p><code>$space-md</code></p>
+                <div style="display: flex;">
+                    <span class="space-block pt-md mr-md mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mr-md mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mb-xs" style="flex-grow: 1"></span>
                 </div>
                 </p>
-                <p>
-                    <code>space-lg</code></p>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <span class="space-block pt-md mr-lg mb-lg"></span>
-                    <span class="space-block pt-md mr-lg mb-lg"></span>
-                    <span class="space-block pt-md mr-lg mb-lg"></span>
-                    <span class="space-block pt-md mr-lg mb-lg"></span>
+                <p><code>$space-lg</code></p>
+                <div style="display: flex;">
+                    <span class="space-block pt-md mr-lg mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mr-lg mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mb-xs" style="flex-grow: 1"></span>
                 </div>
                 </p>
-                <p>
-                    <code>space-xl</code></p>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <span class="space-block pt-md mr-xl mb-xl"></span>
-                    <span class="space-block pt-md mr-xl mb-xl"></span>
-                    <span class="space-block pt-md mr-xl mb-xl"></span>
-                    <span class="space-block pt-md mr-xl mb-xl"></span>
+                <p><code>$space-xl</code></p>
+                <div style="display: flex;">
+                    <span class="space-block pt-md mr-xl mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mr-xl mb-xs" style="flex-grow: 1"></span>
+                    <span class="space-block pt-md mb-xs" style="flex-grow: 1"></span>
                 </div>
                 </p>
             </div>

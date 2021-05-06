@@ -28,10 +28,40 @@
           display: flex;
           align-items: center;
       }
+      .index {
+        position: fixed;
+        top: 0;
+        right: calc(100% - 2em);
+        bottom: 0;
+        width: 250px;
+        transition: .2s ease-in-out;
+      }
+      .index:hover {
+        transform: translateX(calc(100% - 2em));
+      }
+      .index ul {
+        padding-left: 20px;
+      }
+      .index a {
+        text-decoration: none;
+      }
+      .index > div {
+        position: fixed;
+      }
+      html {
+        padding-left: 2em;
+      }
   </style>
 </head>
-<body class="pt-xl">
+<body>
 
+<nav class="index bg-gray-extra-dark px-md py-xl">
+  <div>
+    <div class="h3 color-white">Index</div>
+    <ul class="color-white" style="padding-left:20px;"></ul>
+  </div>
+</nav>
+<main class="py-xl">
 <header class="grid">
   <div class="grid__container">
     <h1>Reprovinci Frontend Toolkit 🚀</h1>
@@ -42,6 +72,21 @@
 </header>
 
 {{ content | safe }}
-
+</main>
+<script type="text/javascript">
+  var sections = document.querySelectorAll('section[id]');
+  var index = document.querySelector('nav.index ul');
+  for (var i = sections.length - 1; i >= 0; i--) {
+    var sectionId = sections[i].id;
+    var a = document.createElement('a'); 
+    var text = document.createTextNode(sectionId);
+    a.appendChild(text); 
+    a.href = "#" + sectionId;
+    a.classList.add("color-white");
+    var li = document.createElement('li');
+    li.append(a);
+    index.prepend(li); 
+  }
+</script>
 </body>
 </html>
