@@ -7,18 +7,22 @@ $font-size-md: 1rem;
 $font-size-lg: 1.2rem;
 
 $line-height-base: 1.65;
-$line-height-condensed: 1.1;
+$line-height-condensed: 1.2;
 
 
 // headings
 // ratio base works out of the box, but change to your needs
 $headings-font: $font-family-base;
+$headings-font-weight: bold;
+$headings-line-height: $line-height-condensed;
 $headings__small-size: $font-size-sm;
 $headings__small-color: $color-primary;
 
+// heading sizes can be regular rem sizes
+// these defaults are calculcated based on the line-height
 $h1-size: $font-size-md * $line-height-base * $line-height-base;
 $h2-size: $font-size-md * $line-height-base;
-$h3-size: $font-size-md * (1 + ($line-height-base - 1 / 2));
+$h3-size: $font-size-md * (1 + (($line-height-base - 1) / 2));
 $h4-size: $font-size-md;
 $h5-size: $font-size-md;
 $h6-size: $font-size-md;
