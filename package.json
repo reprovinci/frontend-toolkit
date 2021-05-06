@@ -1,5 +1,5 @@
 {
-  "name": "frontend-toolkit",
+  "name": "rv-frontend-toolkit",
   "version": "0.1.0",
   "description": "Frontend toolkit. Framework classes, grid, typography/colors/spacing setup.. the scaffolding we start with. 🚀",
   "main": "index.js",
