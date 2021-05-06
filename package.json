@@ -4,9 +4,10 @@
   "description": "Frontend toolkit. Framework classes, grid, typography/colors/spacing setup.. the scaffolding we start with. 🚀",
   "main": "index.js",
   "scripts": {
+    "start": "npm-run-all --parallel eleventy",
+    "eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
     "dev": "gulp sass",
-    "build": "gulp sass",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp sass"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,6 @@
   ],
   "contributors": [
     "G. Lekkerkerker",
-    "C. Houdé",
     "M.C. Brouwer"
   ],
   "license": "MIT",
@@ -36,8 +36,12 @@
   },
   "homepage": "https://github.com/reprovinci/frontend-toolkit",
   "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+    "gh-pages": "^3.1.0",
     "gulp": "^4.0.2",
-    "gulp-dart-sass": "^1.0.2"
+    "gulp-dart-sass": "^1.0.2",
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "gulp-rename": "^2.0.0"
