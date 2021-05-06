@@ -1,0 +1,115 @@
+$flexgrid-gap: 1em;
+
+@mixin flexgrid ($gap: $flexgrid-gap) {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$gap;
+  > * {
+    flex: 1 1 100%;
+    margin: $gap;
+    @media screen and (min-width: $breakpoint-xs) {
+      flex: 0 0 calc(50% - #{$flexgrid-gap * 2});
+    }
+  }
+  &._reverse {
+    flex-direction: row-reverse;
+  }
+  &._center {
+    justify-content: center;
+  }
+  &._flex-start {
+    justify-content: flex-start;
+  }
+  &._flex-end {
+    justify-content: flex-end;
+  }
+  &._space-around {
+    justify-content: space-around;
+  }
+  &._space-between {
+    justify-content: space-between;
+  }
+}
+
+.flexgrid-2 {
+  @include flexgrid;
+}
+
+.flexgrid-3 {
+  @include flexgrid;
+  > * {
+    @media screen and (min-width: $breakpoint-sm) {
+      flex: 0 0 calc(33.3333% - #{$flexgrid-gap * 2});
+    }
+  }
+}
+
+.flexgrid-4 {
+  @include flexgrid;
+  > * {
+    @media screen and (min-width: $breakpoint-sm) {
+      flex: 0 0 calc(33.3333% - #{$flexgrid-gap});
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      flex: 0 0 calc(25% - #{$flexgrid-gap * 2});
+    }
+  }
+}
+
+
+
+
+// // 4 cards in a row
+// .flexgrid-4 {
+//   .flexgrid-base();
+//   justify-content: center;
+//   > * {
+//     margin: @space-sm @flexgrid-margin-half;
+//     width: 100%;
+//     @media screen and (min-width: @screen-xs){
+//       width: ((100% - (2 * @flexgrid-margin)) / 2);
+//     }
+//     @media screen and (min-width: @screen-sm-min){
+//       width: ((100% - (3 * @flexgrid-margin)) / 3);
+//     }
+//     @media screen and (min-width: @screen-md-min){
+//       width: ((100% - (4 * @flexgrid-margin)) / 4);
+//     }
+//   }
+// }
+
+
+// // 
+// // edit this
+// // 
+// @flexgrid-margin: 2%;
+// @flexgrid-margin-half: (@flexgrid-margin / 2);
+
+// // 
+// // not below this line..
+// // 
+// @mixin flexgrid-base($justify: center, $gap: 2%) {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-left: -@flexgrid-margin-half;
+//   margin-right: -@flexgrid-margin-half;
+//   justify-content: @justify;
+//   &._reverse {
+//     flex-direction: row-reverse;
+//   }
+//   &._center {
+//     justify-content: center;
+//   }
+//   &._flex-start {
+//     justify-content: flex-start;
+//   }
+//   &._flex-end {
+//     justify-content: flex-end;
+//   }
+//   &._space-around {
+//     justify-content: space-around;
+//   }
+//   &._space-between {
+//     justify-content: space-between;
+//   }
+// }

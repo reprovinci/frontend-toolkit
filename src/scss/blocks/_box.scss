@@ -1,0 +1,18 @@
+@mixin box($bgcolor: $color-soft, $color: $color-soft__text) {
+  background: $bgcolor;
+  padding: $space-lg;
+  color: $color;  
+}
+
+.box,
+.box--soft {
+  @include box;
+}
+
+.box--loud {
+  @include box($color-loud, $color-loud__text);
+}
+
+.box--primary {
+  @include box($color-primary, $color-primary__text);
+}

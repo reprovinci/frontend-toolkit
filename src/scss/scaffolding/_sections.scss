@@ -1,0 +1,9 @@
+@mixin section-margins {
+  margin-top: $section-margin;
+  margin-bottom: $section-margin;
+}
+
+.section-margins {
+  @include section-margins;
+}
+
