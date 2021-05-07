@@ -5,7 +5,7 @@
 }
 
 // given a px size returns the rem variant based on the $font-size-base
-@function calculateEm($size, $base: $font-size-base) {
+@function calculateRem($size, $base: $font-size-base) {
   $remSize: $size / $base;
   @return #{$remSize}rem;
 }
