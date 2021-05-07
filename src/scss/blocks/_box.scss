@@ -1,7 +1,7 @@
 @mixin box($bgcolor: $color-soft, $color: $color-soft__text) {
   background: $bgcolor;
   padding: $space-lg;
-  color: $color;  
+  color: $color;
 }
 
 .box,

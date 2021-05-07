@@ -7,7 +7,9 @@ body {
   margin: 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -224,44 +226,80 @@ html {
   text-shadow: none;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6,
-h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: sans-serif;
   font-weight: bold;
   line-height: 1.2;
 }
-.h1:first-child, .h2:first-child, .h3:first-child, .h4:first-child, .h5:first-child, .h6:first-child,
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+.h1:first-child,
+.h2:first-child,
+.h3:first-child,
+.h4:first-child,
+.h5:first-child,
+.h6:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
   margin-top: 0;
 }
-.h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small,
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
   font-size: 0.85rem;
   display: block;
-  color: #1D5566;
+  color: #1d5566;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2.7225rem;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.65rem;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.325rem;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 1rem;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1rem;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 1rem;
 }
 
@@ -273,13 +311,13 @@ h6, .h6 {
 }
 
 .box--loud {
-  background: #1D5566;
+  background: #1d5566;
   padding: 2em;
   color: #fff;
 }
 
 .box--primary {
-  background: #1D5566;
+  background: #1d5566;
   padding: 2em;
   color: #fff;
 }
@@ -291,27 +329,27 @@ h6, .h6 {
 }
 
 .color-green {
-  color: #6B7516;
+  color: #6b7516;
 }
 
 .bg-green {
-  background-color: #6B7516;
+  background-color: #6b7516;
 }
 
 .border-color-green {
-  border-color: #6B7516;
+  border-color: #6b7516;
 }
 
 .color-blue {
-  color: #1D5566;
+  color: #1d5566;
 }
 
 .bg-blue {
-  background-color: #1D5566;
+  background-color: #1d5566;
 }
 
 .border-color-blue {
-  border-color: #1D5566;
+  border-color: #1d5566;
 }
 
 .color-white {
@@ -399,39 +437,39 @@ h6, .h6 {
 }
 
 .color-primary {
-  color: #1D5566;
+  color: #1d5566;
 }
 
 .bg-primary {
-  background-color: #1D5566;
+  background-color: #1d5566;
 }
 
 .border-color-primary {
-  border-color: #1D5566;
+  border-color: #1d5566;
 }
 
 .color-secondary {
-  color: #6B7516;
+  color: #6b7516;
 }
 
 .bg-secondary {
-  background-color: #6B7516;
+  background-color: #6b7516;
 }
 
 .border-color-secondary {
-  border-color: #6B7516;
+  border-color: #6b7516;
 }
 
 .color-loud {
-  color: #1D5566;
+  color: #1d5566;
 }
 
 .bg-loud {
-  background-color: #1D5566;
+  background-color: #1d5566;
 }
 
 .border-color-loud {
-  border-color: #1D5566;
+  border-color: #1d5566;
 }
 
 .color-soft {
