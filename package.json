@@ -11,8 +11,6 @@
     "sass": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --watch",
     "lint": "npm-run-all stylelint",
     "stylelint": "stylelint \"src/**/*.{css,scss}\" --fix --cache --cache-location .cache/.stylelintcache --rd",
-    "dev": "gulp sass",
-    "build": "gulp sass",
     "deploy": "npm-run-all prod:sass prod:eleventy gh-pages",
     "gh-pages": "gh-pages -d _site"
   },
