@@ -1,31 +1,31 @@
 // color-definitions
-$color-green: #6b7516; // dummy color, not really used, define colors in project
-$color-blue: #1d5566;  // dummy color, not really used, define colors in project
+$color-green: #6B7516 !default; // dummy color, not really used, define colors in project
+$color-blue: #1D5566 !default;  // dummy color, not really used, define colors in project
 
 // grayscale colors
-$color-white: #fff;
-$color-black: #333;
-$color-gray-extra-light: #f3f3f3;
-$color-gray-light: #ddd;
-$color-gray: #aaa;
-$color-gray-dark: #888;
-$color-gray-extra-dark: #444;
+$color-white: #fff !default;
+$color-black: #333 !default;
+$color-gray-extra-light: #f3f3f3 !default;
+$color-gray-light: #ddd !default;
+$color-gray: #aaa !default;
+$color-gray-dark: #888 !default;
+$color-gray-extra-dark: #444 !default;
 
 // color applications
-$font-color: $color-black;
-$color-primary: $color-blue;
-$color-secondary: $color-green;
+$font-color: $color-black !default;
+$color-primary: $color-blue !default;
+$color-secondary: $color-green !default;
 
 // color loud, for loud attention backgrounds
-$color-loud: $color-primary;
-$color-loud__text: #fff;
-$color-loud__headings: #fff;
+$color-loud: $color-primary !default;
+$color-loud__text: #fff !default;
+$color-loud__headings: #fff !default;
 
 // color soft, for soft backgrounds
-$color-soft: #f3f3f3;
-$color-soft__text: $font-color;
-$color-soft__headings: $font-color;
+$color-soft: #f3f3f3 !default;
+$color-soft__text: $font-color !default;
+$color-soft__headings: $font-color !default;
 
 // text color on primary colored backgrounds
-$color-primary__text: #fff;
-$color-primary__headings: #fff;
+$color-primary__text: #fff !default;
+$color-primary__headings: #fff !default;

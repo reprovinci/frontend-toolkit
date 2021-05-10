@@ -1,9 +1,9 @@
-$site-width: 1100px;
-$site-padding: 1rem;
+$site-width: 1100px !default;
+$site-padding: 1rem !default;
 
-$breakpoint-lg: 1650px;
-$breakpoint-md: 1024px;
-$breakpoint-sm: 768px;
-$breakpoint-xs: 500px;
+$breakpoint-lg: 1650px !default;
+$breakpoint-md: 1024px !default;
+$breakpoint-sm: 768px !default;
+$breakpoint-xs: 500px !default;
 
-$breakpoint-nav: $breakpoint-md;
+$breakpoint-nav: $breakpoint-md !default;

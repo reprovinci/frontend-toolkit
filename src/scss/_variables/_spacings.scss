@@ -1,10 +1,10 @@
 // spacing size definitions
-$space-xs: 0.3em;
-$space-sm: 0.6em;
-$space-md: 1em;
-$space-lg: 2em;
-$space-xl: 4em;
+$space-xs: .3em !default;
+$space-sm: .6em !default;
+$space-md: 1em !default;
+$space-lg: 2em !default;
+$space-xl: 4em !default;
 
 // section spacing
-$section-margin: $space-lg;  // the top & bottom margin for sections
-$section-padding: $space-lg; // top & bottom padding for sections with color bg
+$section-margin: $space-lg !default;  // the top & bottom margin for sections
+$section-padding: $space-lg !default; // top & bottom padding for sections with color bg
