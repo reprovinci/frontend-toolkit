@@ -57,7 +57,7 @@ $flexgrid-gap: 1em;
 
   > * {
     @media screen and (min-width: $breakpoint-sm) {
-      flex: 0 0 calc(33.3333% - #{$flexgrid-gap});
+      flex: 0 0 calc(33.3333% - #{$flexgrid-gap * 2});
     }
     @media screen and (min-width: $breakpoint-md) {
       flex: 0 0 calc(25% - #{$flexgrid-gap * 2});
