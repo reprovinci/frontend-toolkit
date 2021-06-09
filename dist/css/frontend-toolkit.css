@@ -17,6 +17,11 @@ figure {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .section-margins {
   margin-top: 2em;
   margin-bottom: 2em;
@@ -24,7 +29,7 @@ figure {
 
 .grid {
   display: grid;
-  grid-template-columns: 1rem minmax(0, calc(50% - 1100px / 2 - 1rem)) repeat(24, 1fr) minmax(0, calc(50% - 1100px / 2 - 1rem)) 1rem;
+  grid-template-columns: 1rem minmax(0, calc(50% - 1200px / 2 - 1rem)) repeat(24, 1fr) minmax(0, calc(50% - 1200px / 2 - 1rem)) 1rem;
 }
 
 .grid__full {
@@ -40,6 +45,34 @@ figure {
 .grid__container {
   grid-column-start: 3;
   grid-column-end: span 24;
+}
+@media screen and (min-width: 1024px) {
+  .grid__container {
+    grid-column-start: 3;
+    grid-column-end: span 24;
+  }
+}
+
+.grid__container--sm {
+  grid-column-start: 3;
+  grid-column-end: span 24;
+}
+@media screen and (min-width: 1024px) {
+  .grid__container--sm {
+    grid-column-start: 5;
+    grid-column-end: span 20;
+  }
+}
+
+.grid__container--xs {
+  grid-column-start: 3;
+  grid-column-end: span 24;
+}
+@media screen and (min-width: 1024px) {
+  .grid__container--xs {
+    grid-column-start: 7;
+    grid-column-end: span 16;
+  }
 }
 
 .grid__left {
@@ -65,23 +98,47 @@ figure {
 }
 
 .grid__left-extended {
-  grid-column-start: 2;
-  grid-column-end: span 13;
+  grid-column-start: 3;
+  grid-column-end: span 24;
+}
+@media screen and (min-width: 768px) {
+  .grid__left-extended {
+    grid-column-start: 2;
+    grid-column-end: span 13;
+  }
 }
 
 .grid__right-extended {
-  grid-column-start: 15;
-  grid-column-end: span 13;
+  grid-column-start: 3;
+  grid-column-end: span 24;
+}
+@media screen and (min-width: 768px) {
+  .grid__right-extended {
+    grid-column-start: 15;
+    grid-column-end: span 13;
+  }
 }
 
 .grid__left-full {
-  grid-column-start: 1;
-  grid-column-end: span 14;
+  grid-column-start: 3;
+  grid-column-end: span 24;
+}
+@media screen and (min-width: 768px) {
+  .grid__left-full {
+    grid-column-start: 1;
+    grid-column-end: span 14;
+  }
 }
 
 .grid__right-full {
-  grid-column-start: 15;
-  grid-column-end: span 14;
+  grid-column-start: 3;
+  grid-column-end: span 24;
+}
+@media screen and (min-width: 768px) {
+  .grid__right-full {
+    grid-column-start: 15;
+    grid-column-end: span 14;
+  }
 }
 
 .flexgrid-2 {
@@ -189,7 +246,7 @@ figure {
 }
 @media screen and (min-width: 768px) {
   .flexgrid-4 > * {
-    flex: 0 0 calc(33.3333% - 1em);
+    flex: 0 0 calc(33.3333% - 2em);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -783,5 +840,3 @@ h6,
 .p-xl {
   padding: 4em !important;
 }
-
-/*# sourceMappingURL=frontend-toolkit.css.map */

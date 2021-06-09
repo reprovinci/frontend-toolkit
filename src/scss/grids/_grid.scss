@@ -5,12 +5,16 @@
 
 // editable vars:
 $grid-columns: 24;
-$grid-container-width: $site-width;
+$grid-width: $site-width;
 $grid-split-breakpoint: $breakpoint-sm;
+$grid-container-breakpoint: $breakpoint-md;
+$grid-container-pad: 0; // the columns to pad for the default container
+$grid-container-sm-pad: 2; // the columns to pad for the sm container
+$grid-container-xs-pad: 4; // the columns to pad for the xs container
 
 // these vars need some care when changing: 1 needs to be flex, the other can be fixed
 $grid-padding: $site-padding;
-$grid-spacer: minmax(0, calc(50% - #{$grid-container-width} / 2 - #{$grid-padding}));
+$grid-spacer: minmax(0, calc(50% - #{$grid-width} / 2 - #{$grid-padding}));
 
 @mixin grid($columns: $grid-columns, $c1: $grid-padding, $c2: $grid-spacer) {
   display: grid;
@@ -46,15 +50,36 @@ $grid-spacer: minmax(0, calc(50% - #{$grid-container-width} / 2 - #{$grid-paddin
 }
 
 .grid__full {
+  // container to full viewport width
   @include grid-abspos(1,28);
 }
 
 .grid__extended {
+  // extended width container
   @include grid-abspos(2,26);
 }
 
 .grid__container {
+  // default width container
   @include grid-pos(1,24);
+  @media screen and (min-width: $grid-container-breakpoint) {
+    @include grid-pos((1 + $grid-container-pad), ($grid-columns - $grid-container-pad - $grid-container-pad));
+  }
+}
+
+.grid__container--sm {
+  // slightly smaller container, padded 1 column by default
+  @include grid-pos(1,24);
+  @media screen and (min-width: $grid-container-breakpoint) {
+    @include grid-pos((1 + $grid-container-sm-pad), ($grid-columns - $grid-container-sm-pad - $grid-container-sm-pad));
+  }
+}
+.grid__container--xs {
+  // slightly smaller container
+  @include grid-pos(1,24);
+  @media screen and (min-width: $grid-container-breakpoint) {
+    @include grid-pos((1 + $grid-container-xs-pad), ($grid-columns - $grid-container-xs-pad - $grid-container-xs-pad));
+  }
 }
 
 .grid__left {
@@ -72,17 +97,29 @@ $grid-spacer: minmax(0, calc(50% - #{$grid-container-width} / 2 - #{$grid-paddin
 }
 
 .grid__left-extended {
-  @include grid-abspos(2,13);
+  @include grid-pos(1,24);
+  @media screen and (min-width: $grid-split-breakpoint) {
+    @include grid-abspos(2,13);
+  }
 }
 
 .grid__right-extended {
-  @include grid-pos(13,13);
+  @include grid-pos(1,24);
+  @media screen and (min-width: $grid-split-breakpoint) {
+    @include grid-pos(13,13);
+  }
 }
 
 .grid__left-full {
-  @include grid-abspos(1,14);
+  @include grid-pos(1,24);
+  @media screen and (min-width: $grid-split-breakpoint) {
+    @include grid-abspos(1,14);
+  }
 }
 
 .grid__right-full {
-  @include grid-pos(13,14);
+  @include grid-pos(1,24);
+  @media screen and (min-width: $grid-split-breakpoint) {
+    @include grid-pos(13,14);
+  }
 }
