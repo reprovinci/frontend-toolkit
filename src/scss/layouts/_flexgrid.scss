@@ -65,9 +65,14 @@ $flexgrid-gap: 1em;
   }
 }
 
-.flexgrid-shuffle {
+.flexgrid-bricks {
   @include flexgrid;
   > * {
+    flex: 0 0 calc(60% - #{$flexgrid-gap * 2});
+    &:nth-child(4n - 1),
+    &:nth-child(4n - 2) {
+      flex: 0 0 calc(40% - #{$flexgrid-gap * 2});
+    }
     @media screen and (min-width: $breakpoint-sm) {
       &:nth-child(6n - 2),
       &:nth-child(6n - 5) {

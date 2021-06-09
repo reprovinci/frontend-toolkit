@@ -255,43 +255,49 @@ img {
   }
 }
 
-.flexgrid-shuffle {
+.flexgrid-bricks {
   display: flex;
   flex-wrap: wrap;
   margin: -1em;
 }
-.flexgrid-shuffle > * {
+.flexgrid-bricks > * {
   flex: 1 1 100%;
   margin: 1em;
 }
 @media screen and (min-width: 500px) {
-  .flexgrid-shuffle > * {
+  .flexgrid-bricks > * {
     flex: 0 0 calc(50% - 2em);
   }
 }
-.flexgrid-shuffle._reverse {
+.flexgrid-bricks._reverse {
   flex-direction: row-reverse;
 }
-.flexgrid-shuffle._center {
+.flexgrid-bricks._center {
   justify-content: center;
 }
-.flexgrid-shuffle._flex-start {
+.flexgrid-bricks._flex-start {
   justify-content: flex-start;
 }
-.flexgrid-shuffle._flex-end {
+.flexgrid-bricks._flex-end {
   justify-content: flex-end;
 }
-.flexgrid-shuffle._space-around {
+.flexgrid-bricks._space-around {
   justify-content: space-around;
 }
-.flexgrid-shuffle._space-between {
+.flexgrid-bricks._space-between {
   justify-content: space-between;
 }
+.flexgrid-bricks > * {
+  flex: 0 0 calc(60% - 2em);
+}
+.flexgrid-bricks > *:nth-child(4n-1), .flexgrid-bricks > *:nth-child(4n-2) {
+  flex: 0 0 calc(40% - 2em);
+}
 @media screen and (min-width: 768px) {
-  .flexgrid-shuffle > *:nth-child(6n-2), .flexgrid-shuffle > *:nth-child(6n-5) {
+  .flexgrid-bricks > *:nth-child(6n-2), .flexgrid-bricks > *:nth-child(6n-5) {
     flex: 0 0 calc(66.6666% - 2em);
   }
-  .flexgrid-shuffle > *:nth-child(6n-3), .flexgrid-shuffle > *:nth-child(6n-4) {
+  .flexgrid-bricks > *:nth-child(6n-3), .flexgrid-bricks > *:nth-child(6n-4) {
     flex: 0 0 calc(33.3333% - 2em);
   }
 }
