@@ -1,4 +1,4 @@
-$flexgrid-gap: 1em;
+$flexgrid-gap: $space-md;
 
 @mixin flexgrid ($gap: $flexgrid-gap) {
   display: flex;
