@@ -1,15 +1,9 @@
 // spacing size definitions
-$space-xs: 0.3rem !default;
-$space-sm: 0.6rem !default;
-$space-md: 1rem !default;
-$space-lg: 2rem !default;
-$space-xl: 4rem !default;
-
-//$space-xs-rem: ($space-xs * 1rem) !default;
-//$space-sm-rem: ($space-sm * 1rem) !default;
-//$space-md-rem: ($space-md * 1rem) !default;
-//$space-lg-rem: ($space-lg * 1rem) !default;
-//$space-xl-rem: ($space-xl * 1rem) !default;
+$space-1: 0.3rem !default;
+$space-2: 0.6rem !default;
+$space-3: 1rem !default;
+$space-4: 2rem !default;
+$space-5: 4rem !default;
 
 // section spacing
 $section-margin: $space-lg !default; // the top & bottom margin for sections
@@ -17,9 +11,9 @@ $section-padding: $space-lg !default; // top & bottom padding for sections with 
 
 $spacers: (
   0: 0,
-  1: $space-xs,
-  2: $space-sm,
-  3: $space-md,
-  4: $space-lg,
-  5: $space-xl,
+  1: $space-1,
+  2: $space-2,
+  3: $space-3,
+  4: $space-4,
+  5: $space-5,
 );

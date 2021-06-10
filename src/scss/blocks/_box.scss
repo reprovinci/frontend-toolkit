@@ -1,4 +1,4 @@
-@mixin box($bgcolor: $color-soft, $color: $color-soft__text, $spacing: $space-lg) {
+@mixin box($bgcolor: $color-soft, $color: $color-soft__text, $spacing: $space-4) {
   background: $bgcolor;
   padding: $spacing;
   color: $color;
