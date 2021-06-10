@@ -1,0 +1,51 @@
+/**
+ *
+ * svg
+ * place icons before/after/in elements.
+ * common usage example: a.mylink { @include svg--after('arrow-right', 1em, .5em) }
+ * places the image arrow-right.svg in the background of an inline-block element after the a.mylink
+ * - the svg() places the icon in the background of the element itself
+ * - the svg--abs() places it in an absolute positioned after
+ *
+ */
+
+$svg__root: '../images' !default;
+
+@mixin svg($filename, $w:1em, $h:1em) {
+  background-image: url('#{$svg__root}/#{$filename}.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: $w;
+  height: $h;
+  display: block;
+  text-indent: -999em;
+}
+
+@mixin svg--before($filename, $w:1em, $h:1em, $margin: $space-sm, $align: middle) {
+  &::before {
+    @include svg($filename, $w, $h);
+    content: "";
+    display: inline-block;
+    margin-right: $margin;
+    vertical-align: $align;
+  }
+}
+
+@mixin svg--after($filename, $w:1em, $h:1em, $margin: $space-sm, $align: middle) {
+  &::after {
+    @include svg($filename, $w, $h);
+    content: "";
+    display: inline-block;
+    margin-left: $margin;
+    vertical-align: $align;
+  }
+}
+
+@mixin svg--abs($filename, $w:1em, $h:1em) {
+  &::after {
+    @include svg($filename, $w, $h);
+    content: "";
+    position: absolute;
+  }
+}
