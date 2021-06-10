@@ -4,17 +4,17 @@
 //
 
 // editable vars:
-$grid-columns: 24;
-$grid-width: $site-width;
-$grid-split-breakpoint: $breakpoint-sm;
-$grid-container-breakpoint: $breakpoint-md;
-$grid-container-pad: 0; // the columns to pad for the default container
-$grid-container-sm-pad: 2; // the columns to pad for the sm container
-$grid-container-xs-pad: 4; // the columns to pad for the xs container
+$grid-columns: 24 !default;
+$grid-width: $site-width !default;
+$grid-split-breakpoint: $breakpoint-sm !default;
+$grid-container-breakpoint: $breakpoint-md !default;
+$grid-container-pad: 0 !default; // the columns to pad for the default container
+$grid-container-sm-pad: 2 !default; // the columns to pad for the sm container
+$grid-container-xs-pad: 4 !default; // the columns to pad for the xs container
 
 // these vars need some care when changing: 1 needs to be flex, the other can be fixed
-$grid-padding: $site-padding;
-$grid-spacer: minmax(0, calc(50% - #{$grid-width} / 2 - #{$grid-padding}));
+$grid-padding: $site-padding !default;
+$grid-spacer: minmax(0, calc(50% - #{$grid-width} / 2 - #{$grid-padding})) !default;
 
 @mixin grid($columns: $grid-columns, $c1: $grid-padding, $c2: $grid-spacer) {
   display: grid;
