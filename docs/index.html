@@ -377,7 +377,26 @@ $h6-size: $font-size-md !default;
         <p><code>svg--before(img, width height)</code> places the icon inline before the element</p>
         <p><code>svg--abs(img, width, height)</code> places it in an absolute positioned after the element.</p>
         <p><code>svg(img, width height)</code> places the icon in the background of the element itself</p>
-        <h3>Root folder</h3>
+        <h3>The icon source</h3>
+        <p>The icon source can either be a base64 encoded string or an icon name. Some default icons are defined in _variables/</p>
         <p>The root folder the icons is by default ../images but can be set with the variable <code>$svg__root: '../images';</code></p>
+        <div class="flexgrid-4">
+            <div class="box">
+                <code>svg--before</code>
+                <p><span class="svg-demo--before">My Button!</span></p>
+            </div>
+            <div class="box">
+                <code>svg--after</code>
+                <p><span class="svg-demo--after">My Button!</span></p>
+            </div>
+            <div class="box">
+                <code>svg--abs</code>
+                <p><span class="svg-demo--abs">My Button!</span></p>
+            </div>
+            <div class="box">
+                <code>svg($rocket, 2em, 2em)</code>
+                <p><span class="svg-demo--main">My Button!</span></p>
+            </div>
+        </div>
     </div>
 </section>

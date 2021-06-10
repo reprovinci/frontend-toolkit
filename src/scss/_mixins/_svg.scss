@@ -12,7 +12,11 @@
 $svg__root: '../images' !default;
 
 @mixin svg($filename, $w:1em, $h:1em) {
-  background-image: url('#{$svg__root}/#{$filename}.svg');
+  @if (str-index($filename, 'data:')) {
+    background-image: url($filename);
+  } @else {
+    background-image: url('#{$svg__root}/#{$filename}.svg');
+  }
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -51,4 +55,17 @@ $svg__root: '../images' !default;
     content: "";
     position: absolute;
   }
+}
+
+.svg-demo--before {
+  @include svg--before($ic-rocket, 1.5em, 1.5em);
+}
+.svg-demo--after {
+  @include svg--after($ic-rocket, 1.5em, 1.5em);
+}
+.svg-demo--abs {
+  @include svg--abs($ic-rocket, 1.5em, 1.5em);
+}
+.svg-demo--main {
+  @include svg($ic-rocket, 3em, 3em);
 }
