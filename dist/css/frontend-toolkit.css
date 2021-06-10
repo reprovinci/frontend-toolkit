@@ -387,7 +387,7 @@ html {
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
-  font-size: clamp(14px, 1.6vw, 18px);
+  font-size: clamp(14px, 1.3671875vw, 18px);
 }
 
 ::selection {
