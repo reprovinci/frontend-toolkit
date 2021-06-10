@@ -5,4 +5,11 @@ tags:
 - page
 ---
 
-<h1>Test!</h1>
+<h1>Images</h1>
+{% include components/image.html %}
+{% include components/image.html, container_class: 'grid__container--sm' %}
+{% include components/image.html, container_class: 'grid__container--xs' %}
+
+<h1>Text-img</h1>
+{% include components/text-img.html %}
+
