@@ -8,3 +8,4 @@
 	console.log(message);
 
 }());
+//# sourceMappingURL=frontend-toolkit.js.map
