@@ -2,55 +2,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reprovinci Frontend Toolkit 🚀</title>
+  <title>Reprovinci Frontend Toolkit 🚲</title>
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/frontend-toolkit.css">
   <style type="text/css">
-      .section-header {
-          border-top: solid 1px #ccc;
-          padding-top: 1em;
-      }
+    .section-header {
+      border-top: solid 1px #ccc;
+      padding-top: 1em;
+    }
 
-      .space-block {
-          background: #ccc;
-          display: block;
-          width: 2em;
-      }
+    .space-block {
+      background: #ccc;
+      display: block;
+      width: 2em;
+    }
 
-      .colorset span {
-          width: 4em;
-          height: 4em;
-          border: solid 1px #ccc;
-          display: inline-block;
-          margin-right: .5em;
-      }
+    .colorset span {
+      width: 4em;
+      height: 4em;
+      border: solid 1px #ccc;
+      display: inline-block;
+      margin-right: .5em;
+    }
 
-      .colorset p {
-          display: flex;
-          align-items: center;
-      }
-      .index {
-        position: fixed;
-        top: 0;
-        right: calc(100% - 2em);
-        bottom: 0;
-        width: 250px;
-        transition: .2s ease-in-out;
-      }
-      .index:hover {
-        transform: translateX(calc(100% - 2em));
-      }
-      .index ul {
-        padding-left: 20px;
-      }
-      .index a {
-        text-decoration: none;
-      }
-      .index > div {
-        position: fixed;
-      }
-      html {
-        padding-left: 2em;
-      }
+    .colorset p {
+      display: flex;
+      align-items: center;
+    }
+
+    .index {
+      position: fixed;
+      top: 0;
+      right: calc(100% - 2em);
+      bottom: 0;
+      width: 250px;
+      transition: .2s ease-in-out;
+    }
+
+    .index:hover {
+      transform: translateX(calc(100% - 2em));
+    }
+
+    .index ul {
+      padding-left: 20px;
+    }
+
+    .index a {
+      text-decoration: none;
+    }
+
+    .index > div {
+      position: fixed;
+    }
+
+    html {
+      padding-left: 2em;
+    }
   </style>
 </head>
 <body>
@@ -62,31 +68,63 @@
   </div>
 </nav>
 <main class="py-xl">
-<header class="grid">
+  <header class="grid">
+    <div class="grid__container">
+      <h1>Reprovinci Frontend Toolkit 🚀</h1>
+      <p>The scaffolding we work with. It contains a responsive 24 column grid, setups for colors, typography, spacings and some prototyping classes. It is
+        <em>not</em> a full fledged css framework. It only contains some layout classes. It's the start of your own creativity 🎨
+      </p>
+    </div>
+  </header>
+
+  
+<h1>Images</h1>
+<div class="grid">
   <div class="grid__container">
-    <h1>Reprovinci Frontend Toolkit 🚀</h1>
-    <p>The scaffolding we work with. It contains a responsive 24 column grid, setups for colors, typography, spacings and some prototyping classes. It is
-      <em>not</em> a full fledged css framework. It only contains some layout classes. It's the start of your own creativity 🎨
-    </p>
+    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
   </div>
-</header>
+</div>
+
+<div class="grid">
+  <div class="grid__container--sm">
+    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
+  </div>
+</div>
+
+<div class="grid">
+  <div class="grid__container--xs">
+    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
+  </div>
+</div>
 
 
-<h1>Test!</h1>
+<h1>Text-img</h1>
+<div class="grid">
+  <div class="grid__left">
+    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
+  </div>
+  <div class="grid__right">
+    <h1>Home</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
+  </div>
+</div>
+
+
+
 </main>
 <script type="text/javascript">
   var sections = document.querySelectorAll('section[id]');
   var index = document.querySelector('nav.index ul');
   for (var i = sections.length - 1; i >= 0; i--) {
     var sectionId = sections[i].id;
-    var a = document.createElement('a'); 
+    var a = document.createElement('a');
     var text = document.createTextNode(sectionId);
-    a.appendChild(text); 
+    a.appendChild(text);
     a.href = "#" + sectionId;
     a.classList.add("color-white");
     var li = document.createElement('li');
     li.append(a);
-    index.prepend(li); 
+    index.prepend(li);
   }
 </script>
 </body>

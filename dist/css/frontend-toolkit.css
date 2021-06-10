@@ -1,3 +1,13 @@
+/**
+ *
+ * svg
+ * place icons before/after/in elements.
+ * common usage example: a.mylink { @include svg--after('arrow-right', 1em, .5em) }
+ * places the image arrow-right.svg in the background of an inline-block element after the a.mylink
+ * - the svg() places the icon in the background of the element itself
+ * - the svg--abs() places it in an absolute positioned after
+ *
+ */
 html {
   scroll-behavior: smooth;
 }
