@@ -86,41 +86,41 @@ $grid-spacer: minmax(0, calc(50% - #{$grid-width} / 2 - #{$grid-padding})) !defa
 .grid__left {
   @include grid-pos(1,24);
   @media screen and (min-width: $grid-split-breakpoint) {
-    @include grid-pos(1,12);
+    @include grid-pos(1,12,1,1);
   }
 }
 
 .grid__right {
   @include grid-pos(1,24);
   @media screen and (min-width: $grid-split-breakpoint) {
-    @include grid-pos(13,12);
+    @include grid-pos(13,12,1,1);
   }
 }
 
 .grid__left-extended {
   @include grid-pos(1,24);
   @media screen and (min-width: $grid-split-breakpoint) {
-    @include grid-abspos(2,13);
+    @include grid-abspos(2,13,1,1);
   }
 }
 
 .grid__right-extended {
   @include grid-pos(1,24);
   @media screen and (min-width: $grid-split-breakpoint) {
-    @include grid-pos(13,13);
+    @include grid-pos(13,13,1,1);
   }
 }
 
 .grid__left-full {
   @include grid-pos(1,24);
   @media screen and (min-width: $grid-split-breakpoint) {
-    @include grid-abspos(1,14);
+    @include grid-abspos(1,14,1,1);
   }
 }
 
 .grid__right-full {
   @include grid-pos(1,24);
   @media screen and (min-width: $grid-split-breakpoint) {
-    @include grid-pos(13,14);
+    @include grid-pos(13,14,1,1);
   }
 }

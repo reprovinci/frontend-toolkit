@@ -1,0 +1,68 @@
+<!-- Typography -->
+<section id="typography" class="section-margins grid">
+    <div class="grid__container">
+        <h2 class="section-header">Typography</h2>
+        <p>The typography is based on a scaling font size with a min and max size. By setting the variables <code>$font-size-min</code> and <code>$font-size-max</code> the html font will be the min font until breakpoint-md and the gradualy scale up to max size. This is done with clamp: <code>clamp(#{$font-size-min}, #{$font-size-scaling}, #{$font-size-max})</code>. Try scaling up and down this browser viewport and see the result.</p>
+        <h3>Text styles</h3>
+        <p>There 2 text stylings. UI text is the default. Used for text outside dedicated body copy. When needed, body copy placed inside a <code>.text</code> class can be styled differently from the UI type. By default they are the same.
+        <div class="flexgrid-2">
+            <div class="box">
+                <h2>Some text in the UI</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem aliquam.</p>
+            </div>
+            <div class="text box">
+                <h2>Some text as body copy</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem aliquam.</p>
+            </div>
+            <div class="box">
+                <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
+                <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
+                <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
+                <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
+                <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
+                <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
+            </div>
+            <div class="text box">
+                <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
+                <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
+                <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
+                <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
+                <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
+                <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
+            </div>
+        </div>
+        <h3>SCSS Variables</h3>
+        <pre>// type settings
+$font-family-base: sans-serif !default;
+$font-size-base: 18px !default; // px
+$font-size-min: round(($font-size-base * 0.777)) !default; // px
+$font-size-max: $font-size-base !default; // px
+
+// font size variations
+$font-size-sm: .85rem !default;
+$font-size-md: 1rem !default;
+$font-size-lg: 1.2rem !default;
+
+// line-height
+$line-height-base: 1.65 !default;
+$line-height-condensed: 1.2 !default;
+
+// headings
+// ratio base works out of the box, but change to your needs
+$headings-font: $font-family-base !default;
+$headings-font-weight: bold !default;
+$headings-line-height: $line-height-condensed !default;
+$headings__small-size: $font-size-sm !default;
+$headings__small-color: $color-primary !default;
+
+// heading sizes can be regular rem sizes
+// these defaults are are a ratio based on the line-height
+$h1-size: $font-size-md * $line-height-base * $line-height-base !default;
+$h2-size: $font-size-md * $line-height-base !default;
+$h3-size: $font-size-md * (1 + (($line-height-base - 1) / 2)) !default;
+$h4-size: $font-size-md !default;
+$h5-size: $font-size-md !default;
+$h6-size: $font-size-md !default;
+        </pre>
+    </div>
+</section>

@@ -27,7 +27,7 @@ $headings__small-size: $font-size-sm !default;
 $headings__small-color: $color-primary !default;
 
 // heading sizes can be regular rem sizes
-// these defaults are calculcated based on the line-height
+// these defaults are are a ratio based on the line-height
 $h1-size: $font-size-md * $line-height-base * $line-height-base !default;
 $h2-size: $font-size-md * $line-height-base !default;
 $h3-size: $font-size-md * (1 + (($line-height-base - 1) / 2)) !default;
