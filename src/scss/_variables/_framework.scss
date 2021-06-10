@@ -7,3 +7,11 @@ $breakpoint-sm: 768px !default;
 $breakpoint-xs: 500px !default;
 
 $breakpoint-nav: $breakpoint-md !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $breakpoint-xs,
+  md: $breakpoint-sm,
+  lg: $breakpoint-md,
+  xl: $breakpoint-lg
+) !default;

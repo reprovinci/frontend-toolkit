@@ -1,319 +1,70 @@
-// spacing classes.. mainly used for prototyping
-// based on bootstrap var naming
-
-// margin top
-.mt-xs {
-  margin-top: $space-xs !important;
-}
-
-.mt-sm {
-  margin-top: $space-sm !important;
-}
-
-.mt-md {
-  margin-top: $space-md !important;
-}
-
-.mt-lg {
-  margin-top: $space-lg !important;
-}
-
-.mt-xl {
-  margin-top: $space-xl !important;
-}
-
-// margin bottom
-.mb-xs {
-  margin-bottom: $space-xs !important;
-}
-
-.mb-sm {
-  margin-bottom: $space-sm !important;
-}
-
-.mb-md {
-  margin-bottom: $space-md !important;
-}
-
-.mb-lg {
-  margin-bottom: $space-lg !important;
-}
-
-.mb-xl {
-  margin-bottom: $space-xl !important;
-}
-
-// margin left
-.ml-xs {
-  margin-left: $space-xs !important;
-}
-
-.ml-sm {
-  margin-left: $space-sm !important;
-}
-
-.ml-md {
-  margin-left: $space-md !important;
-}
-
-.ml-lg {
-  margin-left: $space-lg !important;
-}
-
-.ml-xl {
-  margin-left: $space-xl !important;
-}
-
-// margin right
-.mr-xs {
-  margin-right: $space-xs !important;
-}
-
-.mr-sm {
-  margin-right: $space-sm !important;
-}
-
-.mr-md {
-  margin-right: $space-md !important;
-}
-
-.mr-lg {
-  margin-right: $space-lg !important;
-}
-
-.mr-xl {
-  margin-right: $space-xl !important;
-}
-
-// margin left+right
-.mx-xs {
-  margin-left: $space-xs !important;
-  margin-right: $space-xs !important;
-}
-
-.mx-sm {
-  margin-left: $space-sm !important;
-  margin-right: $space-sm !important;
-}
-
-.mx-md {
-  margin-left: $space-md !important;
-  margin-right: $space-md !important;
-}
-
-.mx-lg {
-  margin-left: $space-lg !important;
-  margin-right: $space-lg !important;
-}
-
-.mx-xl {
-  margin-left: $space-xl !important;
-  margin-right: $space-xl !important;
-}
-
-// margin top+bottom
-.my-xs {
-  margin-top: $space-xs !important;
-  margin-bottom: $space-xs !important;
-}
-
-.my-sm {
-  margin-top: $space-sm !important;
-  margin-bottom: $space-sm !important;
-}
-
-.my-md {
-  margin-top: $space-md !important;
-  margin-bottom: $space-md !important;
-}
-
-.my-lg {
-  margin-top: $space-lg !important;
-  margin-bottom: $space-lg !important;
-}
-
-.my-xl {
-  margin-top: $space-xl !important;
-  margin-bottom: $space-xl !important;
-}
-
-// margin all sides
-.m-xs {
-  margin: $space-xs !important;
-}
-
-.m-sm {
-  margin: $space-sm !important;
-}
-
-.m-md {
-  margin: $space-md !important;
-}
-
-.m-lg {
-  margin: $space-lg !important;
-}
-
-.m-xl {
-  margin: $space-xl !important;
-}
-
-// padding classes.. mainly used for prototyping
-// based on bootstrap var naming
-
-// padding top
-.pt-xs {
-  padding-top: $space-xs !important;
-}
-
-.pt-sm {
-  padding-top: $space-sm !important;
-}
-
-.pt-md {
-  padding-top: $space-md !important;
-}
-
-.pt-lg {
-  padding-top: $space-lg !important;
-}
-
-.pt-xl {
-  padding-top: $space-xl !important;
-}
-
-// padding bottom
-.pb-xs {
-  padding-bottom: $space-xs !important;
-}
-
-.pb-sm {
-  padding-bottom: $space-sm !important;
-}
-
-.pb-md {
-  padding-bottom: $space-md !important;
-}
-
-.pb-lg {
-  padding-bottom: $space-lg !important;
-}
-
-.pb-xl {
-  padding-bottom: $space-xl !important;
-}
-
-// padding left
-.pl-xs {
-  padding-left: $space-xs !important;
-}
-
-.pl-sm {
-  padding-left: $space-sm !important;
-}
-
-.pl-md {
-  padding-left: $space-md !important;
-}
-
-.pl-lg {
-  padding-left: $space-lg !important;
-}
-
-.pl-xl {
-  padding-left: $space-xl !important;
-}
-
-// padding right
-.pr-xs {
-  padding-right: $space-xs !important;
-}
-
-.pr-sm {
-  padding-right: $space-sm !important;
-}
-
-.pr-md {
-  padding-right: $space-md !important;
-}
-
-.pr-lg {
-  padding-right: $space-lg !important;
-}
-
-.pr-xl {
-  padding-right: $space-xl !important;
-}
-
-// padding left+right
-.px-xs {
-  padding-left: $space-xs !important;
-  padding-right: $space-xs !important;
-}
-
-.px-sm {
-  padding-left: $space-sm !important;
-  padding-right: $space-sm !important;
-}
-
-.px-md {
-  padding-left: $space-md !important;
-  padding-right: $space-md !important;
-}
-
-.px-lg {
-  padding-left: $space-lg !important;
-  padding-right: $space-lg !important;
-}
-
-.px-xl {
-  padding-left: $space-xl !important;
-  padding-right: $space-xl !important;
-}
-
-// padding top+bottom
-.py-xs {
-  padding-top: $space-xs !important;
-  padding-bottom: $space-xs !important;
-}
-
-.py-sm {
-  padding-top: $space-sm !important;
-  padding-bottom: $space-sm !important;
-}
-
-.py-md {
-  padding-top: $space-md !important;
-  padding-bottom: $space-md !important;
-}
-
-.py-lg {
-  padding-top: $space-lg !important;
-  padding-bottom: $space-lg !important;
-}
-
-.py-xl {
-  padding-top: $space-xl !important;
-  padding-bottom: $space-xl !important;
-}
-
-// padding all sides
-.p-xs {
-  padding: $space-xs !important;
-}
-
-.p-sm {
-  padding: $space-sm !important;
-}
-
-.p-md {
-  padding: $space-md !important;
-}
-
-.p-lg {
-  padding: $space-lg !important;
-}
-
-.p-xl {
-  padding: $space-xl !important;
+// Margin and Padding
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+
+    // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+    @each $size, $length in $spacers {
+      @if $size != 0 {
+        .m#{$infix}-n#{$size} { margin: -$length !important; }
+        .mt#{$infix}-n#{$size},
+        .my#{$infix}-n#{$size} {
+          margin-top: -$length !important;
+        }
+        .mr#{$infix}-n#{$size},
+        .mx#{$infix}-n#{$size} {
+          margin-right: -$length !important;
+        }
+        .mb#{$infix}-n#{$size},
+        .my#{$infix}-n#{$size} {
+          margin-bottom: -$length !important;
+        }
+        .ml#{$infix}-n#{$size},
+        .mx#{$infix}-n#{$size} {
+          margin-left: -$length !important;
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m#{$infix}-auto { margin: auto !important; }
+    .mt#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-top: auto !important;
+    }
+    .mr#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-right: auto !important;
+    }
+    .mb#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-bottom: auto !important;
+    }
+    .ml#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-left: auto !important;
+    }
+  }
 }

@@ -12,5 +12,14 @@ $space-lg-rem: ($space-lg * 1rem) !default;
 $space-xl-rem: ($space-xl * 1rem) !default;
 
 // section spacing
-$section-margin: $space-lg !default;  // the top & bottom margin for sections
+$section-margin: $space-lg !default; // the top & bottom margin for sections
 $section-padding: $space-lg !default; // top & bottom padding for sections with color bg
+
+$spacers: (
+  0: 0,
+  1: $space-xs,
+  2: $space-sm,
+  3: $space-md,
+  4: $space-lg,
+  5: $space-xl,
+)
