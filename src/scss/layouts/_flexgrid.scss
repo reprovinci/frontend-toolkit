@@ -67,8 +67,10 @@ $flexgrid-gap: $space-md;
 
 .flexgrid-bricks {
   @include flexgrid;
+
   > * {
     flex: 0 0 calc(60% - #{$flexgrid-gap * 2});
+
     &:nth-child(4n - 1),
     &:nth-child(4n - 2) {
       flex: 0 0 calc(40% - #{$flexgrid-gap * 2});
@@ -78,6 +80,7 @@ $flexgrid-gap: $space-md;
       &:nth-child(6n - 5) {
         flex: 0 0 calc(66.6666% - #{$flexgrid-gap * 2});
       }
+
       &:nth-child(6n - 3),
       &:nth-child(6n - 4) {
         flex: 0 0 calc(33.3333% - #{$flexgrid-gap * 2});

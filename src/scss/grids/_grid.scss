@@ -74,6 +74,7 @@ $grid-spacer: minmax(0, calc(50% - #{$grid-width} / 2 - #{$grid-padding}));
     @include grid-pos((1 + $grid-container-sm-pad), ($grid-columns - $grid-container-sm-pad - $grid-container-sm-pad));
   }
 }
+
 .grid__container--xs {
   // slightly smaller container
   @include grid-pos(1,24);

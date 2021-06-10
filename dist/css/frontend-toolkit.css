@@ -384,7 +384,7 @@ h5 small,
 h6 small {
   font-size: 0.85rem;
   display: block;
-  color: #1D5566;
+  color: #1d5566;
 }
 
 h1,
@@ -425,13 +425,13 @@ h6,
 }
 
 .box--loud {
-  background: #1D5566;
+  background: #1d5566;
   padding: 2rem;
   color: #fff;
 }
 
 .box--primary {
-  background: #1D5566;
+  background: #1d5566;
   padding: 2rem;
   color: #fff;
 }
@@ -443,27 +443,27 @@ h6,
 }
 
 .color-green {
-  color: #6B7516;
+  color: #6b7516;
 }
 
 .bg-green {
-  background-color: #6B7516;
+  background-color: #6b7516;
 }
 
 .border-color-green {
-  border-color: #6B7516;
+  border-color: #6b7516;
 }
 
 .color-blue {
-  color: #1D5566;
+  color: #1d5566;
 }
 
 .bg-blue {
-  background-color: #1D5566;
+  background-color: #1d5566;
 }
 
 .border-color-blue {
-  border-color: #1D5566;
+  border-color: #1d5566;
 }
 
 .color-white {
@@ -551,39 +551,39 @@ h6,
 }
 
 .color-primary {
-  color: #1D5566;
+  color: #1d5566;
 }
 
 .bg-primary {
-  background-color: #1D5566;
+  background-color: #1d5566;
 }
 
 .border-color-primary {
-  border-color: #1D5566;
+  border-color: #1d5566;
 }
 
 .color-secondary {
-  color: #6B7516;
+  color: #6b7516;
 }
 
 .bg-secondary {
-  background-color: #6B7516;
+  background-color: #6b7516;
 }
 
 .border-color-secondary {
-  border-color: #6B7516;
+  border-color: #6b7516;
 }
 
 .color-loud {
-  color: #1D5566;
+  color: #1d5566;
 }
 
 .bg-loud {
-  background-color: #1D5566;
+  background-color: #1d5566;
 }
 
 .border-color-loud {
-  border-color: #1D5566;
+  border-color: #1d5566;
 }
 
 .color-soft {

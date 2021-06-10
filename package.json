@@ -4,15 +4,17 @@
   "description": "Frontend toolkit. Framework classes, grid, typography/colors/spacing setup.. the scaffolding we start with. 🚀",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel eleventy sass",
-    "eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "deploy": "npm-run-all prod:sass prod:eleventy gh-pages",
+    "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "dev:sass": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --watch",
+    "dev:rollup": "rollup -c -w",
+    "gh-pages": "gh-pages -d _site",
+    "lint": "npm-run-all lint:*",
+    "lint:stylelint": "stylelint \"src/**/*.{css,scss}\" --fix --cache --cache-location .cache/.stylelintcache --rd",
+    "lint:eslint": "eslint src/js/*",
     "prod:eleventy": "ELEVENTY_ENV=production eleventy",
     "prod:sass": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --no-source-map",
-    "sass": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --watch",
-    "lint": "npm-run-all stylelint",
-    "stylelint": "stylelint \"src/**/*.{css,scss}\" --fix --cache --cache-location .cache/.stylelintcache --rd",
-    "deploy": "npm-run-all prod:sass prod:eleventy gh-pages",
-    "gh-pages": "gh-pages -d _site"
+    "start": "npm-run-all --parallel dev:*"
   },
   "repository": {
     "type": "git",
@@ -53,5 +55,10 @@
     "sass": "^1.32.12",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
   }
 }

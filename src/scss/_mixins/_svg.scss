@@ -25,6 +25,7 @@ $svg__root: '../images' !default;
 @mixin svg--before($filename, $w:1em, $h:1em, $margin: $space-sm, $align: middle) {
   &::before {
     @include svg($filename, $w, $h);
+
     content: "";
     display: inline-block;
     margin-right: $margin;
@@ -35,6 +36,7 @@ $svg__root: '../images' !default;
 @mixin svg--after($filename, $w:1em, $h:1em, $margin: $space-sm, $align: middle) {
   &::after {
     @include svg($filename, $w, $h);
+
     content: "";
     display: inline-block;
     margin-left: $margin;
@@ -45,6 +47,7 @@ $svg__root: '../images' !default;
 @mixin svg--abs($filename, $w:1em, $h:1em) {
   &::after {
     @include svg($filename, $w, $h);
+
     content: "";
     position: absolute;
   }
