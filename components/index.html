@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Componenten</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/frontend-toolkit.css">
   <style type="text/css">
@@ -57,7 +57,7 @@
 
     .index__rocket {
       position: absolute;
-      top:  .5em;
+      top: .5em;
       right: .3em;
       width: 1.5em;
       height: auto;
@@ -74,17 +74,13 @@
   <div>
     <div class="index__pages">
       <div class="h3 color-white">Toolkit pages</div>
-      <ul class="color-white" style="padding-left:20px;">
-        <li>
-          <a class="color-white" href="/frontend-toolkit">Start</a>
-        </li>
-        <li>
-          <a class="color-white" href="/frontend-toolkit/docs">Docs</a>
-        </li>
-        <li>
-          <a class="color-white" href="/frontend-toolkit/components">Components</a>
-        </li>
-      </ul>
+      <ul class="color-white" style="padding-left:20px;"><li >
+          <a class="color-white" href="/frontend-toolkit/">Start</a>
+        </li><li >
+          <a class="color-white" href="/frontend-toolkit/docs/">Docs</a>
+        </li><li  aria-current="page" >
+          <a class="color-white" href="/frontend-toolkit/components/">Componenten</a>
+        </li></ul>
     </div>
     <div class="index__sections">
       <div class="h3 color-white">Page index</div>
@@ -94,7 +90,6 @@
 </nav>
 
 <main class="my-5">
-
   <section id="Single image" class="bg-gray py-4 grid">
     <h1 class="grid__container">Single image</h1>
     <div class="grid__full bg-white">
@@ -128,7 +123,7 @@
 
     </div>
   </section>
-  
+
   <section id="Text + image" class="bg-gray py-4 grid">
     <h1 class="grid__container">Text + image</h1>
     <div class="grid__full bg-white">
@@ -139,7 +134,7 @@
   </figure>
   <div class="grid__right">
     <div class="pl-md-5">
-      <h1>Home</h1>
+      <h1>Componenten</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
       <a href="#" class="btn">
         Lees verder
@@ -155,7 +150,7 @@
   </figure>
   <div class="grid__left">
     <div class="pl-md-5">
-      <h1>Home</h1>
+      <h1>Componenten</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
       <a href="#" class="btn">
         Lees verder
@@ -171,7 +166,7 @@
   </figure>
   <div class="grid__right">
     <div class="pl-md-5">
-      <h1>Home</h1>
+      <h1>Componenten</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
       <a href="#" class="btn">
         Lees verder
@@ -187,7 +182,7 @@
   </figure>
   <div class="grid__left">
     <div class="pl-md-5">
-      <h1>Home</h1>
+      <h1>Componenten</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
       <a href="#" class="btn">
         Lees verder
@@ -195,11 +190,37 @@
     </div>
   </div>
 </section>
-      
+
     </div>
   </section>
-  
 
+  <section id="Swiper" class="bg-gray py-4 grid">
+    <h1 class="grid__container">Swiper</h1>
+    <div class="grid__full bg-white">
+      <!-- image -->
+<div class="grid section-margins">
+  <div class="grid__container">
+    <div class="js-swiper ">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
 </main>
 
 <script type="text/javascript">
@@ -214,12 +235,13 @@
     var a = document.createElement('a');
     var text = document.createTextNode(sectionId);
     a.appendChild(text);
-    a.href = "#" + sectionId;
-    a.classList.add("color-white");
+    a.href = '#' + sectionId;
+    a.classList.add('color-white');
     var li = document.createElement('li');
     li.append(a);
     index.prepend(li);
   }
 </script>
+<script src="/frontend-toolkit/dist/js/frontend-toolkit.js"></script>
 </body>
 </html>
