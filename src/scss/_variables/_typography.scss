@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // text
 $font-family-base: sans-serif !default;
 $font-size-base: 18px !default; // px
@@ -5,7 +7,7 @@ $font-size-base: 18px !default; // px
 // calculated by default, but overwrite when needed
 // the scaling calculation starts scaling up on $breakpoint-md
 $font-size-min: round(($font-size-base * 0.777)) !default; // px
-$font-size-scaling: ($font-size-min / $breakpoint-md * 100 * 1vw) !default; // vw
+$font-size-scaling: (math.div($font-size-min, $breakpoint-md) * 100 * 1vw) !default; // vw
 $font-size-max: $font-size-base !default; // px
 $font-size-html: clamp(#{$font-size-min}, #{$font-size-scaling}, #{$font-size-max}) !default; // the html font size is variable
 
@@ -30,7 +32,7 @@ $headings__small-color: $color-primary !default;
 // these defaults are are a ratio based on the line-height
 $h1-size: $font-size-md * $line-height-base * $line-height-base !default;
 $h2-size: $font-size-md * $line-height-base !default;
-$h3-size: $font-size-md * (1 + (($line-height-base - 1) / 2)) !default;
+$h3-size: $font-size-md * (1 + (math.div($line-height-base - 1, 2))) !default;
 $h4-size: $font-size-md !default;
 $h5-size: $font-size-md !default;
 $h6-size: $font-size-md !default;
