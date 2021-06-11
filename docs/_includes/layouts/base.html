@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
-  <link rel="stylesheet" href="{{ "/dist/css/frontend-toolkit.css" | url }}">
+  <link rel="stylesheet" href="{{ '/dist/css/frontend-toolkit.css' | url }}">
   <style type="text/css">
     .section-header {
       border-top: solid 1px #ccc;
@@ -57,7 +57,7 @@
 
     .index__rocket {
       position: absolute;
-      top:  .5em;
+      top: .5em;
       right: .3em;
       width: 1.5em;
       height: auto;
@@ -75,15 +75,11 @@
     <div class="index__pages">
       <div class="h3 color-white">Toolkit pages</div>
       <ul class="color-white" style="padding-left:20px;">
-        <li>
-          <a class="color-white" href="/frontend-toolkit">Start</a>
+        {%- for post in collections.nav -%}
+        <li {% if page.url== post.url %} aria-current="page" {% endif %}>
+          <a class="color-white" href="{{ post.url | url }}">{{ post.data.title }}</a>
         </li>
-        <li>
-          <a class="color-white" href="/frontend-toolkit/docs">Docs</a>
-        </li>
-        <li>
-          <a class="color-white" href="/frontend-toolkit/components">Components</a>
-        </li>
+        {%- endfor -%}
       </ul>
     </div>
     <div class="index__sections">
@@ -105,12 +101,13 @@
     var a = document.createElement('a');
     var text = document.createTextNode(sectionId);
     a.appendChild(text);
-    a.href = "#" + sectionId;
-    a.classList.add("color-white");
+    a.href = '#' + sectionId;
+    a.classList.add('color-white');
     var li = document.createElement('li');
     li.append(a);
     index.prepend(li);
   }
 </script>
+<script src="{{ '/dist/js/frontend-toolkit.js' | url }}"></script>
 </body>
 </html>

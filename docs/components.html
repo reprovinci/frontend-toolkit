@@ -1,12 +1,12 @@
 ---
 layout: layouts/base.html
-title: Home
+title: Componenten
+order: 20
 tags:
-- page
+- menu
 ---
 
 <main class="my-5">
-
   <section id="Single image" class="bg-gray py-4 grid">
     <h1 class="grid__container">Single image</h1>
     <div class="grid__full bg-white">
@@ -16,16 +16,21 @@ tags:
       {% include components/image.html, container_class: 'grid__container--xs' %}
     </div>
   </section>
-  
+
   <section id="Text + image" class="bg-gray py-4 grid">
     <h1 class="grid__container">Text + image</h1>
     <div class="grid__full bg-white">
       {% include components/text-img.html %}
       {% include components/text-img.html, text_class: 'grid__left', image_class: 'grid__right' %}
       {% include components/text-img.html, text_class: 'grid__right', image_class: 'grid__left-extended' %}
-      {% include components/text-img.html, text_class: 'grid__left', image_class: 'grid__right-extended' %}      
+      {% include components/text-img.html, text_class: 'grid__left', image_class: 'grid__right-extended' %}
     </div>
   </section>
-  
 
+  <section id="Swiper" class="bg-gray py-4 grid">
+    <h1 class="grid__container">Swiper</h1>
+    <div class="grid__full bg-white">
+      {% include components/swiper.html %}
+    </div>
+  </section>
 </main>

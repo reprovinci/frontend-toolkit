@@ -5,9 +5,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("dist");
     eleventyConfig.setUseGitIgnore(false);
 
-    // eleventyConfig.addCollection("nav", function(collection) {
-    //     return collection.getFilteredByTag("menu").sort((a, b) => a.data.order - b.data.order);
-    // });
+    eleventyConfig.addCollection('nav', function (collection) {
+      return collection.getFilteredByTag('menu')
+        .sort((a, b) => a.data.order - b.data.order);
+    });
 
     return {
         pathPrefix: "/frontend-toolkit",

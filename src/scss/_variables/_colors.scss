@@ -1,6 +1,6 @@
 // color-definitions
 $color-green: #6b7516 !default; // dummy color, not really used, define colors in project
-$color-blue: #1d5566 !default;  // dummy color, not really used, define colors in project
+$color-blue: #1d5566 !default; // dummy color, not really used, define colors in project
 
 // grayscale colors
 $color-white: #fff !default;
@@ -30,3 +30,20 @@ $color-soft__headings: $font-color !default;
 // text color on primary colored backgrounds
 $color-primary__text: #fff !default;
 $color-primary__headings: #fff !default;
+
+
+$theme-colors: (
+  'black': $color-black,
+  'blue': $color-blue,
+  'gray': $color-gray,
+  'gray-dark': $color-gray-dark,
+  'gray-extra-dark': $color-gray-extra-dark,
+  'gray-extra-light': $color-gray-extra-light,
+  'gray-light': $color-gray-light,
+  'green': $color-green,
+  'loud': $color-loud,
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'soft': $color-soft,
+  'white': $color-white,
+) !default;

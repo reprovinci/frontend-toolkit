@@ -6,8 +6,8 @@
 // editable vars:
 $grid-columns: 24 !default;
 $grid-width: $site-width !default;
-$grid-split-breakpoint: $breakpoint-sm !default;
-$grid-container-breakpoint: $breakpoint-md !default;
+$grid-split-breakpoint: map-get($grid-breakpoints, 'sm') !default;
+$grid-container-breakpoint: map-get($grid-breakpoints, 'sm') !default;
 $grid-container-pad: 0 !default; // the columns to pad for the default container
 $grid-container-sm-pad: 2 !default; // the columns to pad for the sm container
 $grid-container-xs-pad: 4 !default; // the columns to pad for the xs container

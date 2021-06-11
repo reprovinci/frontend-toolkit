@@ -7,7 +7,7 @@ $font-size-base: 18px !default; // px
 // calculated by default, but overwrite when needed
 // the scaling calculation starts scaling up on $breakpoint-md
 $font-size-min: round(($font-size-base * 0.777)) !default; // px
-$font-size-scaling: (math.div($font-size-min, $breakpoint-md) * 100 * 1vw) !default; // vw
+$font-size-scaling: (math.div($font-size-min, map-get($grid-breakpoints, 'md')) * 100 * 1vw) !default; // vw
 $font-size-max: $font-size-base !default; // px
 $font-size-html: clamp(#{$font-size-min}, #{$font-size-scaling}, #{$font-size-max}) !default; // the html font size is variable
 

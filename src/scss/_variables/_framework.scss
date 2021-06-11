@@ -1,17 +1,12 @@
 $site-width: 1200px !default;
 $site-padding: 1rem !default;
 
-$breakpoint-lg: 1650px !default;
-$breakpoint-md: 1024px !default;
-$breakpoint-sm: 768px !default;
-$breakpoint-xs: 500px !default;
-
-$breakpoint-nav: $breakpoint-md !default;
+$breakpoint-nav: 992px !default;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: $breakpoint-xs,
-  md: $breakpoint-sm,
-  lg: $breakpoint-md,
-  xl: $breakpoint-lg
+  sm: 500px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1650px
 ) !default;
