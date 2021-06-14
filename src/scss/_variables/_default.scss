@@ -1,0 +1,199 @@
+@use "sass:math";
+
+/**
+ *
+ * framework
+ *
+ */
+
+$site-width: 1200px !default;
+$site-padding: 1rem !default;
+
+$breakpoint-nav: 992px !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 500px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1650px
+) !default;
+
+
+/**
+ *
+ * Colors
+ *
+ */
+
+// color-definitions
+$color-green: #6b7516 !default; // dummy color, not really used, define colors in project
+$color-blue: #1d5566 !default; // dummy color, not really used, define colors in project
+
+// grayscale colors
+$color-white: #fff !default;
+$color-black: #333 !default;
+$color-gray-extra-light: #f3f3f3 !default;
+$color-gray-light: #ddd !default;
+$color-gray: #aaa !default;
+$color-gray-dark: #888 !default;
+$color-gray-extra-dark: #444 !default;
+
+// color applications
+$body-bg: $color-white !default;
+$font-color: $color-black !default;
+$color-primary: $color-blue !default;
+$color-secondary: $color-green !default;
+
+// color loud, for loud attention backgrounds
+$color-loud: $color-primary !default;
+$color-loud__text: #fff !default;
+$color-loud__headings: #fff !default;
+
+// color soft, for soft backgrounds
+$color-soft: #f3f3f3 !default;
+$color-soft__text: $font-color !default;
+$color-soft__headings: $font-color !default;
+
+// text color on primary colored backgrounds
+$color-primary__text: #fff !default;
+$color-primary__headings: #fff !default;
+
+// text color on secondary colored backgrounds
+$color-secondary__text: #fff !default;
+$color-secondary__headings: #fff !default;
+
+
+$theme-colors: (
+  'black': $color-black,
+  'blue': $color-blue,
+  'gray': $color-gray,
+  'gray-dark': $color-gray-dark,
+  'gray-extra-dark': $color-gray-extra-dark,
+  'gray-extra-light': $color-gray-extra-light,
+  'gray-light': $color-gray-light,
+  'green': $color-green,
+  'loud': $color-loud,
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'soft': $color-soft,
+  'white': $color-white,
+) !default;
+
+
+/**
+ *
+ * Typography
+ *
+ */
+
+// text
+$font-family-base: sans-serif !default;
+$font-size-base: 18px !default; // px
+// the font scaling setup
+// calculated by default, but overwrite when needed
+// the scaling calculation starts scaling up on $breakpoint-lg
+$font-size-min: round(($font-size-base * 0.777)) !default; // px
+$font-size-scaling: (math.div($font-size-min, map-get($grid-breakpoints, 'lg')) * 100 * 1vw) !default; // vw
+$font-size-max: $font-size-base !default; // px
+$font-size-html: clamp(#{$font-size-min}, #{$font-size-scaling}, #{$font-size-max}) !default; // the html font size is variable
+
+// font size variations
+$font-size-sm: .85rem !default;
+$font-size-md: 1rem !default;
+$font-size-lg: 1.2rem !default;
+
+// line-height
+$line-height-base: 1.65 !default;
+$line-height-condensed: 1.2 !default;
+
+// headings
+// ratio base works out of the box, but change to your needs
+$headings-font: $font-family-base !default;
+$headings-font-weight: bold !default;
+$headings-line-height: $line-height-condensed !default;
+// "headings__small" as in: <h1>My main title <small>some small subtitle</small></h1>
+$headings__small-size: $font-size-sm !default;
+$headings__small-color: inherit !default;
+
+// heading sizes can be regular rem sizes
+// these defaults are are a ratio based on the line-height
+$h1-size: $font-size-md * $line-height-base * $line-height-base !default;
+$h2-size: $font-size-md * $line-height-base !default;
+$h3-size: $font-size-md * (1 + (math.div($line-height-base - 1, 2))) !default;
+$h4-size: $font-size-md !default;
+$h5-size: $font-size-md !default;
+$h6-size: $font-size-md !default;
+
+// links in .text
+$link-decoration: none !default;
+$link-color: $color-secondary !default;
+$link-hover-decoration: underline !default;
+$link-hover-color: lighten($color-secondary, 10%) !default;
+
+/**
+ *
+ * Borders
+ *
+ */
+
+// default borders
+$border-color: $color-gray-light !default;
+$border-width: 1px !default;
+$border-type: solid !default;
+$border: $border-type $border-width $border-color !default;
+
+
+/**
+ *
+ * Spacings
+ *
+ */
+
+// spacing size definitions
+$space-1: 0.3rem !default;
+$space-2: 0.6rem !default;
+$space-3: 1rem !default;
+$space-4: 2rem !default;
+$space-5: 4rem !default;
+
+// section spacing
+$section-margin: $space-5 !default; // the top & bottom margin for sections
+$section-padding: $space-5 !default; // top & bottom padding for sections with color bg
+
+$spacers: (
+  0: 0,
+  1: $space-1,
+  2: $space-2,
+  3: $space-3,
+  4: $space-4,
+  5: $space-5,
+);
+
+
+/**
+ *
+ * Icons
+ *
+ */
+
+// some icons to work with.
+// overwrite with your own
+// the svg mixin also works with icons from an icon folder.
+
+// arrows
+$ic-arrow-left: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0yMCAxMUg3LjgzbDUuNTktNS41OUwxMiA0bC04IDggOCA4IDEuNDEtMS40MUw3LjgzIDEzSDIwdi0yeiIvPgo8L3N2Zz4K' !default;
+$ic-arrow-right: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KICAgIDxwYXRoIGQ9Ik0xMiA0bC0xLjQxIDEuNDFMMTYuMTcgMTFINHYyaDEyLjE3bC01LjU4IDUuNTlMMTIgMjBsOC04eiIvPgo8L3N2Zz4K' !default;
+$ic-arrow-up: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMFYweiIvPgogICAgPHBhdGggZD0iTTQgMTJsMS40MSAxLjQxTDExIDcuODNWMjBoMlY3LjgzbDUuNTggNS41OUwyMCAxMmwtOC04LTggOHoiLz4KPC9zdmc+Cg==' !default;
+$ic-arrow-down: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMFYweiIvPgogICAgPHBhdGggZmlsbD0iIzAxMDEwMSIgZD0iTTIwIDEybC0xLjQxLTEuNDFMMTMgMTYuMTdWNGgtMnYxMi4xN2wtNS41OC01LjU5TDQgMTJsOCA4IDgtOHoiLz4KPC9zdmc+Cg==' !default;
+
+// brands
+$ic-facebook: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBkPSJNNDQ4IDU2Ljd2Mzk4LjVjMCAxMy43LTExLjEgMjQuNy0yNC43IDI0LjdIMzA5LjFWMzA2LjVoNTguMmw4LjctNjcuNmgtNjd2LTQzLjJjMC0xOS42IDUuNC0zMi45IDMzLjUtMzIuOWgzNS44di02MC41Yy02LjItLjgtMjcuNC0yLjctNTIuMi0yLjctNTEuNiAwLTg3IDMxLjUtODcgODkuNHY0OS45aC01OC40djY3LjZoNTguNFY0ODBIMjQuN0MxMS4xIDQ4MCAwIDQ2OC45IDAgNDU1LjNWNTYuN0MwIDQzLjEgMTEuMSAzMiAyNC43IDMyaDM5OC41YzEzLjcgMCAyNC44IDExLjEgMjQuOCAyNC43eiIvPjwvc3ZnPg==' !default;
+$ic-twitter: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNNDU5LjM3IDE1MS43MTZjLjMyNSA0LjU0OC4zMjUgOS4wOTcuMzI1IDEzLjY0NSAwIDEzOC43Mi0xMDUuNTgzIDI5OC41NTgtMjk4LjU1OCAyOTguNTU4LTU5LjQ1MiAwLTExNC42OC0xNy4yMTktMTYxLjEzNy00Ny4xMDYgOC40NDcuOTc0IDE2LjU2OCAxLjI5OSAyNS4zNCAxLjI5OSA0OS4wNTUgMCA5NC4yMTMtMTYuNTY4IDEzMC4yNzQtNDQuODMyLTQ2LjEzMi0uOTc1LTg0Ljc5Mi0zMS4xODgtOTguMTEyLTcyLjc3MiA2LjQ5OC45NzQgMTIuOTk1IDEuNjI0IDE5LjgxOCAxLjYyNCA5LjQyMSAwIDE4Ljg0My0xLjMgMjcuNjE0LTMuNTczLTQ4LjA4MS05Ljc0Ny04NC4xNDMtNTEuOTgtODQuMTQzLTEwMi45ODV2LTEuMjk5YzEzLjk2OSA3Ljc5NyAzMC4yMTQgMTIuNjcgNDcuNDMxIDEzLjMxOS0yOC4yNjQtMTguODQzLTQ2Ljc4MS01MS4wMDUtNDYuNzgxLTg3LjM5MSAwLTE5LjQ5MiA1LjE5Ny0zNy4zNiAxNC4yOTQtNTIuOTU0IDUxLjY1NSA2My42NzUgMTI5LjMgMTA1LjI1OCAyMTYuMzY1IDEwOS44MDctMS42MjQtNy43OTctMi41OTktMTUuOTE4LTIuNTk5LTI0LjA0IDAtNTcuODI4IDQ2Ljc4Mi0xMDQuOTM0IDEwNC45MzQtMTA0LjkzNCAzMC4yMTMgMCA1Ny41MDIgMTIuNjcgNzYuNjcgMzMuMTM3IDIzLjcxNS00LjU0OCA0Ni40NTYtMTMuMzIgNjYuNTk5LTI1LjM0LTcuNzk4IDI0LjM2Ni0yNC4zNjYgNDQuODMzLTQ2LjEzMiA1Ny44MjcgMjEuMTE3LTIuMjczIDQxLjU4NC04LjEyMiA2MC40MjYtMTYuMjQzLTE0LjI5MiAyMC43OTEtMzIuMTYxIDM5LjMwOC01Mi42MjggNTQuMjUzeiIvPjwvc3ZnPg==' !default;
+$ic-linkedin: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBkPSJNNDE2IDMySDMxLjlDMTQuMyAzMiAwIDQ2LjUgMCA2NC4zdjM4My40QzAgNDY1LjUgMTQuMyA0ODAgMzEuOSA0ODBINDE2YzE3LjYgMCAzMi0xNC41IDMyLTMyLjNWNjQuM2MwLTE3LjgtMTQuNC0zMi4zLTMyLTMyLjN6TTEzNS40IDQxNkg2OVYyMDIuMmg2Ni41VjQxNnptLTMzLjItMjQzYy0yMS4zIDAtMzguNS0xNy4zLTM4LjUtMzguNVM4MC45IDk2IDEwMi4yIDk2YzIxLjIgMCAzOC41IDE3LjMgMzguNSAzOC41IDAgMjEuMy0xNy4yIDM4LjUtMzguNSAzOC41em0yODIuMSAyNDNoLTY2LjRWMzEyYzAtMjQuOC0uNS01Ni43LTM0LjUtNTYuNy0zNC42IDAtMzkuOSAyNy0zOS45IDU0LjlWNDE2aC02Ni40VjIwMi4yaDYzLjd2MjkuMmguOWM4LjktMTYuOCAzMC42LTM0LjUgNjIuOS0zNC41IDY3LjIgMCA3OS43IDQ0LjMgNzkuNyAxMDEuOVY0MTZ6Ii8+PC9zdmc+';
+$ic-pinterest: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTYgNTEyIj48cGF0aCBkPSJNNDk2IDI1NmMwIDEzNy0xMTEgMjQ4LTI0OCAyNDgtMjUuNiAwLTUwLjItMy45LTczLjQtMTEuMSAxMC4xLTE2LjUgMjUuMi00My41IDMwLjgtNjUgMy0xMS42IDE1LjQtNTkgMTUuNC01OSA4LjEgMTUuNCAzMS43IDI4LjUgNTYuOCAyOC41IDc0LjggMCAxMjguNy02OC44IDEyOC43LTE1NC4zIDAtODEuOS02Ni45LTE0My4yLTE1Mi45LTE0My4yLTEwNyAwLTE2My45IDcxLjgtMTYzLjkgMTUwLjEgMCAzNi40IDE5LjQgODEuNyA1MC4zIDk2LjEgNC43IDIuMiA3LjIgMS4yIDguMy0zLjMuOC0zLjQgNS0yMC4zIDYuOS0yOC4xLjYtMi41LjMtNC43LTEuNy03LjEtMTAuMS0xMi41LTE4LjMtMzUuMy0xOC4zLTU2LjYgMC01NC43IDQxLjQtMTA3LjYgMTEyLTEwNy42IDYwLjkgMCAxMDMuNiA0MS41IDEwMy42IDEwMC45IDAgNjcuMS0zMy45IDExMy42LTc4IDExMy42LTI0LjMgMC00Mi42LTIwLjEtMzYuNy00NC44IDctMjkuNSAyMC41LTYxLjMgMjAuNS04Mi42IDAtMTktMTAuMi0zNC45LTMxLjQtMzQuOS0yNC45IDAtNDQuOSAyNS43LTQ0LjkgNjAuMiAwIDIyIDcuNCAzNi44IDcuNCAzNi44cy0yNC41IDEwMy44LTI5IDEyMy4yYy01IDIxLjQtMyA1MS42LS45IDcxLjJDNjUuNCA0NTAuOSAwIDM2MS4xIDAgMjU2IDAgMTE5IDExMSA4IDI0OCA4czI0OCAxMTEgMjQ4IDI0OHoiLz48L3N2Zz4=' !default;
+$ic-youtube: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIj48cGF0aCBkPSJNNTQ5LjY1NSAxMjQuMDgzYy02LjI4MS0yMy42NS0yNC43ODctNDIuMjc2LTQ4LjI4NC00OC41OTdDNDU4Ljc4MSA2NCAyODggNjQgMjg4IDY0UzExNy4yMiA2NCA3NC42MjkgNzUuNDg2Yy0yMy40OTcgNi4zMjItNDIuMDAzIDI0Ljk0Ny00OC4yODQgNDguNTk3LTExLjQxMiA0Mi44NjctMTEuNDEyIDEzMi4zMDUtMTEuNDEyIDEzMi4zMDVzMCA4OS40MzggMTEuNDEyIDEzMi4zMDVjNi4yODEgMjMuNjUgMjQuNzg3IDQxLjUgNDguMjg0IDQ3LjgyMUMxMTcuMjIgNDQ4IDI4OCA0NDggMjg4IDQ0OHMxNzAuNzggMCAyMTMuMzcxLTExLjQ4NmMyMy40OTctNi4zMjEgNDIuMDAzLTI0LjE3MSA0OC4yODQtNDcuODIxIDExLjQxMi00Mi44NjcgMTEuNDEyLTEzMi4zMDUgMTEuNDEyLTEzMi4zMDVzMC04OS40MzgtMTEuNDEyLTEzMi4zMDV6bS0zMTcuNTEgMjEzLjUwOFYxNzUuMTg1bDE0Mi43MzkgODEuMjA1LTE0Mi43MzkgODEuMjAxeiIvPjwvc3ZnPg==' !default;
+
+// misc
+$ic-rocket: 'data:image/svg+xml;base64,77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJmdWxsIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNC4wMCAyNC4wMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQuMDAgMjQuMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgoJPHBhdGggZmlsbD0iIzAwMDAwMCIgZmlsbC1vcGFjaXR5PSIxIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBkPSJNIDIuODA3NjEsMTQuMTIxM0wgNS42MzYwNCwxMS4yOTI5TCA4LjE3MzA0LDEwLjc4NTVDIDExLjM5LDYuNDA5NzIgMTcuNTUzMiw0LjIyMTgzIDE5Ljc3ODIsNC4yMjE4M0MgMTkuNzc4Miw2LjQ0NjgzIDE3LjU5MDMsMTIuNjEgMTMuMjE0NSwxNS44MjdMIDEyLjcwNzEsMTguMzY0TCA5Ljg3ODY4LDIxLjE5MjRMIDkuMTcxNTcsMTcuNjU2OUMgNy43NTczNiwxNy42NTY5IDcuNzU3MzYsMTcuNjU2OSA3LjA1MDI1LDE2Ljk0OTdDIDYuMzQzMTUsMTYuMjQyNiA2LjM0MzE1LDE2LjI0MjYgNi4zNDMxNSwxNC44Mjg0TCAyLjgwNzYxLDE0LjEyMTMgWiBNIDUuNjM2MDQsMTYuOTQ5N0wgNy4wNTAyNSwxOC4zNjRMIDQuMzg2MDMsMjEuMDI4MkwgMi45NzE4MSwyMS4wMjgyTCAyLjk3MTgxLDE5LjYxNEwgNS42MzYwNCwxNi45NDk3IFogTSA0LjIyMTgyLDE1LjUzNTVMIDUuNDU5MjYsMTUuNzEyM0wgMy4wMTQ3MiwxOC4xNTY5TCAzLjAxNDcyLDE2Ljc0MjZMIDQuMjIxODIsMTUuNTM1NSBaIE0gOC4yODc2OSwxOC41NDA3TCA4LjQ2NDQ3LDE5Ljc3ODJMIDcuMjU3MzUsMjAuOTg1M0wgNS44NDMxNCwyMC45ODUzTCA4LjI4NzY5LDE4LjU0MDcgWiBNIDEzLDkuNUMgMTIuMTcxNiw5LjUgMTEuNSwxMC4xNzE2IDExLjUsMTFDIDExLjUsMTEuODI4NCAxMi4xNzE2LDEyLjUgMTMsMTIuNUMgMTMuODI4NCwxMi41IDE0LjUsMTEuODI4NCAxNC41LDExQyAxNC41LDEwLjE3MTYgMTMuODI4NCw5LjUgMTMsOS41IFogIi8+Cjwvc3ZnPgo=' !default;
+

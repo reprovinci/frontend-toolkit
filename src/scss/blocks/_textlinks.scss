@@ -1,0 +1,67 @@
+/**
+ *
+ * textlink
+ *
+ */
+
+// textlink (readmore, link-forward, link-back)
+$textlink-text-transform: uppercase;
+$textlink-decoration: none !default;
+$textlink-color: $link-color !default;
+$textlink-hover-decoration: underline !default;
+$textlink-hover-color: lighten($color-secondary, 10%) !default;
+$textlink-font-weight: bold;
+
+@mixin textlink(
+  $text-transform: $textlink-text-transform,
+  $font-weight: $textlink-font-weight,
+  $color: $textlink-color, 
+  $decoration: $textlink-decoration, 
+  $hover-color: $textlink-hover-color, 
+  $hover-decoration: $textlink-hover-decoration
+){
+  text-transform: $text-transform;
+  font-weight: $font-weight;
+  cursor: pointer;
+  color: $color;
+  text-decoration: $decoration;
+  &:focus,
+  &:hover {
+    color: $hover-color;
+    text-decoration: $hover-decoration;
+  }
+  &:active {
+    transform: scale(.97);
+  }
+}
+
+
+// readmore
+.readmore {
+  @include textlink();
+  @include svg--after($ic-arrow-right, $w: 1.5em, $h: 1.5em, $align: -.3em);
+  &:focus,
+  &:hover {
+    &::after {
+      transform: translateX(.2em);
+    }
+  }
+}
+
+// link forward (to a next chapter i.e.)
+.link-forward {
+  @include textlink();
+  @include svg--after($ic-arrow-right, $w: 1.5em, $h: 1.5em, $align: -.3em);
+  &:focus,
+  &:hover {
+    &::after {
+      transform: translateX(.2em);
+    }
+  }
+}
+
+// link back (to a list, or the previous chapter i.e.)
+.link-back {
+  @include textlink();
+  @include svg--before($ic-arrow-left, $align: -.1em);
+}

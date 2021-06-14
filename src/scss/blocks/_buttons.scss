@@ -1,0 +1,183 @@
+/**
+ *
+ * buttons
+ *
+ */
+
+// primary button
+$btn-font-family: $font-family-base !default;
+$btn-font-size: 1rem !default;
+$btn-font-weight: bolder !default;
+$btn-line-height: $line-height-condensed !default;
+$btn-padding: $space-2 $space-3 !default;
+$btn-text-transform: none !default;
+$btn-border-radius: $space-1 !default;
+$btn-background: $color-loud !default;
+$btn-color: $color-loud__text !default;
+$btn-border: none !default;
+$btn-hover-color: $color-loud__text !default;
+$btn-hover-background: darken($color-loud,10%) !default;
+
+// secondary button
+$btn-secondary-font-family: $btn-font-family !default;
+$btn-secondary-font-size: $btn-font-size !default;
+$btn-secondary-font-weight: $btn-font-weight !default;
+$btn-secondary-line-height: $btn-line-height !default;
+$btn-secondary-padding: $btn-padding !default;
+$btn-secondary-text-transform: $btn-text-transform !default;
+$btn-secondary-border-radius: $btn-border-radius !default;
+$btn-secondary-background: $color-secondary !default;
+$btn-secondary-color: $btn-color !default;
+$btn-secondary-border: $btn-border !default;
+$btn-secondary-hover-color: $btn-hover-color !default;
+$btn-secondary-hover-background: $btn-hover-background !default;
+
+// btn-diap, the button on dark backgrounds
+$btn-diap-font-family: $btn-font-family !default;
+$btn-diap-font-size: $btn-font-size !default;
+$btn-diap-font-weight: $btn-font-weight !default;
+$btn-diap-line-height: $btn-line-height !default;
+$btn-diap-padding: $btn-padding !default;
+$btn-diap-text-transform: $btn-text-transform !default;
+$btn-diap-border-radius: $btn-border-radius !default;
+$btn-diap-background: $color-white !default;
+$btn-diap-color: $font-color !default;
+$btn-diap-border: $btn-border !default;
+$btn-diap-hover-color: $color-white !default;
+$btn-diap-hover-background: rgba(255,255,255,.5) !default;
+
+// seconadary diap button
+$btn-secondary-diap-font-family: $btn-diap-font-family !default;
+$btn-secondary-diap-font-size: $btn-diap-font-size !default;
+$btn-secondary-diap-font-weight: $btn-diap-font-weight !default;
+$btn-secondary-diap-line-height: $btn-diap-line-height !default;
+$btn-secondary-diap-padding: $btn-diap-padding !default;
+$btn-secondary-diap-text-transform: $btn-diap-text-transform !default;
+$btn-secondary-diap-border-radius: $btn-diap-border-radius !default;
+$btn-secondary-diap-background: $btn-diap-hover-background !default;
+$btn-secondary-diap-color: $btn-diap-hover-color !default;
+$btn-secondary-diap-border: $btn-diap-border !default;
+$btn-secondary-diap-hover-color: $btn-diap-hover-color !default;
+$btn-secondary-diap-hover-background: rgba(255,255,255,.25) !default;
+
+// the buttons group
+$buttons-margin: $space-3 (0 - $space-1) !default; // the margin on the group
+$buttons__button-margin: $space-1 !default; // the margin between the buttons
+
+
+
+// the button mixin. Use this to create additional button classes.
+@mixin btn(
+  $font-family: $btn-font-family,
+  $font-size: $btn-font-size,
+  $font-weight: $btn-font-weight,
+  $line-height: $btn-line-height,
+  $padding: $btn-padding,
+  $text-transform: $btn-text-transform,
+  $border-radius: $btn-border-radius,
+  $background: $btn-background,
+  $color: $btn-color,
+  $border: $btn-border,
+  $hover-color: $btn-hover-color,
+  $hover-background: $btn-hover-background
+){
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  padding: $padding;
+  text-transform: $text-transform;
+  border-radius: $border-radius;
+  background: $background;
+  color: $color;
+  border: $border;
+  cursor: pointer;
+  display: inline-flex;
+  text-decoration: none;
+  // white-space: nowrap; // nowrap makes buttons expand flexbox items.. not nice.. bad button!
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  &:focus,
+  &:hover {
+    color: $hover-color;
+    background: $hover-background;
+  }
+  &:active {
+    transform: scale(.97);
+  }
+}
+
+// the main button for primary options (like "submit" in a form)
+.btn {
+  @include btn();
+}
+
+// .btn-diap, the main button on a dark background
+.btn-diap {
+  @include btn(
+    $font-family: $btn-diap-font-family,
+    $font-size: $btn-diap-font-size,
+    $font-weight: $btn-diap-font-weight,
+    $line-height: $btn-diap-line-height,
+    $padding: $btn-diap-padding,
+    $text-transform: $btn-diap-text-transform,
+    $border-radius: $btn-diap-border-radius,
+    $background: $btn-diap-background,
+    $color: $btn-diap-color,
+    $border: $btn-diap-border,
+    $hover-color: $btn-diap-hover-color,
+    $hover-background: $btn-diap-hover-background
+  ); 
+}
+
+// the secondary button for secondary options (like "cancel" in a form)
+.btn-secondary {
+  @include btn(
+    $font-family: $btn-secondary-font-family,
+    $font-size: $btn-secondary-font-size,
+    $font-weight: $btn-secondary-font-weight,
+    $line-height: $btn-secondary-line-height,
+    $padding: $btn-secondary-padding,
+    $text-transform: $btn-secondary-text-transform,
+    $border-radius: $btn-secondary-border-radius,
+    $background: $btn-secondary-background,
+    $color: $btn-secondary-color,
+    $border: $btn-secondary-border,
+    $hover-color: $btn-secondary-hover-color,
+    $hover-background: $btn-secondary-hover-background
+  ); 
+}
+
+// the diapositive btn-secondary, the secondary button on dark background
+.btn-secondary-diap {
+  @include btn(
+    $font-family: $btn-secondary-diap-font-family,
+    $font-size: $btn-secondary-diap-font-size,
+    $font-weight: $btn-secondary-diap-font-weight,
+    $line-height: $btn-secondary-diap-line-height,
+    $padding: $btn-secondary-diap-padding,
+    $text-transform: $btn-secondary-diap-text-transform,
+    $border-radius: $btn-secondary-diap-border-radius,
+    $background: $btn-secondary-diap-background,
+    $color: $btn-secondary-diap-color,
+    $border: $btn-secondary-diap-border,
+    $hover-color: $btn-secondary-diap-hover-color,
+    $hover-background: $btn-secondary-diap-hover-background
+  ); 
+}
+
+/**
+ *
+ * the buttons-group
+ *
+ */
+.buttons {
+  margin: $buttons-margin;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  > * {
+    margin: $buttons__button-margin;
+  }
+}

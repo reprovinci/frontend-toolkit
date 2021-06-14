@@ -7,16 +7,23 @@
         </div>
     </div>
     <style type="text/css">
+        .demogrid {
+            border-top: solid 1px rgba(255,255,255,.3);
+            border-bottom: solid 1px rgba(255,255,255,.3);
+            margin:  1em 0;
+        }
         .demogrid div {
             background: rgba(255, 0, 0, .3);
             font-size: 10px;
             height: 3rem;
-            outline: solid 1px #fff;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
+        }
+        .demogrid div:not(:first-child) {
+            border-left: solid 1px rgba(255,255,255,.3);
         }
         
         .demogrid div:nth-child(1),
@@ -74,7 +81,7 @@
         <div>27</div>
         <div>28</div>
     </div>
-    <div class="grid mt-md grid-placement-test">
+    <div class="grid mt-3 grid-placement-test">
         <div class="grid__container">
             <code>.grid__container</code><code>@include grid-pos(1,24)</code>
         </div>
@@ -109,7 +116,7 @@
             <code>.grid__right-full</code><code>@include grid-pos(13,14)</code>
         </div>
     </div>
-    <div class="grid">
+    <div class="grid grid mt-3 ">
       <div class="grid__container">
         <h3>Grid columns</h3>
         <p>The variable <code>$grid-columns</code> defines the amount of columns in the grid center. 24 is the default. Override it when needed.</p>

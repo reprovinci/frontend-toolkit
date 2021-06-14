@@ -3,19 +3,47 @@
   color: $color;
 }
 
+
+// a box with a soft background
 .box,
 .box--soft {
   @include box;
 }
 
+.box--pad,
 .box__body {
   padding: $space-4;
 }
 
+// a box used for extra attention
 .box--loud {
   @include box($color-loud, $color-loud__text);
+  .btn {
+    @extend .btn-diap;
+  }
+  .btn-secondary {
+    @extend .btn-secondary-diap;
+  }
 }
 
+// a box, specifically colored with the primary color
 .box--primary {
   @include box($color-primary, $color-primary__text);
+  .btn {
+    @extend .btn-diap;
+  }
+  .btn-secondary {
+    @extend .btn-secondary-diap;
+  }
+}
+
+// a box, specifically colored with the secondary color
+.box--secondary {
+  @include box($color-secondary, $color-secondary__text);
+  .btn {
+    @extend .btn-diap;
+  }
+  .btn-secondary {
+    @extend .btn-secondary-diap;
+  }
 }
