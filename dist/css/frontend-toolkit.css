@@ -470,20 +470,21 @@ h6,
 
 .box,
 .box--soft {
-  background: #f3f3f3;
-  padding: 2rem;
+  background-color: #f3f3f3;
   color: #333;
 }
 
-.box--loud {
-  background: #1d5566;
+.box__body {
   padding: 2rem;
+}
+
+.box--loud {
+  background-color: #1d5566;
   color: #fff;
 }
 
 .box--primary {
-  background: #1d5566;
-  padding: 2rem;
+  background-color: #1d5566;
   color: #fff;
 }
 
@@ -652,6 +653,16 @@ h6,
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.img-contain {
+  background-position: center center;
+  background-size: contain;
+}
+
+.img-cover {
+  background-position: center center;
+  background-size: cover;
 }
 
 .overflow-hidden {

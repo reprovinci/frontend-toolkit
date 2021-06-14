@@ -3,7 +3,7 @@ layout: layouts/base.html
 title: Start
 order: -50
 tags:
-  - menu
+- menu
 ---
 
 <main class="my-5">
@@ -12,16 +12,13 @@ tags:
         <div class="grid__container">
             <h2>What's here to find..</h2>
             <ul>
+                {%- for post in collections.nav -%}
+                    <li {% if page.url == post.url %} aria-current="page" {% endif %}>
+                        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+                    </li>
+                {%- endfor -%}
                 <li>
-                    <a href="{{ "/docs" | url }}">Documentation</a>
-                </li>
-                <li>
-                    <a href="{{ "/components" | url }}">Components</a>
-                </li>
-                <li>
-                    <span style="width:200px; display: inline-block;">
-                        <marquee>Todo: example pages</marquee>
-                    </span>
+                    <marquee>Todo: example pages</marquee>
                 </li>
             </ul>
         </div>

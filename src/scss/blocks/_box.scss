@@ -1,12 +1,15 @@
-@mixin box($bgcolor: $color-soft, $color: $color-soft__text, $spacing: $space-4) {
-  background: $bgcolor;
-  padding: $spacing;
+@mixin box($bgcolor: $color-soft, $color: $color-soft__text) {
+  background-color: $bgcolor;
   color: $color;
 }
 
 .box,
 .box--soft {
   @include box;
+}
+
+.box__body {
+  padding: $space-4;
 }
 
 .box--loud {

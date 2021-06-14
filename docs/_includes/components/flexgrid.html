@@ -1,0 +1,19 @@
+<div class="grid section-margins">
+  <div class="{{ container_class | default: 'grid__container' }}">
+    <div class="{{ flexgrid_class | default: 'flexgrid-4' }}">
+      {%- for data in news %}
+        <div class="box img-cover"{% if background_image_url %} style="background-image: url({{ background_image_url }});"{% endif %}>
+          {% if image_url %}
+            <img src="{{ image_url }}" alt="Afbeelding" class="box--image">
+          {% endif %}
+          <div class="box__body">
+            <h3>{{ data.title }}</h3>
+            {{ data.date | date }}
+            <p>{{ data.intro }}</p>
+            <a href="#" class="btn">Lees verder</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
