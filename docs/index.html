@@ -73,7 +73,7 @@
 <body>
 
 <main class="my-5">
-    <header class="grid">
+  <header class="grid">
   <div class="grid__container">
     <h1>Reprovinci Frontend Toolkit 🚀</h1>
     <p>The scaffolding we work with. It contains a responsive 24 column grid, setups for colors, typography, spacings and some prototyping classes. It is
@@ -82,41 +82,54 @@
   </div>
 </header>
 
-    <!-- Typography -->
+  <!-- Typography -->
 <section id="typography" class="section-margins grid">
-    <div class="grid__container">
-        <h2 class="section-header">Typography</h2>
-        <p>The typography is based on a scaling font size with a min and max size. By setting the variables <code>$font-size-min</code> and <code>$font-size-max</code> the html font will be the min font until breakpoint-md and the gradualy scale up to max size. This is done with clamp: <code>clamp(#{$font-size-min}, #{$font-size-scaling}, #{$font-size-max})</code>. Try scaling up and down this browser viewport and see the result.</p>
-        <h3>Text styles</h3>
-        <p>There 2 text stylings. UI text is the default. Used for text outside dedicated body copy. When needed, body copy placed inside a <code>.text</code> class can be styled differently from the UI type. By default they are the same.
-        <div class="flexgrid-2">
-            <div class="box">
-                <h2>Some text in the UI</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem aliquam.</p>
-            </div>
-            <div class="text box">
-                <h2>Some text as body copy</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem aliquam.</p>
-            </div>
-            <div class="box">
-                <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
-                <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
-                <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
-                <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
-                <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
-                <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
-            </div>
-            <div class="text box">
-                <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
-                <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
-                <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
-                <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
-                <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
-                <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
-            </div>
+  <div class="grid__container">
+    <h2 class="section-header">Typography</h2>
+    <p>The typography is based on a scaling font size with a min and max size. By setting the variables
+      <code>$font-size-min</code> and
+      <code>$font-size-max</code> the html font will be the min font until breakpoint-md and the gradualy scale up to max size. This is done with clamp:
+      <code>clamp(#{$font-size-min}, #{$font-size-scaling}, #{$font-size-max})</code>. Try scaling up and down this browser viewport and see the result.
+    </p>
+    <h3>Text styles</h3>
+    <p>There 2 text stylings. UI text is the default. Used for text outside dedicated body copy. When needed, body copy placed inside a
+      <code>.text</code> class can be styled differently from the UI type. By default they are the same.
+    <div class="flexgrid-2">
+      <div class="box">
+        <div class="box__body">
+          <h2>Some text in the UI</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem aliquam.</p>
         </div>
-        <h3>SCSS Variables</h3>
-        <pre>// type settings
+      </div>
+      <div class="text box">
+        <div class="box__body">
+          <h2>Some text as body copy</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente molestias modi ratione aliquam unde, commodi corporis hic vitae sint mollitia numquam eos. Veritatis blanditiis obcaecati, maiores perferendis quasi exercitationem aliquam.</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
+          <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
+          <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
+          <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
+          <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
+          <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
+        </div>
+      </div>
+      <div class="text box">
+        <div class="box__body">
+          <h1><small>H1</small>Lorem ipsum dolor sit amet</h1>
+          <h2><small>H2</small>Lorem ipsum dolor sit amet</h2>
+          <h3><small>H3</small>Lorem ipsum dolor sit amet</h3>
+          <h4><small>H4</small>Lorem ipsum dolor sit amet</h4>
+          <h5><small>H5</small>Lorem ipsum dolor sit amet</h5>
+          <h6><small>H6</small>Lorem ipsum dolor sit amet</h6>
+        </div>
+      </div>
+    </div>
+    <h3>SCSS Variables</h3>
+    <pre>// type settings
 $font-family-base: sans-serif !default;
 $font-size-base: 18px !default; // px
 $font-size-min: round(($font-size-base * 0.777)) !default; // px
@@ -148,39 +161,41 @@ $h4-size: $font-size-md !default;
 $h5-size: $font-size-md !default;
 $h6-size: $font-size-md !default;
         </pre>
-    </div>
+  </div>
 </section>
-    <!-- colors -->
+
+  <!-- colors -->
 <section id="colors" class="section-margins grid">
-    <div class="grid__container">
-        <h2>Colors</h2>
-        <div class="flexgrid-3">
-            <div class="colorset">
-                <h3>Defined Grayscales</h3>
-                <p><span class="bg-black"></span><code>$color-black</code></p>
-                <p><span class="bg-gray-extra-dark"></span><code>$color-gray-extra-dark</code></p>
-                <p><span class="bg-gray-dark"></span><code>$color-gray-dark</code></p>
-                <p><span class="bg-gray"></span><code>$color-gray</code></p>
-                <p><span class="bg-gray-light"></span><code>$color-gray-light</code></p>
-                <p><span class="bg-gray-extra-light"></span><code>$color-gray-extra-light</code></p>
-            </div>
-            <div class="colorset">
-                <h3>Defined colors</h3>
-                <p><span class="bg-blue"></span><code>$color-blue</code></p>
-                <p><span class="bg-green"></span><code>$color-green</code></p>
-                <p><span class="bg-white"></span><code>$color-white</code></p>
-            </div>
-            <div class="colorset">
-                <h3>Applied colors</h3>
-                <p><span class="bg-primary"></span><code>$color-primary</code></p>
-                <p><span class="bg-secondary"></span><code>$color-secondary</code></p>
-                <p><span class="bg-loud"></span><code>$color-loud</code></p>
-                <p><span class="bg-soft"></span><code>$color-soft</code></p>
-            </div>
-        </div>
+  <div class="grid__container">
+    <h2>Colors</h2>
+    <div class="flexgrid-3">
+      <div class="colorset">
+        <h3>Defined Grayscales</h3>
+        <p><span class="bg-black"></span><code>$color-black</code></p>
+        <p><span class="bg-gray-extra-dark"></span><code>$color-gray-extra-dark</code></p>
+        <p><span class="bg-gray-dark"></span><code>$color-gray-dark</code></p>
+        <p><span class="bg-gray"></span><code>$color-gray</code></p>
+        <p><span class="bg-gray-light"></span><code>$color-gray-light</code></p>
+        <p><span class="bg-gray-extra-light"></span><code>$color-gray-extra-light</code></p>
+      </div>
+      <div class="colorset">
+        <h3>Defined colors</h3>
+        <p><span class="bg-blue"></span><code>$color-blue</code></p>
+        <p><span class="bg-green"></span><code>$color-green</code></p>
+        <p><span class="bg-white"></span><code>$color-white</code></p>
+      </div>
+      <div class="colorset">
+        <h3>Applied colors</h3>
+        <p><span class="bg-primary"></span><code>$color-primary</code></p>
+        <p><span class="bg-secondary"></span><code>$color-secondary</code></p>
+        <p><span class="bg-loud"></span><code>$color-loud</code></p>
+        <p><span class="bg-soft"></span><code>$color-soft</code></p>
+      </div>
     </div>
+  </div>
 </section>
-    <!-- grid -->
+
+  <!-- grid -->
 <section id="grid" id="grid" class="section-margins">
     <div class="grid">
         <div class="grid__container">
@@ -306,7 +321,7 @@ $h6-size: $font-size-md !default;
       </div>
     </div>
 </section>
-    <!-- layouts -->
+  <!-- layouts -->
 <section id="layouts" class="section-margins grid">
     <div class="grid__container">
         <h2 class="section-header">Layouts</h2>
@@ -343,65 +358,79 @@ $h6-size: $font-size-md !default;
         </div>
     </div>
 </section>
-    <!-- buttons -->
+  <!-- buttons -->
 <section id="buttons" class="section-margins grid">
-    <div class="grid__container">
-        <h2 class="section-header">Buttons</h2>
-        <div class="flexgrid-4">
-            <div class="box">
-                <h4>The main button</h4>
-                <p>Used for primary click actions</p>
-                <p><code>.btn</code></p>
-                <button class="btn">The Button</button>
-            </div>
-            <div class="box">
-                <h4>The secondary button</h4>
-                <p>Used for secondary options</p>
-                <p><code>.btn-secondary</code></p>
-                <button class="btn">The Secondary Button</button>
-            </div>
-            <div class="box">
-                <h4>The alt button</h4>
-                <p>Used for alternative styling</p>
-                <p><code>.btn-alt</code></p>
-                <button class="btn">The Alt Button</button>
-            </div>
-            <div class="box bg-gray-extra-dark color-white">
-                <h4>The diap button</h4>
-                <p>Used on dark backgrounds</p>
-                <p><code>.btn-diap</code></p>
-                <button class="btn">The Diap Button</button>
-            </div>
+  <div class="grid__container">
+    <h2 class="section-header">Buttons</h2>
+    <div class="flexgrid-4">
+      <div class="box">
+        <div class="box__body">
+          <h4>The main button</h4>
+          <p>Used for primary click actions</p>
+          <p><code>.btn</code></p>
+          <button class="btn">The Button</button>
         </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <h4>The secondary button</h4>
+          <p>Used for secondary options</p>
+          <p><code>.btn-secondary</code></p>
+          <button class="btn">The Secondary Button</button>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <h4>The alt button</h4>
+          <p>Used for alternative styling</p>
+          <p><code>.btn-alt</code></p>
+          <button class="btn">The Alt Button</button>
+        </div>
+      </div>
+      <div class="box bg-gray-extra-dark color-white">
+        <div class="box__body">
+          <h4>The diap button</h4>
+          <p>Used on dark backgrounds</p>
+          <p><code>.btn-diap</code></p>
+          <button class="btn">The Diap Button</button>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
-    <!-- box -->
+
+  <!-- box -->
 <section id="box" class="section-margins grid">
-    <div class="grid__container">
-        <h2 class="section-header">Box</h2>
-        <p>Colored boxes to place attention on content. Default boxes are <code>.box--loud</code> and
-            <code>.box--soft</code>. Loud is color-primary by default.</p>
-        <div class="flexgrid-2">
-            <div class="box">
-                <h2>Soft box</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
-            </div>
-            <div class="box--loud">
-                <h2>Loud box</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
-            </div>
+  <div class="grid__container">
+    <h2 class="section-header">Box</h2>
+    <p>Colored boxes to place attention on content. Default boxes are <code>.box--loud</code> and
+      <code>.box--soft</code>. Loud is color-primary by default.</p>
+    <div class="flexgrid-2">
+      <div class="box">
+        <div class="box__body">
+          <h2>Soft box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
         </div>
-        <h3>Box mixin</h3>
-        <p>If you need more box colors create them with the mixin:</p>
-        <pre>
+      </div>
+      <div class="box--loud">
+        <div class="box__body">
+          <h2>Loud box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+        </div>
+      </div>
+    </div>
+    <h3>Box mixin</h3>
+    <p>If you need more box colors create them with the mixin:</p>
+    <pre>
 // @mixin box($bgcolor, $color) {
 .black-box {
   @include box(black, hotpink);
 }
         </pre>
-    </div>
+  </div>
 </section>
-    <!-- spacing -->
+
+  <!-- spacing -->
 <section id="spacing" id="box" class="section-margins grid">
     <div class="grid__container">
         <h2 class="section-header">Spacing</h2>
@@ -465,40 +494,58 @@ $h6-size: $font-size-md !default;
         </div>
     </div>
 </section>
-    <!-- svg mixin -->
+  <!-- svg mixin -->
 <section id="svg" id="box" class="section-margins grid">
-    <div class="grid__container">
-        <h2 class="section-header">SVG mixin</h2>
-        <p>Place icons before/after/in elements. Common usage example:</p>
-        <h3>Common usage</h3>
-        <pre>a.mylink { @include svg--after('arrow-right', 1em, .5em) }</pre>
-        <p>places the image arrow-right.svg in the background of an inline-block element after the a.mylink</p>
-        <p><code>svg--before(img, width height)</code> places the icon inline before the element</p>
-        <p><code>svg--abs(img, width, height)</code> places it in an absolute positioned after the element.</p>
-        <p><code>svg(img, width height)</code> places the icon in the background of the element itself</p>
-        <h3>The icon source</h3>
-        <p>The icon source can either be a base64 encoded string or an icon name. Some default icons are defined in _variables/</p>
-        <p>The root folder the icons is by default ../images but can be set with the variable <code>$svg__root: '../images';</code></p>
-        <div class="flexgrid-4">
-            <div class="box">
-                <code>svg--before</code>
-                <p><button class="btn svg-demo--before">My Button!</button></p>
-            </div>
-            <div class="box">
-                <code>svg--after</code>
-                <p><button class="btn svg-demo--after">My Button!</button></p>
-            </div>
-            <div class="box">
-                <code>svg--abs</code>
-                <p><button class="btn svg-demo--abs">My Button!</button></p>
-            </div>
-            <div class="box">
-                <code>svg($rocket, 2em, 2em)</code>
-                <p><button class="btn svg-demo--main">My Button!</button></p>
-            </div>
+  <div class="grid__container">
+    <h2 class="section-header">SVG mixin</h2>
+    <p>Place icons before/after/in elements. Common usage example:</p>
+    <h3>Common usage</h3>
+    <pre>a.mylink { @include svg--after('arrow-right', 1em, .5em) }</pre>
+    <p>places the image arrow-right.svg in the background of an inline-block element after the a.mylink</p>
+    <p><code>svg--before(img, width height)</code> places the icon inline before the element</p>
+    <p><code>svg--abs(img, width, height)</code> places it in an absolute positioned after the element.</p>
+    <p><code>svg(img, width height)</code> places the icon in the background of the element itself</p>
+    <h3>The icon source</h3>
+    <p>The icon source can either be a base64 encoded string or an icon name. Some default icons are defined in _variables/</p>
+    <p>The root folder the icons is by default ../images but can be set with the variable
+      <code>$svg__root: '../images';</code></p>
+    <div class="flexgrid-4">
+      <div class="box">
+        <div class="box__body">
+          <code>svg--before</code>
+          <p>
+            <button class="btn svg-demo--before">My Button!</button>
+          </p>
         </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg--after</code>
+          <p>
+            <button class="btn svg-demo--after">My Button!</button>
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg--abs</code>
+          <p>
+            <button class="btn svg-demo--abs">My Button!</button>
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg($rocket, 2em, 2em)</code>
+          <p>
+            <button class="btn svg-demo--main">My Button!</button>
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
+
 </main>
 
 <nav class="index bg-gray-extra-dark px-2 py-4">
@@ -512,6 +559,8 @@ $h6-size: $font-size-md !default;
           <a class="color-white" href="/frontend-toolkit/docs/">Docs</a>
         </li><li >
           <a class="color-white" href="/frontend-toolkit/components/">Componenten</a>
+        </li><li >
+          <a class="color-white" href="/frontend-toolkit/flexgrids/">Flexgrids</a>
         </li><li >
           <a class="color-white" href="/frontend-toolkit/swiper/">Swiper</a>
         </li></ul>
