@@ -4,7 +4,7 @@
   "description": "Frontend toolkit. Framework classes, grid, typography/colors/spacing setup.. the scaffolding we start with. 🚀",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm-run-all prod:sass-toolkit prod:sass-packages prod:eleventy gh-pages",
+    "deploy": "npm-run-all prod:rimraf prod:rollup prod:sass-toolkit prod:sass-packages prod:eleventy gh-pages",
     "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
     "dev:rollup": "rollup --config --watch --sourcemap",
     "dev:sass-toolkit": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --watch",
@@ -15,6 +15,7 @@
     "lint:stylelint": "stylelint \"src/**/*.{css,scss}\" --fix --cache --cache-location .cache/.stylelintcache --rd",
     "ngrok": "npm-run-all --parallel dev:* ngrok:serve",
     "ngrok:serve": "ngrok http http://localhost:8080/",
+    "prod:rimraf": "rimraf dist",
     "prod:eleventy": "ELEVENTY_ENV=production eleventy",
     "prod:rollup": "rollup --config --compact",
     "prod:sass-toolkit": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --no-source-map",

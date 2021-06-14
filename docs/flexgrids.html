@@ -1,27 +1,28 @@
 ---
 layout: layouts/base.html
-title: Flexgrids
+title: Layouts
 order: 30
 tags:
 - menu
 ---
 
-<h1>Swiper</h1>
+
 <main class="my-5">
-  <section id="Flexgrid - 4" class="py-4 grid">
-    <h1 class="grid__container">Flexgrid - 4</h1>
+  {% include docs/sections/layouts.html %}
+  <section id="Flexgrid - 4" class="grid">
+    <h2 class="grid__container">Flexgrid - 4</h2>
   </section>
   {% include components/flexgrid.html, image_url: 'https://via.placeholder.com/500x300/8e44ad/fff.jpg' %}
-  <section id="Flexgrid - 3" class="py-4 grid">
-    <h1 class="grid__container">Flexgrid - 3</h1>
+  <section id="Flexgrid - 3" class="grid">
+    <h2 class="grid__container">Flexgrid - 3</h2>
   </section>
   {% include components/flexgrid.html, flexgrid_class: 'flexgrid-3', background_image_url: 'https://via.placeholder.com/400x600/3498db/fff.jpg' %}
-  <section id="Flexgrid - 2" class="py-4 grid">
-    <h1 class="grid__container">Flexgrid - 2</h1>
+  <section id="Flexgrid - 2" class="grid">
+    <h2 class="grid__container">Flexgrid - 2</h2>
   </section>
   {% include components/flexgrid.html, flexgrid_class: 'flexgrid-2' %}
-  <section id="Flexgrid - bricks" class="py-4 grid">
-    <h1 class="grid__container">Flexgrid - bricks</h1>
+  <section id="Flexgrid - bricks" class="grid">
+    <h2 class="grid__container">Flexgrid - bricks</h2>
   </section>
   {% include components/flexgrid.html, flexgrid_class: 'flexgrid-bricks' %}
 </main>
