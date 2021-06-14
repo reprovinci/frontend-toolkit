@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Componenten</title>
+  <title>Swiper</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/frontend-toolkit.css">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/packages.css">
@@ -72,109 +72,192 @@
 </head>
 <body>
 
+<h1>Swiper</h1>
 <main class="my-5">
-  <section id="Single image" class="bg-gray py-4 grid">
-    <h1 class="grid__container">Single image</h1>
-    <div class="grid__full bg-white">
-      <!-- image -->
-<div class="grid section-margins">
-  <div class="grid__full">
-    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
-  </div>
-</div>
-
-      <!-- image -->
-<div class="grid section-margins">
+  <section id="Pagination" class="py-4 grid">
+    <h1 class="grid__container">Pagination</h1>
+  </section>
+  <!-- swiper -->
+<div class="grid section-margins overflow-hidden">
   <div class="grid__container">
-    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
-  </div>
-</div>
-
-      <!-- image -->
-<div class="grid section-margins">
-  <div class="grid__container--sm">
-    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
-  </div>
-</div>
-
-      <!-- image -->
-<div class="grid section-margins">
-  <div class="grid__container--xs">
-    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
-  </div>
-</div>
-
+    <div style="position: relative;">
+      <div class="js-swiper" data-swiper='{"pagination":{"el":".swiper-pagination-one","type":"bullets","clickable":true}}'>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+        </div>
+        
+          <div class="swiper-pagination swiper-pagination-one"></div>
+        
+        
+        
+      </div>
     </div>
+  </div>
+</div>
+
+  <section id="Scrollbar" class="py-4 grid">
+    <h1 class="grid__container">Scrollbar</h1>
   </section>
-  <section id="Text + image" class="bg-gray py-4 grid">
-    <h1 class="grid__container">Text + image</h1>
-    <div class="grid__full bg-white">
-      <!-- text + img -->
-<section class="section-margins grid">
-  <figure class="grid__left">
-    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
-  </figure>
-  <div class="grid__right">
-    <div class="pl-md-5">
-      <h1>Componenten</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
-      <a href="#" class="btn">
-        Lees verder
-      </a>
+  <!-- swiper -->
+<div class="grid section-margins overflow-hidden">
+  <div class="grid__container">
+    <div style="position: relative;">
+      <div class="js-swiper" data-swiper='{"scrollbar":{"el":".swiper-scrollbar-two","draggable":true}}'>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+        </div>
+        
+        
+        
+          <div class="swiper-scrollbar swiper-scrollbar-two"></div>
+        
+      </div>
     </div>
   </div>
-</section>
+</div>
 
-      <!-- text + img -->
-<section class="section-margins grid">
-  <figure class="grid__right">
-    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
-  </figure>
-  <div class="grid__left">
-    <div class="pl-md-5">
-      <h1>Componenten</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
-      <a href="#" class="btn">
-        Lees verder
-      </a>
-    </div>
-  </div>
-</section>
-
-      <!-- text + img -->
-<section class="section-margins grid">
-  <figure class="grid__left-extended">
-    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
-  </figure>
-  <div class="grid__right">
-    <div class="pl-md-5">
-      <h1>Componenten</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
-      <a href="#" class="btn">
-        Lees verder
-      </a>
-    </div>
-  </div>
-</section>
-
-      <!-- text + img -->
-<section class="section-margins grid">
-  <figure class="grid__right-extended">
-    <img src="https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80" alt="Image">
-  </figure>
-  <div class="grid__left">
-    <div class="pl-md-5">
-      <h1>Componenten</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
-      <a href="#" class="btn">
-        Lees verder
-      </a>
-    </div>
-  </div>
-</section>
-
-    </div>
+  <section id="Responsive" class="py-4 grid">
+    <h1 class="grid__container">Responsive</h1>
   </section>
+  <!-- swiper -->
+<div class="grid section-margins overflow-hidden">
+  <div class="grid__container">
+    <div style="position: relative;">
+      <div class="js-swiper" data-swiper='{"loop":true,"slidesPerView":1,"spaceBetween":10,"breakpoints":{"768":{"slidesPerView":2,"spaceBetween":30},"1024":{"slidesPerView":4,"spaceBetween":40}}}'>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  <section id="Slides per view" class="py-4 grid">
+    <h1 class="grid__container">Slides per view</h1>
+  </section>
+  <!-- swiper -->
+<div class="grid section-margins overflow-hidden">
+  <div class="grid__container">
+    <div style="position: relative;">
+      <div class="js-swiper" data-swiper='{"loop":true,"spaceBetween":8,"slidesPerView":2}'>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  <section id="Disable loop" class="py-4 grid">
+    <h1 class="grid__container">Disable loop</h1>
+  </section>
+  <!-- swiper -->
+<div class="grid section-margins overflow-hidden">
+  <div class="grid__container">
+    <div style="position: relative;">
+      <div class="js-swiper" data-swiper='{"loop":false,"spaceBetween":8}'>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  <section id="Default" class="py-4 grid">
+    <h1 class="grid__container">Default</h1>
+  </section>
+  <!-- swiper -->
+<div class="grid section-margins overflow-hidden">
+  <div class="grid__container">
+    <div style="position: relative;">
+      <div class="js-swiper" data-swiper=' {"loop":true}'>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://via.placeholder.com/1600x900.jpg" alt="Image">
+          </div>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 
 <nav class="index bg-gray-extra-dark px-2 py-4">
@@ -186,9 +269,9 @@
           <a class="color-white" href="/frontend-toolkit/">Start</a>
         </li><li >
           <a class="color-white" href="/frontend-toolkit/docs/">Docs</a>
-        </li><li  aria-current="page" >
-          <a class="color-white" href="/frontend-toolkit/components/">Componenten</a>
         </li><li >
+          <a class="color-white" href="/frontend-toolkit/components/">Componenten</a>
+        </li><li  aria-current="page" >
           <a class="color-white" href="/frontend-toolkit/swiper/">Swiper</a>
         </li></ul>
     </div>
