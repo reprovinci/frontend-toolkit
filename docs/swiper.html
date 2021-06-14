@@ -1,0 +1,35 @@
+---
+layout: layouts/base.html
+title: Swiper
+order: 70
+tags:
+- menu
+---
+
+<h1>Swiper</h1>
+<main class="my-5">
+  <section id="Pagination" class="py-4 grid">
+    <h1 class="grid__container">Pagination</h1>
+  </section>
+  {% include components/swiper.html, pagination: 'swiper-pagination-one', swiper: '{"pagination":{"el":".swiper-pagination-one","type":"bullets","clickable":true}}' %}
+  <section id="Scrollbar" class="py-4 grid">
+    <h1 class="grid__container">Scrollbar</h1>
+  </section>
+  {% include components/swiper.html, scrollbar: 'swiper-scrollbar-two', swiper: '{"scrollbar":{"el":".swiper-scrollbar-two","draggable":true}}' %}
+  <section id="Responsive" class="py-4 grid">
+    <h1 class="grid__container">Responsive</h1>
+  </section>
+  {% include components/swiper.html, swiper: '{"loop":true,"slidesPerView":1,"spaceBetween":10,"breakpoints":{"768":{"slidesPerView":2,"spaceBetween":30},"1024":{"slidesPerView":4,"spaceBetween":40}}}' %}
+  <section id="Slides per view" class="py-4 grid">
+    <h1 class="grid__container">Slides per view</h1>
+  </section>
+  {% include components/swiper.html, swiper: '{"loop":true,"spaceBetween":8,"slidesPerView":2}' %}
+  <section id="Disable loop" class="py-4 grid">
+    <h1 class="grid__container">Disable loop</h1>
+  </section>
+  {% include components/swiper.html, swiper: '{"loop":false,"spaceBetween":8}' %}
+  <section id="Default" class="py-4 grid">
+    <h1 class="grid__container">Default</h1>
+  </section>
+  {% include components/swiper.html %}
+</main>

@@ -4,10 +4,11 @@
   "description": "Frontend toolkit. Framework classes, grid, typography/colors/spacing setup.. the scaffolding we start with. 🚀",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm-run-all prod:sass prod:eleventy gh-pages",
+    "deploy": "npm-run-all prod:sass-toolkit prod:sass-packages prod:eleventy gh-pages",
     "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
     "dev:rollup": "rollup --config --watch --sourcemap",
-    "dev:sass": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --watch",
+    "dev:sass-toolkit": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --watch",
+    "dev:sass-packages": "sass src/scss/packages.scss dist/css/packages.css --watch",
     "gh-pages": "gh-pages -d _site",
     "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint src/js/*",
@@ -16,7 +17,8 @@
     "ngrok:serve": "ngrok http http://localhost:8080/",
     "prod:eleventy": "ELEVENTY_ENV=production eleventy",
     "prod:rollup": "rollup --config --compact",
-    "prod:sass": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --no-source-map",
+    "prod:sass-toolkit": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --no-source-map",
+    "prod:sass-packages": "sass src/scss/packages.scss dist/css/packages.css --no-source-map",
     "start": "npm-run-all --parallel dev:*"
   },
   "repository": {

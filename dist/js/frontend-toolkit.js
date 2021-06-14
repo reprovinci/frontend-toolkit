@@ -1295,6 +1295,32 @@
       });
     }
 
+    function classesToSelector(classes) {
+      if (classes === void 0) {
+        classes = '';
+      }
+
+      return "." + classes.trim().replace(/([\.:\/])/g, '\\$1') // eslint-disable-line
+      .replace(/ /g, '.');
+    }
+
+    function createElementIfNotDefined($container, params, createElements, checkProps) {
+      var document = getDocument();
+
+      if (createElements) {
+        Object.keys(checkProps).forEach(function (key) {
+          if (!params[key] && params.auto === true) {
+            var element = document.createElement('div');
+            element.className = checkProps[key];
+            $container.append(element);
+            params[key] = element;
+          }
+        });
+      }
+
+      return params;
+    }
+
     var support;
 
     function calcSupport() {
@@ -1495,8 +1521,8 @@
       }
     };
 
-    function _extends() {
-      _extends = Object.assign || function (target) {
+    function _extends$3() {
+      _extends$3 = Object.assign || function (target) {
         for (var i = 1; i < arguments.length; i++) {
           var source = arguments[i];
 
@@ -1510,7 +1536,7 @@
         return target;
       };
 
-      return _extends.apply(this, arguments);
+      return _extends$3.apply(this, arguments);
     }
     var Observer = {
       attach: function attach(target, options) {
@@ -1586,7 +1612,7 @@
       create: function create() {
         var swiper = this;
         bindModuleMethods(swiper, {
-          observer: _extends({}, Observer, {
+          observer: _extends$3({}, Observer, {
             observers: []
           })
         });
@@ -5353,6 +5379,990 @@
     });
     Swiper.use([Resize, Observer$1]);
 
+    function _extends$2() {
+      _extends$2 = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];
+
+          for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+
+        return target;
+      };
+
+      return _extends$2.apply(this, arguments);
+    }
+    var Navigation = {
+      toggleEl: function toggleEl($el, disabled) {
+        $el[disabled ? 'addClass' : 'removeClass'](this.params.navigation.disabledClass);
+        if ($el[0] && $el[0].tagName === 'BUTTON') $el[0].disabled = disabled;
+      },
+      update: function update() {
+        // Update Navigation Buttons
+        var swiper = this;
+        var params = swiper.params.navigation;
+        var toggleEl = swiper.navigation.toggleEl;
+        if (swiper.params.loop) return;
+        var _swiper$navigation = swiper.navigation,
+            $nextEl = _swiper$navigation.$nextEl,
+            $prevEl = _swiper$navigation.$prevEl;
+
+        if ($prevEl && $prevEl.length > 0) {
+          if (swiper.isBeginning) {
+            toggleEl($prevEl, true);
+          } else {
+            toggleEl($prevEl, false);
+          }
+
+          if (swiper.params.watchOverflow && swiper.enabled) {
+            $prevEl[swiper.isLocked ? 'addClass' : 'removeClass'](params.lockClass);
+          }
+        }
+
+        if ($nextEl && $nextEl.length > 0) {
+          if (swiper.isEnd) {
+            toggleEl($nextEl, true);
+          } else {
+            toggleEl($nextEl, false);
+          }
+
+          if (swiper.params.watchOverflow && swiper.enabled) {
+            $nextEl[swiper.isLocked ? 'addClass' : 'removeClass'](params.lockClass);
+          }
+        }
+      },
+      onPrevClick: function onPrevClick(e) {
+        var swiper = this;
+        e.preventDefault();
+        if (swiper.isBeginning && !swiper.params.loop) return;
+        swiper.slidePrev();
+      },
+      onNextClick: function onNextClick(e) {
+        var swiper = this;
+        e.preventDefault();
+        if (swiper.isEnd && !swiper.params.loop) return;
+        swiper.slideNext();
+      },
+      init: function init() {
+        var swiper = this;
+        var params = swiper.params.navigation;
+        swiper.params.navigation = createElementIfNotDefined(swiper.$el, swiper.params.navigation, swiper.params.createElements, {
+          nextEl: 'swiper-button-next',
+          prevEl: 'swiper-button-prev'
+        });
+        if (!(params.nextEl || params.prevEl)) return;
+        var $nextEl;
+        var $prevEl;
+
+        if (params.nextEl) {
+          $nextEl = $(params.nextEl);
+
+          if (swiper.params.uniqueNavElements && typeof params.nextEl === 'string' && $nextEl.length > 1 && swiper.$el.find(params.nextEl).length === 1) {
+            $nextEl = swiper.$el.find(params.nextEl);
+          }
+        }
+
+        if (params.prevEl) {
+          $prevEl = $(params.prevEl);
+
+          if (swiper.params.uniqueNavElements && typeof params.prevEl === 'string' && $prevEl.length > 1 && swiper.$el.find(params.prevEl).length === 1) {
+            $prevEl = swiper.$el.find(params.prevEl);
+          }
+        }
+
+        if ($nextEl && $nextEl.length > 0) {
+          $nextEl.on('click', swiper.navigation.onNextClick);
+        }
+
+        if ($prevEl && $prevEl.length > 0) {
+          $prevEl.on('click', swiper.navigation.onPrevClick);
+        }
+
+        extend(swiper.navigation, {
+          $nextEl: $nextEl,
+          nextEl: $nextEl && $nextEl[0],
+          $prevEl: $prevEl,
+          prevEl: $prevEl && $prevEl[0]
+        });
+
+        if (!swiper.enabled) {
+          if ($nextEl) $nextEl.addClass(params.lockClass);
+          if ($prevEl) $prevEl.addClass(params.lockClass);
+        }
+      },
+      destroy: function destroy() {
+        var swiper = this;
+        var _swiper$navigation2 = swiper.navigation,
+            $nextEl = _swiper$navigation2.$nextEl,
+            $prevEl = _swiper$navigation2.$prevEl;
+
+        if ($nextEl && $nextEl.length) {
+          $nextEl.off('click', swiper.navigation.onNextClick);
+          $nextEl.removeClass(swiper.params.navigation.disabledClass);
+        }
+
+        if ($prevEl && $prevEl.length) {
+          $prevEl.off('click', swiper.navigation.onPrevClick);
+          $prevEl.removeClass(swiper.params.navigation.disabledClass);
+        }
+      }
+    };
+    var Navigation$1 = {
+      name: 'navigation',
+      params: {
+        navigation: {
+          nextEl: null,
+          prevEl: null,
+          hideOnClick: false,
+          disabledClass: 'swiper-button-disabled',
+          hiddenClass: 'swiper-button-hidden',
+          lockClass: 'swiper-button-lock'
+        }
+      },
+      create: function create() {
+        var swiper = this;
+        bindModuleMethods(swiper, {
+          navigation: _extends$2({}, Navigation)
+        });
+      },
+      on: {
+        init: function init(swiper) {
+          swiper.navigation.init();
+          swiper.navigation.update();
+        },
+        toEdge: function toEdge(swiper) {
+          swiper.navigation.update();
+        },
+        fromEdge: function fromEdge(swiper) {
+          swiper.navigation.update();
+        },
+        destroy: function destroy(swiper) {
+          swiper.navigation.destroy();
+        },
+        'enable disable': function enableDisable(swiper) {
+          var _swiper$navigation3 = swiper.navigation,
+              $nextEl = _swiper$navigation3.$nextEl,
+              $prevEl = _swiper$navigation3.$prevEl;
+
+          if ($nextEl) {
+            $nextEl[swiper.enabled ? 'removeClass' : 'addClass'](swiper.params.navigation.lockClass);
+          }
+
+          if ($prevEl) {
+            $prevEl[swiper.enabled ? 'removeClass' : 'addClass'](swiper.params.navigation.lockClass);
+          }
+        },
+        click: function click(swiper, e) {
+          var _swiper$navigation4 = swiper.navigation,
+              $nextEl = _swiper$navigation4.$nextEl,
+              $prevEl = _swiper$navigation4.$prevEl;
+          var targetEl = e.target;
+
+          if (swiper.params.navigation.hideOnClick && !$(targetEl).is($prevEl) && !$(targetEl).is($nextEl)) {
+            if (swiper.pagination && swiper.params.pagination && swiper.params.pagination.clickable && (swiper.pagination.el === targetEl || swiper.pagination.el.contains(targetEl))) return;
+            var isHidden;
+
+            if ($nextEl) {
+              isHidden = $nextEl.hasClass(swiper.params.navigation.hiddenClass);
+            } else if ($prevEl) {
+              isHidden = $prevEl.hasClass(swiper.params.navigation.hiddenClass);
+            }
+
+            if (isHidden === true) {
+              swiper.emit('navigationShow');
+            } else {
+              swiper.emit('navigationHide');
+            }
+
+            if ($nextEl) {
+              $nextEl.toggleClass(swiper.params.navigation.hiddenClass);
+            }
+
+            if ($prevEl) {
+              $prevEl.toggleClass(swiper.params.navigation.hiddenClass);
+            }
+          }
+        }
+      }
+    };
+
+    function _extends$1() {
+      _extends$1 = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];
+
+          for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+
+        return target;
+      };
+
+      return _extends$1.apply(this, arguments);
+    }
+    var Pagination = {
+      update: function update() {
+        // Render || Update Pagination bullets/items
+        var swiper = this;
+        var rtl = swiper.rtl;
+        var params = swiper.params.pagination;
+        if (!params.el || !swiper.pagination.el || !swiper.pagination.$el || swiper.pagination.$el.length === 0) return;
+        var slidesLength = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.slides.length : swiper.slides.length;
+        var $el = swiper.pagination.$el; // Current/Total
+
+        var current;
+        var total = swiper.params.loop ? Math.ceil((slidesLength - swiper.loopedSlides * 2) / swiper.params.slidesPerGroup) : swiper.snapGrid.length;
+
+        if (swiper.params.loop) {
+          current = Math.ceil((swiper.activeIndex - swiper.loopedSlides) / swiper.params.slidesPerGroup);
+
+          if (current > slidesLength - 1 - swiper.loopedSlides * 2) {
+            current -= slidesLength - swiper.loopedSlides * 2;
+          }
+
+          if (current > total - 1) current -= total;
+          if (current < 0 && swiper.params.paginationType !== 'bullets') current = total + current;
+        } else if (typeof swiper.snapIndex !== 'undefined') {
+          current = swiper.snapIndex;
+        } else {
+          current = swiper.activeIndex || 0;
+        } // Types
+
+
+        if (params.type === 'bullets' && swiper.pagination.bullets && swiper.pagination.bullets.length > 0) {
+          var bullets = swiper.pagination.bullets;
+          var firstIndex;
+          var lastIndex;
+          var midIndex;
+
+          if (params.dynamicBullets) {
+            swiper.pagination.bulletSize = bullets.eq(0)[swiper.isHorizontal() ? 'outerWidth' : 'outerHeight'](true);
+            $el.css(swiper.isHorizontal() ? 'width' : 'height', swiper.pagination.bulletSize * (params.dynamicMainBullets + 4) + "px");
+
+            if (params.dynamicMainBullets > 1 && swiper.previousIndex !== undefined) {
+              swiper.pagination.dynamicBulletIndex += current - swiper.previousIndex;
+
+              if (swiper.pagination.dynamicBulletIndex > params.dynamicMainBullets - 1) {
+                swiper.pagination.dynamicBulletIndex = params.dynamicMainBullets - 1;
+              } else if (swiper.pagination.dynamicBulletIndex < 0) {
+                swiper.pagination.dynamicBulletIndex = 0;
+              }
+            }
+
+            firstIndex = current - swiper.pagination.dynamicBulletIndex;
+            lastIndex = firstIndex + (Math.min(bullets.length, params.dynamicMainBullets) - 1);
+            midIndex = (lastIndex + firstIndex) / 2;
+          }
+
+          bullets.removeClass(params.bulletActiveClass + " " + params.bulletActiveClass + "-next " + params.bulletActiveClass + "-next-next " + params.bulletActiveClass + "-prev " + params.bulletActiveClass + "-prev-prev " + params.bulletActiveClass + "-main");
+
+          if ($el.length > 1) {
+            bullets.each(function (bullet) {
+              var $bullet = $(bullet);
+              var bulletIndex = $bullet.index();
+
+              if (bulletIndex === current) {
+                $bullet.addClass(params.bulletActiveClass);
+              }
+
+              if (params.dynamicBullets) {
+                if (bulletIndex >= firstIndex && bulletIndex <= lastIndex) {
+                  $bullet.addClass(params.bulletActiveClass + "-main");
+                }
+
+                if (bulletIndex === firstIndex) {
+                  $bullet.prev().addClass(params.bulletActiveClass + "-prev").prev().addClass(params.bulletActiveClass + "-prev-prev");
+                }
+
+                if (bulletIndex === lastIndex) {
+                  $bullet.next().addClass(params.bulletActiveClass + "-next").next().addClass(params.bulletActiveClass + "-next-next");
+                }
+              }
+            });
+          } else {
+            var $bullet = bullets.eq(current);
+            var bulletIndex = $bullet.index();
+            $bullet.addClass(params.bulletActiveClass);
+
+            if (params.dynamicBullets) {
+              var $firstDisplayedBullet = bullets.eq(firstIndex);
+              var $lastDisplayedBullet = bullets.eq(lastIndex);
+
+              for (var i = firstIndex; i <= lastIndex; i += 1) {
+                bullets.eq(i).addClass(params.bulletActiveClass + "-main");
+              }
+
+              if (swiper.params.loop) {
+                if (bulletIndex >= bullets.length - params.dynamicMainBullets) {
+                  for (var _i = params.dynamicMainBullets; _i >= 0; _i -= 1) {
+                    bullets.eq(bullets.length - _i).addClass(params.bulletActiveClass + "-main");
+                  }
+
+                  bullets.eq(bullets.length - params.dynamicMainBullets - 1).addClass(params.bulletActiveClass + "-prev");
+                } else {
+                  $firstDisplayedBullet.prev().addClass(params.bulletActiveClass + "-prev").prev().addClass(params.bulletActiveClass + "-prev-prev");
+                  $lastDisplayedBullet.next().addClass(params.bulletActiveClass + "-next").next().addClass(params.bulletActiveClass + "-next-next");
+                }
+              } else {
+                $firstDisplayedBullet.prev().addClass(params.bulletActiveClass + "-prev").prev().addClass(params.bulletActiveClass + "-prev-prev");
+                $lastDisplayedBullet.next().addClass(params.bulletActiveClass + "-next").next().addClass(params.bulletActiveClass + "-next-next");
+              }
+            }
+          }
+
+          if (params.dynamicBullets) {
+            var dynamicBulletsLength = Math.min(bullets.length, params.dynamicMainBullets + 4);
+            var bulletsOffset = (swiper.pagination.bulletSize * dynamicBulletsLength - swiper.pagination.bulletSize) / 2 - midIndex * swiper.pagination.bulletSize;
+            var offsetProp = rtl ? 'right' : 'left';
+            bullets.css(swiper.isHorizontal() ? offsetProp : 'top', bulletsOffset + "px");
+          }
+        }
+
+        if (params.type === 'fraction') {
+          $el.find(classesToSelector(params.currentClass)).text(params.formatFractionCurrent(current + 1));
+          $el.find(classesToSelector(params.totalClass)).text(params.formatFractionTotal(total));
+        }
+
+        if (params.type === 'progressbar') {
+          var progressbarDirection;
+
+          if (params.progressbarOpposite) {
+            progressbarDirection = swiper.isHorizontal() ? 'vertical' : 'horizontal';
+          } else {
+            progressbarDirection = swiper.isHorizontal() ? 'horizontal' : 'vertical';
+          }
+
+          var scale = (current + 1) / total;
+          var scaleX = 1;
+          var scaleY = 1;
+
+          if (progressbarDirection === 'horizontal') {
+            scaleX = scale;
+          } else {
+            scaleY = scale;
+          }
+
+          $el.find(classesToSelector(params.progressbarFillClass)).transform("translate3d(0,0,0) scaleX(" + scaleX + ") scaleY(" + scaleY + ")").transition(swiper.params.speed);
+        }
+
+        if (params.type === 'custom' && params.renderCustom) {
+          $el.html(params.renderCustom(swiper, current + 1, total));
+          swiper.emit('paginationRender', $el[0]);
+        } else {
+          swiper.emit('paginationUpdate', $el[0]);
+        }
+
+        if (swiper.params.watchOverflow && swiper.enabled) {
+          $el[swiper.isLocked ? 'addClass' : 'removeClass'](params.lockClass);
+        }
+      },
+      render: function render() {
+        // Render Container
+        var swiper = this;
+        var params = swiper.params.pagination;
+        if (!params.el || !swiper.pagination.el || !swiper.pagination.$el || swiper.pagination.$el.length === 0) return;
+        var slidesLength = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.slides.length : swiper.slides.length;
+        var $el = swiper.pagination.$el;
+        var paginationHTML = '';
+
+        if (params.type === 'bullets') {
+          var numberOfBullets = swiper.params.loop ? Math.ceil((slidesLength - swiper.loopedSlides * 2) / swiper.params.slidesPerGroup) : swiper.snapGrid.length;
+
+          if (swiper.params.freeMode && !swiper.params.loop && numberOfBullets > slidesLength) {
+            numberOfBullets = slidesLength;
+          }
+
+          for (var i = 0; i < numberOfBullets; i += 1) {
+            if (params.renderBullet) {
+              paginationHTML += params.renderBullet.call(swiper, i, params.bulletClass);
+            } else {
+              paginationHTML += "<" + params.bulletElement + " class=\"" + params.bulletClass + "\"></" + params.bulletElement + ">";
+            }
+          }
+
+          $el.html(paginationHTML);
+          swiper.pagination.bullets = $el.find(classesToSelector(params.bulletClass));
+        }
+
+        if (params.type === 'fraction') {
+          if (params.renderFraction) {
+            paginationHTML = params.renderFraction.call(swiper, params.currentClass, params.totalClass);
+          } else {
+            paginationHTML = "<span class=\"" + params.currentClass + "\"></span>" + ' / ' + ("<span class=\"" + params.totalClass + "\"></span>");
+          }
+
+          $el.html(paginationHTML);
+        }
+
+        if (params.type === 'progressbar') {
+          if (params.renderProgressbar) {
+            paginationHTML = params.renderProgressbar.call(swiper, params.progressbarFillClass);
+          } else {
+            paginationHTML = "<span class=\"" + params.progressbarFillClass + "\"></span>";
+          }
+
+          $el.html(paginationHTML);
+        }
+
+        if (params.type !== 'custom') {
+          swiper.emit('paginationRender', swiper.pagination.$el[0]);
+        }
+      },
+      init: function init() {
+        var swiper = this;
+        swiper.params.pagination = createElementIfNotDefined(swiper.$el, swiper.params.pagination, swiper.params.createElements, {
+          el: 'swiper-pagination'
+        });
+        var params = swiper.params.pagination;
+        if (!params.el) return;
+        var $el = $(params.el);
+        if ($el.length === 0) return;
+
+        if (swiper.params.uniqueNavElements && typeof params.el === 'string' && $el.length > 1) {
+          $el = swiper.$el.find(params.el);
+        }
+
+        if (params.type === 'bullets' && params.clickable) {
+          $el.addClass(params.clickableClass);
+        }
+
+        $el.addClass(params.modifierClass + params.type);
+
+        if (params.type === 'bullets' && params.dynamicBullets) {
+          $el.addClass("" + params.modifierClass + params.type + "-dynamic");
+          swiper.pagination.dynamicBulletIndex = 0;
+
+          if (params.dynamicMainBullets < 1) {
+            params.dynamicMainBullets = 1;
+          }
+        }
+
+        if (params.type === 'progressbar' && params.progressbarOpposite) {
+          $el.addClass(params.progressbarOppositeClass);
+        }
+
+        if (params.clickable) {
+          $el.on('click', classesToSelector(params.bulletClass), function onClick(e) {
+            e.preventDefault();
+            var index = $(this).index() * swiper.params.slidesPerGroup;
+            if (swiper.params.loop) index += swiper.loopedSlides;
+            swiper.slideTo(index);
+          });
+        }
+
+        extend(swiper.pagination, {
+          $el: $el,
+          el: $el[0]
+        });
+
+        if (!swiper.enabled) {
+          $el.addClass(params.lockClass);
+        }
+      },
+      destroy: function destroy() {
+        var swiper = this;
+        var params = swiper.params.pagination;
+        if (!params.el || !swiper.pagination.el || !swiper.pagination.$el || swiper.pagination.$el.length === 0) return;
+        var $el = swiper.pagination.$el;
+        $el.removeClass(params.hiddenClass);
+        $el.removeClass(params.modifierClass + params.type);
+        if (swiper.pagination.bullets) swiper.pagination.bullets.removeClass(params.bulletActiveClass);
+
+        if (params.clickable) {
+          $el.off('click', classesToSelector(params.bulletClass));
+        }
+      }
+    };
+    var Pagination$1 = {
+      name: 'pagination',
+      params: {
+        pagination: {
+          el: null,
+          bulletElement: 'span',
+          clickable: false,
+          hideOnClick: false,
+          renderBullet: null,
+          renderProgressbar: null,
+          renderFraction: null,
+          renderCustom: null,
+          progressbarOpposite: false,
+          type: 'bullets',
+          // 'bullets' or 'progressbar' or 'fraction' or 'custom'
+          dynamicBullets: false,
+          dynamicMainBullets: 1,
+          formatFractionCurrent: function formatFractionCurrent(number) {
+            return number;
+          },
+          formatFractionTotal: function formatFractionTotal(number) {
+            return number;
+          },
+          bulletClass: 'swiper-pagination-bullet',
+          bulletActiveClass: 'swiper-pagination-bullet-active',
+          modifierClass: 'swiper-pagination-',
+          // NEW
+          currentClass: 'swiper-pagination-current',
+          totalClass: 'swiper-pagination-total',
+          hiddenClass: 'swiper-pagination-hidden',
+          progressbarFillClass: 'swiper-pagination-progressbar-fill',
+          progressbarOppositeClass: 'swiper-pagination-progressbar-opposite',
+          clickableClass: 'swiper-pagination-clickable',
+          // NEW
+          lockClass: 'swiper-pagination-lock'
+        }
+      },
+      create: function create() {
+        var swiper = this;
+        bindModuleMethods(swiper, {
+          pagination: _extends$1({
+            dynamicBulletIndex: 0
+          }, Pagination)
+        });
+      },
+      on: {
+        init: function init(swiper) {
+          swiper.pagination.init();
+          swiper.pagination.render();
+          swiper.pagination.update();
+        },
+        activeIndexChange: function activeIndexChange(swiper) {
+          if (swiper.params.loop) {
+            swiper.pagination.update();
+          } else if (typeof swiper.snapIndex === 'undefined') {
+            swiper.pagination.update();
+          }
+        },
+        snapIndexChange: function snapIndexChange(swiper) {
+          if (!swiper.params.loop) {
+            swiper.pagination.update();
+          }
+        },
+        slidesLengthChange: function slidesLengthChange(swiper) {
+          if (swiper.params.loop) {
+            swiper.pagination.render();
+            swiper.pagination.update();
+          }
+        },
+        snapGridLengthChange: function snapGridLengthChange(swiper) {
+          if (!swiper.params.loop) {
+            swiper.pagination.render();
+            swiper.pagination.update();
+          }
+        },
+        destroy: function destroy(swiper) {
+          swiper.pagination.destroy();
+        },
+        'enable disable': function enableDisable(swiper) {
+          var $el = swiper.pagination.$el;
+
+          if ($el) {
+            $el[swiper.enabled ? 'removeClass' : 'addClass'](swiper.params.pagination.lockClass);
+          }
+        },
+        click: function click(swiper, e) {
+          var targetEl = e.target;
+
+          if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && swiper.pagination.$el.length > 0 && !$(targetEl).hasClass(swiper.params.pagination.bulletClass)) {
+            if (swiper.navigation && (swiper.navigation.nextEl && targetEl === swiper.navigation.nextEl || swiper.navigation.prevEl && targetEl === swiper.navigation.prevEl)) return;
+            var isHidden = swiper.pagination.$el.hasClass(swiper.params.pagination.hiddenClass);
+
+            if (isHidden === true) {
+              swiper.emit('paginationShow');
+            } else {
+              swiper.emit('paginationHide');
+            }
+
+            swiper.pagination.$el.toggleClass(swiper.params.pagination.hiddenClass);
+          }
+        }
+      }
+    };
+
+    function _extends() {
+      _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];
+
+          for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+
+        return target;
+      };
+
+      return _extends.apply(this, arguments);
+    }
+    var Scrollbar = {
+      setTranslate: function setTranslate() {
+        var swiper = this;
+        if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+        var scrollbar = swiper.scrollbar,
+            rtl = swiper.rtlTranslate,
+            progress = swiper.progress;
+        var dragSize = scrollbar.dragSize,
+            trackSize = scrollbar.trackSize,
+            $dragEl = scrollbar.$dragEl,
+            $el = scrollbar.$el;
+        var params = swiper.params.scrollbar;
+        var newSize = dragSize;
+        var newPos = (trackSize - dragSize) * progress;
+
+        if (rtl) {
+          newPos = -newPos;
+
+          if (newPos > 0) {
+            newSize = dragSize - newPos;
+            newPos = 0;
+          } else if (-newPos + dragSize > trackSize) {
+            newSize = trackSize + newPos;
+          }
+        } else if (newPos < 0) {
+          newSize = dragSize + newPos;
+          newPos = 0;
+        } else if (newPos + dragSize > trackSize) {
+          newSize = trackSize - newPos;
+        }
+
+        if (swiper.isHorizontal()) {
+          $dragEl.transform("translate3d(" + newPos + "px, 0, 0)");
+          $dragEl[0].style.width = newSize + "px";
+        } else {
+          $dragEl.transform("translate3d(0px, " + newPos + "px, 0)");
+          $dragEl[0].style.height = newSize + "px";
+        }
+
+        if (params.hide) {
+          clearTimeout(swiper.scrollbar.timeout);
+          $el[0].style.opacity = 1;
+          swiper.scrollbar.timeout = setTimeout(function () {
+            $el[0].style.opacity = 0;
+            $el.transition(400);
+          }, 1000);
+        }
+      },
+      setTransition: function setTransition(duration) {
+        var swiper = this;
+        if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+        swiper.scrollbar.$dragEl.transition(duration);
+      },
+      updateSize: function updateSize() {
+        var swiper = this;
+        if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;
+        var scrollbar = swiper.scrollbar;
+        var $dragEl = scrollbar.$dragEl,
+            $el = scrollbar.$el;
+        $dragEl[0].style.width = '';
+        $dragEl[0].style.height = '';
+        var trackSize = swiper.isHorizontal() ? $el[0].offsetWidth : $el[0].offsetHeight;
+        var divider = swiper.size / swiper.virtualSize;
+        var moveDivider = divider * (trackSize / swiper.size);
+        var dragSize;
+
+        if (swiper.params.scrollbar.dragSize === 'auto') {
+          dragSize = trackSize * divider;
+        } else {
+          dragSize = parseInt(swiper.params.scrollbar.dragSize, 10);
+        }
+
+        if (swiper.isHorizontal()) {
+          $dragEl[0].style.width = dragSize + "px";
+        } else {
+          $dragEl[0].style.height = dragSize + "px";
+        }
+
+        if (divider >= 1) {
+          $el[0].style.display = 'none';
+        } else {
+          $el[0].style.display = '';
+        }
+
+        if (swiper.params.scrollbar.hide) {
+          $el[0].style.opacity = 0;
+        }
+
+        extend(scrollbar, {
+          trackSize: trackSize,
+          divider: divider,
+          moveDivider: moveDivider,
+          dragSize: dragSize
+        });
+
+        if (swiper.params.watchOverflow && swiper.enabled) {
+          scrollbar.$el[swiper.isLocked ? 'addClass' : 'removeClass'](swiper.params.scrollbar.lockClass);
+        }
+      },
+      getPointerPosition: function getPointerPosition(e) {
+        var swiper = this;
+
+        if (swiper.isHorizontal()) {
+          return e.type === 'touchstart' || e.type === 'touchmove' ? e.targetTouches[0].clientX : e.clientX;
+        }
+
+        return e.type === 'touchstart' || e.type === 'touchmove' ? e.targetTouches[0].clientY : e.clientY;
+      },
+      setDragPosition: function setDragPosition(e) {
+        var swiper = this;
+        var scrollbar = swiper.scrollbar,
+            rtl = swiper.rtlTranslate;
+        var $el = scrollbar.$el,
+            dragSize = scrollbar.dragSize,
+            trackSize = scrollbar.trackSize,
+            dragStartPos = scrollbar.dragStartPos;
+        var positionRatio;
+        positionRatio = (scrollbar.getPointerPosition(e) - $el.offset()[swiper.isHorizontal() ? 'left' : 'top'] - (dragStartPos !== null ? dragStartPos : dragSize / 2)) / (trackSize - dragSize);
+        positionRatio = Math.max(Math.min(positionRatio, 1), 0);
+
+        if (rtl) {
+          positionRatio = 1 - positionRatio;
+        }
+
+        var position = swiper.minTranslate() + (swiper.maxTranslate() - swiper.minTranslate()) * positionRatio;
+        swiper.updateProgress(position);
+        swiper.setTranslate(position);
+        swiper.updateActiveIndex();
+        swiper.updateSlidesClasses();
+      },
+      onDragStart: function onDragStart(e) {
+        var swiper = this;
+        var params = swiper.params.scrollbar;
+        var scrollbar = swiper.scrollbar,
+            $wrapperEl = swiper.$wrapperEl;
+        var $el = scrollbar.$el,
+            $dragEl = scrollbar.$dragEl;
+        swiper.scrollbar.isTouched = true;
+        swiper.scrollbar.dragStartPos = e.target === $dragEl[0] || e.target === $dragEl ? scrollbar.getPointerPosition(e) - e.target.getBoundingClientRect()[swiper.isHorizontal() ? 'left' : 'top'] : null;
+        e.preventDefault();
+        e.stopPropagation();
+        $wrapperEl.transition(100);
+        $dragEl.transition(100);
+        scrollbar.setDragPosition(e);
+        clearTimeout(swiper.scrollbar.dragTimeout);
+        $el.transition(0);
+
+        if (params.hide) {
+          $el.css('opacity', 1);
+        }
+
+        if (swiper.params.cssMode) {
+          swiper.$wrapperEl.css('scroll-snap-type', 'none');
+        }
+
+        swiper.emit('scrollbarDragStart', e);
+      },
+      onDragMove: function onDragMove(e) {
+        var swiper = this;
+        var scrollbar = swiper.scrollbar,
+            $wrapperEl = swiper.$wrapperEl;
+        var $el = scrollbar.$el,
+            $dragEl = scrollbar.$dragEl;
+        if (!swiper.scrollbar.isTouched) return;
+        if (e.preventDefault) e.preventDefault();else e.returnValue = false;
+        scrollbar.setDragPosition(e);
+        $wrapperEl.transition(0);
+        $el.transition(0);
+        $dragEl.transition(0);
+        swiper.emit('scrollbarDragMove', e);
+      },
+      onDragEnd: function onDragEnd(e) {
+        var swiper = this;
+        var params = swiper.params.scrollbar;
+        var scrollbar = swiper.scrollbar,
+            $wrapperEl = swiper.$wrapperEl;
+        var $el = scrollbar.$el;
+        if (!swiper.scrollbar.isTouched) return;
+        swiper.scrollbar.isTouched = false;
+
+        if (swiper.params.cssMode) {
+          swiper.$wrapperEl.css('scroll-snap-type', '');
+          $wrapperEl.transition('');
+        }
+
+        if (params.hide) {
+          clearTimeout(swiper.scrollbar.dragTimeout);
+          swiper.scrollbar.dragTimeout = nextTick(function () {
+            $el.css('opacity', 0);
+            $el.transition(400);
+          }, 1000);
+        }
+
+        swiper.emit('scrollbarDragEnd', e);
+
+        if (params.snapOnRelease) {
+          swiper.slideToClosest();
+        }
+      },
+      enableDraggable: function enableDraggable() {
+        var swiper = this;
+        if (!swiper.params.scrollbar.el) return;
+        var document = getDocument();
+        var scrollbar = swiper.scrollbar,
+            touchEventsTouch = swiper.touchEventsTouch,
+            touchEventsDesktop = swiper.touchEventsDesktop,
+            params = swiper.params,
+            support = swiper.support;
+        var $el = scrollbar.$el;
+        var target = $el[0];
+        var activeListener = support.passiveListener && params.passiveListeners ? {
+          passive: false,
+          capture: false
+        } : false;
+        var passiveListener = support.passiveListener && params.passiveListeners ? {
+          passive: true,
+          capture: false
+        } : false;
+        if (!target) return;
+
+        if (!support.touch) {
+          target.addEventListener(touchEventsDesktop.start, swiper.scrollbar.onDragStart, activeListener);
+          document.addEventListener(touchEventsDesktop.move, swiper.scrollbar.onDragMove, activeListener);
+          document.addEventListener(touchEventsDesktop.end, swiper.scrollbar.onDragEnd, passiveListener);
+        } else {
+          target.addEventListener(touchEventsTouch.start, swiper.scrollbar.onDragStart, activeListener);
+          target.addEventListener(touchEventsTouch.move, swiper.scrollbar.onDragMove, activeListener);
+          target.addEventListener(touchEventsTouch.end, swiper.scrollbar.onDragEnd, passiveListener);
+        }
+      },
+      disableDraggable: function disableDraggable() {
+        var swiper = this;
+        if (!swiper.params.scrollbar.el) return;
+        var document = getDocument();
+        var scrollbar = swiper.scrollbar,
+            touchEventsTouch = swiper.touchEventsTouch,
+            touchEventsDesktop = swiper.touchEventsDesktop,
+            params = swiper.params,
+            support = swiper.support;
+        var $el = scrollbar.$el;
+        var target = $el[0];
+        var activeListener = support.passiveListener && params.passiveListeners ? {
+          passive: false,
+          capture: false
+        } : false;
+        var passiveListener = support.passiveListener && params.passiveListeners ? {
+          passive: true,
+          capture: false
+        } : false;
+        if (!target) return;
+
+        if (!support.touch) {
+          target.removeEventListener(touchEventsDesktop.start, swiper.scrollbar.onDragStart, activeListener);
+          document.removeEventListener(touchEventsDesktop.move, swiper.scrollbar.onDragMove, activeListener);
+          document.removeEventListener(touchEventsDesktop.end, swiper.scrollbar.onDragEnd, passiveListener);
+        } else {
+          target.removeEventListener(touchEventsTouch.start, swiper.scrollbar.onDragStart, activeListener);
+          target.removeEventListener(touchEventsTouch.move, swiper.scrollbar.onDragMove, activeListener);
+          target.removeEventListener(touchEventsTouch.end, swiper.scrollbar.onDragEnd, passiveListener);
+        }
+      },
+      init: function init() {
+        var swiper = this;
+        var scrollbar = swiper.scrollbar,
+            $swiperEl = swiper.$el;
+        swiper.params.scrollbar = createElementIfNotDefined($swiperEl, swiper.params.scrollbar, swiper.params.createElements, {
+          el: 'swiper-scrollbar'
+        });
+        var params = swiper.params.scrollbar;
+        if (!params.el) return;
+        var $el = $(params.el);
+
+        if (swiper.params.uniqueNavElements && typeof params.el === 'string' && $el.length > 1 && $swiperEl.find(params.el).length === 1) {
+          $el = $swiperEl.find(params.el);
+        }
+
+        var $dragEl = $el.find("." + swiper.params.scrollbar.dragClass);
+
+        if ($dragEl.length === 0) {
+          $dragEl = $("<div class=\"" + swiper.params.scrollbar.dragClass + "\"></div>");
+          $el.append($dragEl);
+        }
+
+        extend(scrollbar, {
+          $el: $el,
+          el: $el[0],
+          $dragEl: $dragEl,
+          dragEl: $dragEl[0]
+        });
+
+        if (params.draggable) {
+          scrollbar.enableDraggable();
+        }
+
+        if ($el) {
+          $el[swiper.enabled ? 'removeClass' : 'addClass'](swiper.params.scrollbar.lockClass);
+        }
+      },
+      destroy: function destroy() {
+        var swiper = this;
+        swiper.scrollbar.disableDraggable();
+      }
+    };
+    var Scrollbar$1 = {
+      name: 'scrollbar',
+      params: {
+        scrollbar: {
+          el: null,
+          dragSize: 'auto',
+          hide: false,
+          draggable: false,
+          snapOnRelease: true,
+          lockClass: 'swiper-scrollbar-lock',
+          dragClass: 'swiper-scrollbar-drag'
+        }
+      },
+      create: function create() {
+        var swiper = this;
+        bindModuleMethods(swiper, {
+          scrollbar: _extends({
+            isTouched: false,
+            timeout: null,
+            dragTimeout: null
+          }, Scrollbar)
+        });
+      },
+      on: {
+        init: function init(swiper) {
+          swiper.scrollbar.init();
+          swiper.scrollbar.updateSize();
+          swiper.scrollbar.setTranslate();
+        },
+        update: function update(swiper) {
+          swiper.scrollbar.updateSize();
+        },
+        resize: function resize(swiper) {
+          swiper.scrollbar.updateSize();
+        },
+        observerUpdate: function observerUpdate(swiper) {
+          swiper.scrollbar.updateSize();
+        },
+        setTranslate: function setTranslate(swiper) {
+          swiper.scrollbar.setTranslate();
+        },
+        setTransition: function setTransition(swiper, duration) {
+          swiper.scrollbar.setTransition(duration);
+        },
+        'enable disable': function enableDisable(swiper) {
+          var $el = swiper.scrollbar.$el;
+
+          if ($el) {
+            $el[swiper.enabled ? 'removeClass' : 'addClass'](swiper.params.scrollbar.lockClass);
+          }
+        },
+        destroy: function destroy(swiper) {
+          swiper.scrollbar.destroy();
+        }
+      }
+    };
+
+    Swiper.use([Navigation$1, Pagination$1, Scrollbar$1]);
+
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initSwiper);
     } else {
@@ -5363,7 +6373,16 @@
     function initSwiper() {
       var swipers = document.querySelectorAll('.js-swiper');
       swipers.forEach(function (el) {
-        new Swiper(el);
+        var swiper = el.dataset.swiper;
+        var options = {
+          loop: true
+        };
+
+        if (swiper) {
+          options = JSON.parse(swiper);
+        }
+
+        new Swiper(el, options);
       });
     }
 

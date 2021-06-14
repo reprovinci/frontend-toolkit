@@ -1,20 +1,32 @@
-<!-- image -->
-<div class="grid section-margins">
+<!-- swiper -->
+<div class="grid section-margins overflow-hidden">
   <div class="{{ container_class | default: 'grid__container' }}">
-    <div class="js-swiper ">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="{{ src | default: 'https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80' }}" alt="Image">
+    <div style="position: relative;">
+      <div class="js-swiper" data-swiper='{{ swiper | default: ' {"loop":true}' }}'>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
+          </div>
+          <div class="swiper-slide">
+            <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
+          </div>
         </div>
-        <div class="swiper-slide">
-          <img src="{{ src | default: 'https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80' }}" alt="Image">
-        </div>
-        <div class="swiper-slide">
-          <img src="{{ src | default: 'https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80' }}" alt="Image">
-        </div>
-        <div class="swiper-slide">
-          <img src="{{ src | default: 'https://images.unsplash.com/photo-1426024120108-99cc76989c71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&h=900&q=80' }}" alt="Image">
-        </div>
+        {% if pagination %}
+          <div class="swiper-pagination {{ pagination }}"></div>
+        {% endif %}
+        {% if prevnext %}
+          <div class="swiper-button-prev swiper-button-prev-{{ prevnext }}"></div>
+          <div class="swiper-button-next swiper-button-next-{{ prevnext }}"></div>
+        {% endif %}
+        {% if scrollbar %}
+          <div class="swiper-scrollbar {{ scrollbar }}"></div>
+        {% endif %}
       </div>
     </div>
   </div>
