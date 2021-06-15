@@ -10,19 +10,25 @@ tags:
   <section id="Single image" class="bg-gray py-4 grid">
     <h1 class="grid__container">Single image</h1>
     <div class="grid__full bg-white">
-      {% include components/image.html, container_class: 'grid__full' %}
-      {% include components/image.html %}
-      {% include components/image.html, container_class: 'grid__container--sm' %}
-      {% include components/image.html, container_class: 'grid__container--xs' %}
+      {% include components/sections/image.html, container_class: 'grid__full' %}
+      {% include components/sections/image.html %}
+      {% include components/sections/image.html, container_class: 'grid__container--sm' %}
+      {% include components/sections/image.html, container_class: 'grid__container--xs' %}
     </div>
   </section>
   <section id="Text + image" class="bg-gray py-4 grid">
     <h1 class="grid__container">Text + image</h1>
     <div class="grid__full bg-white">
-      {% include components/text-img.html %}
-      {% include components/text-img.html, text_class: 'grid__left', image_class: 'grid__right' %}
-      {% include components/text-img.html, text_class: 'grid__right', image_class: 'grid__left-extended' %}
-      {% include components/text-img.html, text_class: 'grid__left', image_class: 'grid__right-extended' %}
+      {% include components/sections/text-image.html %}
+      {% include components/sections/text-image.html, textpos: 'left' %}
+      {% include components/sections/text-image.html, image-width: 'extend' %}
+      {% include components/sections/text-image.html, textpos: 'left', image-width: 'extend' %}
+    </div>
+  </section>
+  <section id="Cards" class="bg-gray py-4 grid">
+    <h1 class="grid__container">Cards</h1>
+    <div class="grid__full bg-white">
+      {% include components/sections/cards.html %}
     </div>
   </section>
 </main>

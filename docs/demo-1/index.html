@@ -3,10 +3,10 @@ layout: layouts/base.html
 title: Home
 ---
 
-{% include components/image.html, container_class: 'grid__full', src: 'https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60' %}
+{% include components/sections/image.html, container_class: 'grid__full', src: 'https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60' %}
 
 {% assign button_url = '/demo-1/news' | url %}
-{% include components/text-img.html, title: 'Nieuws', button_url: button_url %}
+{% include components/sections/text-image.html, title: 'Nieuws', button_url: button_url %}
 
 {% assign swiper_url = '/demo-1/text' | url %}
 {% include components/swiper.html, swiper_url: swiper_url, scrollbar: 'swiper-scrollbar-two', swiper: '{"loop":true,"spaceBetween":8,"scrollbar":{"el":".swiper-scrollbar-two","draggable":true}}' %}

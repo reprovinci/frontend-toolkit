@@ -1,0 +1,12 @@
+.meta {
+  font-size: $font-size-sm;
+  font-style: italic;
+  > * {
+    display: inline-block;
+    &:not(:first-child) {
+      &::before {
+        content: ' - '
+      }
+    }
+  }
+}

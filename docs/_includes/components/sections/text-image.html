@@ -1,0 +1,5 @@
+<!-- text + image -->
+<section class="section-text-image grid text-image--textpos-{{ textpos | default: right }}">
+  {% include components/blocks/figure.html, class: 'text-image__image' %}
+  {% include components/blocks/text.html, class: 'text-image__text' %}
+</section>
