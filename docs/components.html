@@ -7,6 +7,13 @@ tags:
 ---
 
 <main class="my-5">
+  <section id="Visual" class="bg-gray py-4 grid">
+    <h1 class="grid__container">Visual</h1>
+    <div class="grid__full bg-white">
+      {% include components/sections/visual.html %}
+      {% include components/sections/visual.html, overlay: 'light' %}
+    </div>
+  </section>
   <section id="Single image" class="bg-gray py-4 grid">
     <h1 class="grid__container">Single image</h1>
     <div class="grid__full bg-white">

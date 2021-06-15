@@ -1,0 +1,24 @@
+// overlay-absolute
+@mixin overlay-absolute($top: 0, $right: 0, $bottom: 0, $left: 0, $bg: rgba(0,0,0,.5), $z-index: 1) {
+  &::after {
+    content: '';
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    background: $bg;
+    z-index: $z-index;
+  }
+}
+
+// overlay-grid
+@mixin overlay-grid($cols: #{1 / -1}, $rows: #{1 / -1}, $bg: rgba(0,0,0,.5), $z-index: 1) {
+  &::after {
+    content: '';
+    grid-column: $cols;
+    grid-row: $rows;
+    background: $bg;
+    z-index: $z-index;
+  }
+}

@@ -6,9 +6,24 @@
   flex-direction: column;
   &:focus,
   &:hover {
-    transform: scale(1.02);
+    h3 {
+      color: $link-hover-color;
+    }
   }
   &:active {
     transform: scale(.97);
+  }
+}
+
+.card__meta {
+  font-size: $font-size-sm;
+  font-style: italic;
+  > * {
+    display: inline-block;
+    &:not(:first-child) {
+      &::before {
+        content: ' - '
+      }
+    }
   }
 }

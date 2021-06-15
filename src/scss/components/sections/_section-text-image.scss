@@ -3,16 +3,20 @@ section.section-text-image {
 }
 
 .section-text-image__image {
-  @include grid-pos(1,12,1,1);
+  @include grid-pos(1,11,1,1);
 }
 .section-text-image__text {
   @include grid-pos(14,11,1,1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 // textpos modifier
 .section-text-image--textpos-left {
   .section-text-image__image {
-    @include grid-pos(13,12,1,1);
+    @include grid-pos(14,11,1,1);
   }
   .section-text-image__text {
     @include grid-pos(1,11,1,1);

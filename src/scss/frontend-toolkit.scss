@@ -1,14 +1,17 @@
-// choose custom style
-// @import "_variables/theme-dark";
+// choose a theme. 
+// A theme is a set of variables that overwrite the defaults
+// @import "_themes/theme-dark";
 
-// choose custom style
-@import '_variables';
-@import '_mixins';
+// the default variables
+// overwrite these with your own
+@import 'variables';
+
+// toolkit
+@import 'mixins';
 @import 'scaffolding';
 @import 'grids';
 @import 'layouts';
-@import 'sections';
 @import 'typography';
-@import 'blocks';
 @import 'utilities';
+@import 'components/blocks';
 

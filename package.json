@@ -4,11 +4,12 @@
   "description": "Frontend toolkit. Framework classes, grid, typography/colors/spacing setup.. the scaffolding we start with. 🚀",
   "main": "index.js",
   "scripts": {
-    "deploy": "npm-run-all prod:rimraf prod:rollup prod:sass-toolkit prod:sass-packages prod:eleventy gh-pages",
+    "deploy": "npm-run-all prod:rimraf prod:rollup prod:sass-toolkit prod:sass-packages prod:sass-sections prod:eleventy gh-pages",
     "dev:eleventy": "ELEVENTY_ENV=development eleventy --serve --quiet",
     "dev:rollup": "rollup --config --watch --sourcemap",
     "dev:sass-toolkit": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --watch",
     "dev:sass-packages": "sass src/scss/packages.scss dist/css/packages.css --watch",
+    "dev:sass-sections": "sass src/scss/sections.scss dist/css/sections.css --watch",
     "gh-pages": "gh-pages -d _site",
     "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint src/js/*",
@@ -20,6 +21,7 @@
     "prod:rollup": "rollup --config --compact",
     "prod:sass-toolkit": "sass src/scss/frontend-toolkit.scss dist/css/frontend-toolkit.css --no-source-map",
     "prod:sass-packages": "sass src/scss/packages.scss dist/css/packages.css --no-source-map",
+    "prod:sass-sections": "sass src/scss/sections.scss dist/css/sections.css --no-source-map",
     "start": "npm-run-all --parallel dev:*"
   },
   "repository": {
@@ -69,6 +71,7 @@
   },
   "dependencies": {
     "luxon": "^1.27.0",
+    "reset-css": "^5.0.1",
     "swiper": "^6.7.0"
   }
 }

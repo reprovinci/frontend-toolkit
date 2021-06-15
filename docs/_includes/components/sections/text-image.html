@@ -1,5 +1,5 @@
-<!-- text + image -->
-<section class="section-text-image grid text-image--textpos-{{ textpos | default: right }} text-image--imgextend-{{ imgextend | default'none' }}">
-  {% include components/blocks/figure.html, class: 'text-image__image' %}
-  {% include components/blocks/text.html, class: 'text-image__text' %}
+<!-- components/sections/text-image -->
+<section class="section-text-image grid section-text-image--textpos-{{ textpos | default: right }} section-text-image--imgextend-{{ imgextend | default'none' }}">
+  {% include components/blocks/figure.html, class: 'section-text-image__image' %}
+  {% include components/blocks/text.html, class: 'section-text-image__text' %}
 </section>
