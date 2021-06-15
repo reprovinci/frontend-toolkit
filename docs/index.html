@@ -166,31 +166,32 @@ $h6-size: $font-size-md !default;
 
   <!-- colors -->
 <section id="colors" class="section-margins grid">
-  <div class="grid__container">
-    <h2>Colors</h2>
-    <div class="flexgrid-3">
-      <div class="colorset">
-        <h3>Defined Grayscales</h3>
-        <p><span class="bg-black"></span><code>$color-black</code></p>
-        <p><span class="bg-gray-extra-dark"></span><code>$color-gray-extra-dark</code></p>
-        <p><span class="bg-gray-dark"></span><code>$color-gray-dark</code></p>
-        <p><span class="bg-gray"></span><code>$color-gray</code></p>
-        <p><span class="bg-gray-light"></span><code>$color-gray-light</code></p>
-        <p><span class="bg-gray-extra-light"></span><code>$color-gray-extra-light</code></p>
-      </div>
-      <div class="colorset">
-        <h3>Defined colors</h3>
-        <p><span class="bg-blue"></span><code>$color-blue</code></p>
-        <p><span class="bg-green"></span><code>$color-green</code></p>
-        <p><span class="bg-white"></span><code>$color-white</code></p>
-      </div>
-      <div class="colorset">
-        <h3>Applied colors</h3>
-        <p><span class="bg-primary"></span><code>$color-primary</code></p>
-        <p><span class="bg-secondary"></span><code>$color-secondary</code></p>
-        <p><span class="bg-loud"></span><code>$color-loud</code></p>
-        <p><span class="bg-soft"></span><code>$color-soft</code></p>
-      </div>
+    <div class="grid__container">
+        <h2>Colors</h2>
+        <div class="flexgrid-3">
+            <div class="colorset">
+                <h3>Defined Grayscales</h3>
+                <p><span class="bg-black"></span><code>$color-black</code></p>
+                <p><span class="bg-gray-extra-dark"></span><code>$color-gray-extra-dark</code></p>
+                <p><span class="bg-gray-dark"></span><code>$color-gray-dark</code></p>
+                <p><span class="bg-gray"></span><code>$color-gray</code></p>
+                <p><span class="bg-gray-light"></span><code>$color-gray-light</code></p>
+                <p><span class="bg-gray-extra-light"></span><code>$color-gray-extra-light</code></p>
+                <p><span class="bg-white"></span><code>$color-white</code></p>
+            </div>
+            <div class="colorset">
+                <h3>Defined colors</h3>
+                <p><span class="bg-blue"></span><code>$color-blue</code></p>
+                <p><span class="bg-green"></span><code>$color-green</code></p>
+            </div>
+            <div class="colorset">
+                <h3>Applied colors</h3>
+                <p><span class="bg-primary"></span><code>$color-primary</code></p>
+                <p><span class="bg-secondary"></span><code>$color-secondary</code></p>
+                <p><span class="bg-loud"></span><code>$color-loud</code></p>
+                <p><span class="bg-soft"></span><code>$color-soft</code></p>
+            </div>
+        </div>
     </div>
   </div>
 </section>
@@ -204,16 +205,23 @@ $h6-size: $font-size-md !default;
         </div>
     </div>
     <style type="text/css">
+        .demogrid {
+            border-top: solid 1px rgba(255,255,255,.3);
+            border-bottom: solid 1px rgba(255,255,255,.3);
+            margin:  1em 0;
+        }
         .demogrid div {
             background: rgba(255, 0, 0, .3);
             font-size: 10px;
             height: 3rem;
-            outline: solid 1px #fff;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #fff;
+        }
+        .demogrid div:not(:first-child) {
+            border-left: solid 1px rgba(255,255,255,.3);
         }
         
         .demogrid div:nth-child(1),
@@ -271,7 +279,7 @@ $h6-size: $font-size-md !default;
         <div>27</div>
         <div>28</div>
     </div>
-    <div class="grid mt-md grid-placement-test">
+    <div class="grid mt-3 grid-placement-test">
         <div class="grid__container">
             <code>.grid__container</code><code>@include grid-pos(1,24)</code>
         </div>
@@ -306,7 +314,7 @@ $h6-size: $font-size-md !default;
             <code>.grid__right-full</code><code>@include grid-pos(13,14)</code>
         </div>
     </div>
-    <div class="grid">
+    <div class="grid grid mt-3 ">
       <div class="grid__container">
         <h3>Grid columns</h3>
         <p>The variable <code>$grid-columns</code> defines the amount of columns in the grid center. 24 is the default. Override it when needed.</p>
@@ -321,18 +329,87 @@ $h6-size: $font-size-md !default;
       </div>
     </div>
 </section>
-
   <!-- buttons -->
 <section id="buttons" class="section-margins grid">
   <div class="grid__container">
     <h2 class="section-header">Buttons</h2>
-    <div class="flexgrid-4">
+    <div class="flexgrid-2">
       <div class="box">
         <div class="box__body">
           <h4>The main button</h4>
-          <p>Used for primary click actions</p>
+          <p>Used for primary click actions like "submit" in a form.</p>
           <p><code>.btn</code></p>
           <button class="btn">The Button</button>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <h4>The secondary button</h4>
+          <p>Used for secondary actions like "cancel" in a form.</p>
+          <p><code>.btn-secondary</code></p>
+          <button class="btn-secondary">The Secondary Button</button>
+        </div>
+      </div>
+      <div class="box bg-gray-extra-dark color-white">
+        <div class="box__body">
+          <h4>The diap button</h4>
+          <p>The main button on dark backgrounds</p>
+          <p><code>.btn-diap</code></p>
+          <button class="btn-diap">The Diap Button</button>
+        </div>
+      </div>
+      <div class="box bg-gray-extra-dark color-white">
+        <div class="box__body">
+          <h4>The secondary diap button</h4>
+          <p>The secondary button on dark backgrounds</p>
+          <p><code>.btn-secondary-diap</code></p>
+          <button class="btn-secondary-diap">The Alt Button</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Button groups</h2>
+    <p>Buttons placed inline need to be spaced and usually the is some extra margin before and/or after the group of button. The
+      <code>.buttons</code> class does this.</p>
+    <div class="buttons">
+      <button class="btn">Primary button</button>
+      <button class="btn-secondary">Secondary button</button>
+    </div>
+    <h2>A lot of buttons should get some top/bottom margin</h2>
+    <p>(also: check that a tag buttons and real buttons look similar)</p>
+    <div class="flexgrid-2">
+      <div>
+        <h3><code>&lt;a&gt;</code> tag buttons</h3>
+        <div class="buttons">
+          <a class="btn">Lorem button</a>
+          <a class="btn-secondary">Quick brown fox button</a>
+          <a class="btn">Primary button</a>
+          <a class="btn-secondary">Whoot button</a>
+          <a class="btn">Lala button</a>
+          <a class="btn-secondary">Yolo button</a>
+          <a class="btn">Some button</a>
+          <a class="btn-secondary">Pressive button</a>
+          <a class="btn">Another button</a>
+          <a class="btn-secondary">Lazy dog button</a>
+        </div>
+      </div>
+      <div>
+        <h3>Real <code>&lt;button&gt;</code></h3>
+        <div class="buttons">
+          <button class="btn">Lorem button</button>
+          <button class="btn-secondary">Quick brown fox button</button>
+          <button class="btn">Primary button</button>
+          <button class="btn-secondary">Whoot button</button>
+          <button class="btn">Lala button</button>
+          <button class="btn-secondary">Yolo button</button>
+          <button class="btn">Some button</button>
+          <button class="btn-secondary">Pressive button</button>
+          <button class="btn">Another button</button>
+          <button class="btn-secondary">Lazy dog button</button>
         </div>
       </div>
       <div class="box">
@@ -356,7 +433,81 @@ $h6-size: $font-size-md !default;
           <h4>The diap button</h4>
           <p>Used on dark backgrounds</p>
           <p><code>.btn-diap</code></p>
-          <button class="btn">The Diap Button</button>
+          <button class="btn-diap">The Diap Button</button>
+        </div>
+      </div>
+      <div class="box bg-gray-extra-dark color-white">
+        <div class="box__body">
+          <h4>The secondary diap button</h4>
+          <p>Used on dark backgrounds</p>
+          <p><code>.btn-secondary-diap</code></p>
+          <button class="btn-secondary-diap">The secondary Diap Button</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- textlinks -->
+<section id="text links" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Text links</h2>
+    <div class="flexgrid-3">
+      <div>
+        <h3>Read more</h3>
+        <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+        <p><a class="readmore">Read more</a></p>
+      </div>
+      <div>
+        <h3>Link forward</h3>
+        <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+        <p><a class="link-forward">Link to next chapter</a></p>
+      </div>
+      <div>
+        <h3>Link back</h3>
+        <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+        <p><a class="link-back">Link back to list</a></p>
+      </div>
+      <div class="box--soft">
+        <div class="box__body">
+          <h3>Read more <small>in a soft box</small></h3>
+          <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+          <p><a class="readmore">Read more</a></p>
+        </div>
+      </div>
+      <div class="box--soft">
+        <div class="box__body">
+          <h3>Link forward <small>in a soft box</small></h3>
+          <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+          <p><a class="link-forward">Link to next chapter</a></p>
+        </div>
+      </div>
+      <div class="box--soft">
+        <div class="box__body">
+          <h3>Link back <small>in a soft box</small></h3>
+          <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+          <p><a class="link-back">Link back to list</a></p>
+        </div>
+      </div>
+      <div class="box--loud">
+        <div class="box__body">
+          <h3>Read more <small>in a LOUD box</small></h3>
+          <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+          <p><a class="readmore">Read more</a></p>
+        </div>
+      </div>
+      <div class="box--loud">
+        <div class="box__body">
+          <h3>Link forward <small>in a LOUD box</small></h3>
+          <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+          <p><a class="link-forward">Link to next chapter</a></p>
+        </div>
+      </div>
+      <div class="box--loud">
+        <div class="box__body">
+          <h3>Link back <small>in a LOUD box</small></h3>
+          <p>This is some text. Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Officia, voluptatem ipsa quia quisquam.</p>
+          <p><a class="link-back">Link back to list</a></p>
         </div>
       </div>
     </div>
@@ -367,19 +518,53 @@ $h6-size: $font-size-md !default;
 <section id="box" class="section-margins grid">
   <div class="grid__container">
     <h2 class="section-header">Box</h2>
-    <p>Colored boxes to place attention on content. Default boxes are <code>.box--loud</code> and
-      <code>.box--soft</code>. Loud is color-primary by default.</p>
+    <p>Colored boxes to place attention on content. Boxes have some padding and coloring.</p>
+    <p>Default boxes are <code>.box--soft</code> for content that needs just a bit of attention and
+      <code>.box--loud</code> for content that needs a lot of attention.</p>
     <div class="flexgrid-2">
       <div class="box">
         <div class="box__body">
           <h2>Soft box</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+          <div class="buttons">
+            <a class="btn">Primary Button</a>
+            <a class="btn-secondary">Secondary Button</a>
+          </div>
         </div>
       </div>
       <div class="box--loud">
         <div class="box__body">
           <h2>Loud box</h2>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+          <div class="buttons">
+            <a class="btn">Primary Button</a>
+            <a class="btn-secondary">Secondary Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Literal box classes</h3>
+    <p class="mt-4 mb-3">Soft and loud are more flexible to style but for quick markup the literal classes
+      <code>.box--primary</code> and <code>.box--secondary</code> are available.</p>
+    <div class="flexgrid-2">
+      <div class="box--primary">
+        <div class="box__body">
+          <h2>Primary colored box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+          <div class="buttons">
+            <a class="btn">Primary Button</a>
+            <a class="btn-secondary">Secondary Button</a>
+          </div>
+        </div>
+      </div>
+      <div class="box--secondary">
+        <div class="box__body">
+          <h2>Secondary colored box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+          <div class="buttons">
+            <a class="btn">Primary Button</a>
+            <a class="btn-secondary">Secondary Button</a>
+          </div>
         </div>
       </div>
     </div>
@@ -391,6 +576,7 @@ $h6-size: $font-size-md !default;
   @include box(black, hotpink);
 }
         </pre>
+  </div>
   </div>
 </section>
 
@@ -459,7 +645,7 @@ $h6-size: $font-size-md !default;
     </div>
 </section>
   <!-- svg mixin -->
-<section id="svg" id="box" class="section-margins grid">
+<section id="svg" class="section-margins grid">
   <div class="grid__container">
     <h2 class="section-header">SVG mixin</h2>
     <p>Place icons before/after/in elements. Common usage example:</p>
@@ -473,13 +659,29 @@ $h6-size: $font-size-md !default;
     <p>The icon source can either be a base64 encoded string or an icon name. Some default icons are defined in _variables/</p>
     <p>The root folder the icons is by default ../images but can be set with the variable
       <code>$svg__root: '../images';</code></p>
-    <div class="flexgrid-4">
+    <div class="flexgrid-2">
       <div class="box">
         <div class="box__body">
-          <code>svg--before</code>
-          <p>
-            <button class="btn svg-demo--before">My Button!</button>
-          </p>
+          <code>svg--before($rocket, 1.5em, 1.5em)</code>
+          <p><span class="svg-demo--before">An icon before this text</span></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg--after($rocket, 1.5em, 1.5em)</code>
+          <p><span class="svg-demo--after">An icon after this text</span></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg--abs($rocket, 1.5em, 1.5em)</code>
+          <p><span class="svg-demo--abs">An icon abs positioned</span></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg($rocket, 2em, 2em)</code>
+          <p><span class="svg-demo--main">Replace text</span></p>
         </div>
       </div>
       <div class="box">
