@@ -1,30 +1,30 @@
-section.text-image {
+section.section-text-image {
   @include section-margins();
 }
 
-.text-image__image {
+.section-text-image__image {
   @include grid-pos(1,12,1,1);
 }
-.text-image__text {
+.section-text-image__text {
   @include grid-pos(14,11,1,1);
 }
 
 // textpos modifier
-.text-image--textpos-left {
-  .text-image__image {
+.section-text-image--textpos-left {
+  .section-text-image__image {
     @include grid-pos(13,12,1,1);
   }
-  .text-image__text {
+  .section-text-image__text {
     @include grid-pos(1,11,1,1);
   }
 }
 
 // figure extend modifier
-.text-image--image-extend {
-  .text-image__image {
+.section-text-image--image-extend {
+  .section-text-image__image {
     @include grid-abspos(1,14,1,1);
   }
-  &.text-image--textpos-left {
+  &.section-text-image--textpos-left {
     @include grid-pos(13,14,1,1);
   }
 }
