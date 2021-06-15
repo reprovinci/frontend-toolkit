@@ -4,18 +4,20 @@
     <div style="position: relative;">
       <div class="js-swiper" data-swiper='{{ swiper | default: '{"loop":true}' }}'>
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
-          </div>
+          {% if swiper_url %}
+            {% for i in (1..5) %}
+              <a class="swiper-slide" href="{{ swiper_url }}">
+                <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
+              </a>
+            {% endfor %}
+          {% else %}
+            {% for i in (1..5) %}
+              <div class="swiper-slide">
+                <img src="{{ src | default: 'https://via.placeholder.com/1600x900.jpg' }}" alt="Image">
+              </div>
+            {% endfor %}
+          {% endif %}
+
         </div>
         {% if pagination %}
           <div class="swiper-pagination {{ pagination }}"></div>

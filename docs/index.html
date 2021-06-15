@@ -7,20 +7,23 @@ tags:
 ---
 
 <main class="my-5">
-    {% include docs/sections/header.html %}
-    <div class="grid">
-        <div class="grid__container">
-            <h2>What's here to find..</h2>
-            <ul>
-                {%- for post in collections.nav -%}
-                    <li {% if page.url == post.url %} aria-current="page" {% endif %}>
-                        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-                    </li>
-                {%- endfor -%}
-                <li>
-                    <marquee>Todo: example pages</marquee>
-                </li>
-            </ul>
-        </div>
+  {% include docs/sections/header.html %}
+  <div class="grid">
+    <div class="grid__container">
+      <h2>What's here to find..</h2>
+      <ul>
+        {%- for post in collections.nav -%}
+          <li {% if page.url == post.url %} aria-current="page" {% endif %}>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+      <h2>Example pages</h2>
+      <ul>
+        <li>
+          <a href="{{ "/demo-1" | url }}">Demo 1</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </main>
