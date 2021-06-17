@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Componenten</title>
+  <title>Sections</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/frontend-toolkit.css">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/packages.css">
@@ -74,10 +74,12 @@
 <body>
 
 <main class="my-5">
-  <section id="Visual" class="bg-gray py-4 grid">
-    <h1 class="grid__container">Pageheader</h1>
-    <div class="grid__full bg-white">
-      <section class="section-pageheader section-pageheader--overlay-dark section-pageheader--height-md grid">
+  
+  <!-- pageheader -->
+  <section id="Pageheader">
+    <h2 class="container mt-5 section-header">Pageheader</h2>
+    <h3 class="container">Pageheader without image</h3>
+    <section class="section-pageheader section-pageheader--overlay-dark section-pageheader--height-md grid">
   
   <div class="section-pageheader__text">
     <h1>Pageheader title lorem ipsum dolor sit <small>Subtitle quick fox</small></h1>
@@ -88,7 +90,8 @@
     </div>
   </div>
 </section>
-      <section class="section-pageheader section-pageheader--overlay-dark section-pageheader--height-md grid">
+    <h3 class="container">Pageheader with dark overlay</h3>
+    <section class="section-pageheader section-pageheader--overlay-dark section-pageheader--height-md grid">
   
     <figure class="figure section-pageheader__figure" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
@@ -103,7 +106,8 @@
     </div>
   </div>
 </section>
-      <section class="section-pageheader section-pageheader--overlay-light section-pageheader--height-md grid">
+    <h3 class="container">Pageheader with light overlay</h3>
+    <section class="section-pageheader section-pageheader--overlay-light section-pageheader--height-md grid">
   
     <figure class="figure section-pageheader__figure" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
@@ -118,12 +122,13 @@
     </div>
   </div>
 </section>
-    </div>
   </section>
-  <section id="Single image" class="bg-gray py-4 grid">
-    <h1 class="grid__container">Single image</h1>
-    <div class="grid__full bg-white">
-      <!-- components/sections/image -->
+
+  <!-- Single image -->
+  <section id="Single image">
+    <h2 class="container mt-5 section-header">Single image</h2>
+    <h3 class="container">Full width single image</h3>
+    <!-- components/sections/image -->
 <section class="section-image grid">
   <div class="grid__full">
     <figure class="figure " style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
@@ -132,7 +137,8 @@
   </div>
 </section>
 
-      <!-- components/sections/image -->
+    <h3 class="container">Main container width image</h3>
+    <!-- components/sections/image -->
 <section class="section-image grid">
   <div class="grid__container">
     <figure class="figure " style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
@@ -141,7 +147,8 @@
   </div>
 </section>
 
-      <!-- components/sections/image -->
+    <h3 class="container">Small container width image</h3>
+    <!-- components/sections/image -->
 <section class="section-image grid">
   <div class="grid__container--sm">
     <figure class="figure " style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
@@ -150,7 +157,8 @@
   </div>
 </section>
 
-      <!-- components/sections/image -->
+    <h3 class="container">X-Small container width image</h3>
+    <!-- components/sections/image -->
 <section class="section-image grid">
   <div class="grid__container--xs">
     <figure class="figure " style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
@@ -159,18 +167,19 @@
   </div>
 </section>
 
-    </div>
   </section>
-  <section id="Text + image" class="bg-gray py-4 grid">
-    <h1 class="grid__container">Text + image</h1>
-    <div class="grid__full bg-white">
-      <!-- components/sections/text-image -->
-<section class="section-text-image grid section-text-image--textpos- section-text-image--imgextend-">
+  
+  <!-- Text + image -->
+  <section id="Text + image">
+    <h2 class="container mt-5 section-header">Text + image</h2>
+    <h3 class="container"></h3>
+    <!-- components/sections/text-image -->
+<section class="section-text-image grid section-text-image--textpos-right section-text-image--img-width-default section-text-image--img-height-original">
   <figure class="figure section-text-image__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
   <div class="text section-text-image__text">
-  <h2>Componenten</h2>
+  <h2>Text & Image text right</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
   <a href="#" class="btn">
     Primary button
@@ -178,13 +187,14 @@
 </div>
 </section>
 
-      <!-- components/sections/text-image -->
-<section class="section-text-image grid section-text-image--textpos-left section-text-image--imgextend-">
+    <h3 class="container"></h3>
+    <!-- components/sections/text-image -->
+<section class="section-text-image grid section-text-image--textpos-left section-text-image--img-width-default section-text-image--img-height-original">
   <figure class="figure section-text-image__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
   <div class="text section-text-image__text">
-  <h2>Componenten</h2>
+  <h2>Text & Image text left</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
   <a href="#" class="btn">
     Primary button
@@ -192,13 +202,14 @@
 </div>
 </section>
 
-      <!-- components/sections/text-image -->
-<section class="section-text-image grid section-text-image--textpos- section-text-image--imgextend-">
+    <h3 class="container"></h3>
+    <!-- components/sections/text-image -->
+<section class="section-text-image grid section-text-image--textpos-right section-text-image--img-width-extend section-text-image--img-height-original">
   <figure class="figure section-text-image__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
   <div class="text section-text-image__text">
-  <h2>Componenten</h2>
+  <h2>Text & Image text left <small>with extended image</small></h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
   <a href="#" class="btn">
     Primary button
@@ -206,13 +217,14 @@
 </div>
 </section>
 
-      <!-- components/sections/text-image -->
-<section class="section-text-image grid section-text-image--textpos-left section-text-image--imgextend-">
+    <h3 class="container"></h3>
+    <!-- components/sections/text-image -->
+<section class="section-text-image grid section-text-image--textpos-left section-text-image--img-width-full section-text-image--img-height-text">
   <figure class="figure section-text-image__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
   <div class="text section-text-image__text">
-  <h2>Componenten</h2>
+  <h2>Text & Image text right <small>with extended image</small></h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
   <a href="#" class="btn">
     Primary button
@@ -220,12 +232,42 @@
 </div>
 </section>
 
-    </div>
+    <h3 class="container"></h3>
+    <!-- components/sections/text-image -->
+<section class="section-text-image grid section-text-image--textpos-right section-text-image--img-width-extend section-text-image--img-height-original">
+  <figure class="figure section-text-image__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
+</figure>
+  <div class="text section-text-image__text">
+  <h2>Text & Image text left <small>with full-width image and text-based image height</small></h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
+  <a href="#" class="btn">
+    Primary button
+  </a>
+</div>
+</section>
+
+    <h3 class="container"></h3>
+    <!-- components/sections/text-image -->
+<section class="section-text-image grid section-text-image--textpos-left section-text-image--img-width-full section-text-image--img-height-text">
+  <figure class="figure section-text-image__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
+</figure>
+  <div class="text section-text-image__text">
+  <h2>Text & Image text right <small>with full-width image and text-based image height</small></h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!</p>
+  <a href="#" class="btn">
+    Primary button
+  </a>
+</div>
+</section>
+
   </section>
-  <section id="Cards" class="bg-gray py-4 grid">
-    <h1 class="grid__container">Cards</h1>
-    <div class="grid__full bg-white">
-      <!-- components/sections/cards -->
+  
+  <!-- Cards -->
+  <section id="Nav-cards">
+    <h2 id="Cards" class="container mt-5 section-header">Nav cards</h2>
+    <!-- components/sections/cards -->
 <section class="section-cards grid">
   <div class="grid__container">
     <div class="cards flexgrid-4">
@@ -233,7 +275,7 @@
   <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
-  <h3>Componenten</h3>
+  <h3>Card title lorem ipsum</h3>
   <div class="card__meta meta">
     <span class="meta__date">17 Aug 2019</span>
     <span class="meta__author">A.U. Teur</span>
@@ -244,7 +286,7 @@
   <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
-  <h3>Componenten</h3>
+  <h3>Card title lorem ipsum</h3>
   <div class="card__meta meta">
     <span class="meta__date">17 Aug 2019</span>
     <span class="meta__author">A.U. Teur</span>
@@ -255,7 +297,7 @@
   <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
-  <h3>Componenten</h3>
+  <h3>Card title lorem ipsum</h3>
   <div class="card__meta meta">
     <span class="meta__date">17 Aug 2019</span>
     <span class="meta__author">A.U. Teur</span>
@@ -266,7 +308,7 @@
   <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
-  <h3>Componenten</h3>
+  <h3>Card title lorem ipsum</h3>
   <div class="card__meta meta">
     <span class="meta__date">17 Aug 2019</span>
     <span class="meta__author">A.U. Teur</span>
@@ -277,7 +319,7 @@
   <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
-  <h3>Componenten</h3>
+  <h3>Card title lorem ipsum</h3>
   <div class="card__meta meta">
     <span class="meta__date">17 Aug 2019</span>
     <span class="meta__author">A.U. Teur</span>
@@ -288,7 +330,7 @@
   <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
-  <h3>Componenten</h3>
+  <h3>Card title lorem ipsum</h3>
   <div class="card__meta meta">
     <span class="meta__date">17 Aug 2019</span>
     <span class="meta__author">A.U. Teur</span>
@@ -299,7 +341,7 @@
   <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
-  <h3>Componenten</h3>
+  <h3>Card title lorem ipsum</h3>
   <div class="card__meta meta">
     <span class="meta__date">17 Aug 2019</span>
     <span class="meta__author">A.U. Teur</span>
@@ -310,7 +352,7 @@
   <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80)">
     <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Image">
 </figure>
-  <h3>Componenten</h3>
+  <h3>Card title lorem ipsum</h3>
   <div class="card__meta meta">
     <span class="meta__date">17 Aug 2019</span>
     <span class="meta__author">A.U. Teur</span>
@@ -320,8 +362,8 @@
 </div>
   </div>
 </section>
-    </div>
   </section>
+
 </main>
 
 <nav class="index bg-gray-extra-dark px-2 py-4">
@@ -334,7 +376,7 @@
         </li><li >
           <a class="color-white" href="/frontend-toolkit/docs/">Docs</a>
         </li><li  aria-current="page" >
-          <a class="color-white" href="/frontend-toolkit/components/">Componenten</a>
+          <a class="color-white" href="/frontend-toolkit/sections/">Sections</a>
         </li><li >
           <a class="color-white" href="/frontend-toolkit/flexgrids/">Layouts</a>
         </li><li >
