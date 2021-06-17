@@ -1,0 +1,13 @@
+<section class="section-pageheader section-pageheader--overlay-{{ overlay | default: 'dark' }} section-pageheader--height-{{ height | default: 'md' }} grid">
+  {% if image != null or demo-image != null %}
+    {% include components/blocks/figure.html, class: 'section-pageheader__figure' %}
+  {% endif %}
+  <div class="section-pageheader__text">
+    <h1>{{ pageheader_title | default: 'Pageheader title lorem ipsum dolor sit' }} <small>Subtitle quick fox</small></h1>
+    <p>{{ pageheader_text | default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ducimus incidunt deleniti. Quo adipisci accusantium autem ea!' }}</p>
+    <div class="buttons">
+      <a class="btn">The Button</a>
+      <a class="btn-secondary">The Button</a>
+    </div>
+  </div>
+</section>

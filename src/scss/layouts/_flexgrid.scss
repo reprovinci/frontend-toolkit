@@ -8,7 +8,7 @@ $flexgrid-gap: $space-2;
   > * {
     flex: 1 1 100%;
     margin: $gap;
-    @include media-breakpoint-up('xs') {
+    @include media-breakpoint-up('sm') {
       flex: 0 0 calc(50% - #{$flexgrid-gap * 2});
     }
   }
@@ -46,7 +46,7 @@ $flexgrid-gap: $space-2;
   @include flexgrid;
 
   > * {
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up('md') {
       flex: 0 0 calc(33.3333% - #{$flexgrid-gap * 2});
     }
   }
@@ -56,10 +56,10 @@ $flexgrid-gap: $space-2;
   @include flexgrid;
 
   > * {
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up('md') {
       flex: 0 0 calc(33.3333% - #{$flexgrid-gap * 2});
     }
-    @include media-breakpoint-up('md') {
+    @include media-breakpoint-up('lg') {
       flex: 0 0 calc(25% - #{$flexgrid-gap * 2});
     }
   }

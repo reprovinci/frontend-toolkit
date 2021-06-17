@@ -1,0 +1,10 @@
+// use the font shorthand for $intro-font: font-style font-variant font-weight font-size/line-height font-family;
+// example: italic small-caps bold $font-size-lg serif !default;
+// supply at least font-size and family 
+$intro-font: $font-size-lg $font-family-base !default;
+$intro-color: null !default;
+
+.intro {
+  font: $intro-font;
+  color: $intro-color;
+}

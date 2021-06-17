@@ -1,5 +1,5 @@
 <!-- components/sections/text-image -->
-<section class="section-text-image grid section-text-image--textpos-{{ textpos | default: right }} section-text-image--imgextend-{{ imgextend | default'none' }}">
+<section class="section-text-image grid section-text-image--textpos-{{ textpos | default: 'right' }} section-text-image--img-width-{{ image-width | default: 'default' }} section-text-image--img-height-{{ image-height | default: 'original' }}">
   {% include components/blocks/figure.html, class: 'section-text-image__image' %}
   {% include components/blocks/text.html, class: 'section-text-image__text' %}
 </section>

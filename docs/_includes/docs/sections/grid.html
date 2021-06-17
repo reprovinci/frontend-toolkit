@@ -36,15 +36,12 @@
             background: rgba(0, 0, 255, .3);
         }
         
+        .container-demo,
         .grid-placement-test div {
             background: linear-gradient(to top right, hotpink, orange);
-            margin-bottom: 1em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            padding: .5em 0;
+        }
+        .container-demo {
+            background-clip:  content-box;
         }
         .grid-placement-test code {
             font-size: .85em;
@@ -82,41 +79,47 @@
         <div>28</div>
     </div>
     <div class="grid mt-3 grid-placement-test">
-        <div class="grid__container">
+        <div class="grid__container py-3 color-white flex-center my-1">
             <code>.grid__container</code><code>@include grid-pos(1,24)</code>
         </div>
-        <div class="grid__container--sm">
+        <div class="grid__container--sm py-3 color-white flex-center my-1">
             <code>.grid__container--sm</code><code>@include grid-pos(2,22)</code>
         </div>
-        <div class="grid__container--xs">
+        <div class="grid__container--xs py-3 color-white flex-center my-1">
             <code>.grid__container--xs</code><code>@include grid-pos(3,20)</code>
         </div>
-        <div class="grid__extended">
+        <div class="grid__extended py-3 color-white flex-center my-1">
             <code>.grid__extended</code><code>@include grid-abspos(2,26)</code>
         </div>
-        <div class="grid__full">
+        <div class="grid__full py-3 color-white flex-center my-1">
             <code>.grid__full</code><code>@include grid-abspos(1,28)</code>
         </div>
-        <div class="grid__left">
+        <div class="grid__left py-3 color-white flex-center my-1">
             <code>.grid__left</code><code>@include grid-pos(1,12)</code>
         </div>
-        <div class="grid__right">
+        <div class="grid__right py-3 color-white flex-center my-1">
             <code>.grid__right</code><code>@include grid-pos(13,12)</code>
         </div>
-        <div class="grid__left-extended">
+        <div class="grid__left-extended py-3 color-white flex-center my-1">
             <code>.grid__left-extended</code><code>@include grid-abspos(2,13)</code>
         </div>
-        <div class="grid__right-extended">
+        <div class="grid__right-extended py-3 color-white flex-center my-1">
             <code>.grid__right-extended</code><code>@include grid-pos(13,13)</code>
         </div>
-        <div class="grid__left-full">
+        <div class="grid__left-full py-3 color-white flex-center my-1">
             <code>.grid__left-full</code><code>@include grid-abspos(1,14)</code>
         </div>
-        <div class="grid__right-full">
+        <div class="grid__right-full py-3 color-white flex-center my-1">
             <code>.grid__right-full</code><code>@include grid-pos(13,14)</code>
         </div>
     </div>
-    <div class="grid grid mt-3 ">
+    <div class="container mt-3">
+        <h3>For quickly applying a container without a .grid as wrapper the <code>.container</code> class is supplied.</h3>
+    </div>
+    <div class="container container-demo color-white flex-center">
+        <code class="my-2">.container</code>
+    </div>
+    <div class="grid grid mt-3">
       <div class="grid__container">
         <h3>Grid columns</h3>
         <p>The variable <code>$grid-columns</code> defines the amount of columns in the grid center. 24 is the default. Override it when needed.</p>

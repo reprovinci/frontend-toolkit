@@ -3,32 +3,89 @@ section.section-text-image {
 }
 
 .section-text-image__image {
-  @include grid-pos(1,11,1,1);
-}
-.section-text-image__text {
-  @include grid-pos(14,11,1,1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-// textpos modifier
-.section-text-image--textpos-left {
-  .section-text-image__image {
-    @include grid-pos(14,11,1,1);
-  }
-  .section-text-image__text {
+  @include grid-pos(1,24,1,1);
+  @include media-breakpoint-up('md') {
     @include grid-pos(1,11,1,1);
   }
 }
 
-// figure extend modifier
-.section-text-image--image-extend {
-  .section-text-image__image {
-    @include grid-abspos(1,14,1,1);
+// extended image
+.section-text-image--img-width-extend .section-text-image__image {
+  @include media-breakpoint-up('md') {
+    @include grid-abspos(2,12,1,1);
   }
-  &.section-text-image--textpos-left {
-    @include grid-pos(13,14,1,1);
+}
+// full width image
+.section-text-image--img-width-full .section-text-image__image {
+  @include media-breakpoint-up('md') {
+    @include grid-abspos(1,13,1,1);
+  }
+}
+
+.section-text-image__text {
+  @include grid-pos(1,24,2,1);
+  margin-top: $space-3;
+  @include media-breakpoint-up('md') {
+    @include grid-pos(14,11,1,1);
+    margin-top: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+/**
+ *
+ * text left
+ *
+ */
+
+.section-text-image--textpos-left {
+  .section-text-image__image {
+    @include media-breakpoint-up('md') {
+      @include grid-pos(14,11,1,1);
+    }
+  }
+  // extended image
+  &.section-text-image--img-width-extend {
+    .section-text-image__image {
+      @include media-breakpoint-up('md') {
+        @include grid-pos(14,12,1,1);
+      }
+    }
+  }
+  &.section-text-image--img-width-full {
+    .section-text-image__image {
+      @include media-breakpoint-up('md') {
+        @include grid-pos(14,13,1,1);
+      }
+    }
+  }
+  
+  .section-text-image__text {
+    @include media-breakpoint-up('md') {
+      @include grid-pos(1,11,1,1);
+    }
+  }
+}
+
+/**
+ *
+ * image height
+ * options:
+ * - ratio: original image ratio
+ * - text: image height is based on the textbox height
+ *
+ */
+.section-text-image--img-height-text {
+  .section-text-image__text {
+    padding-top: $space-5;
+    padding-bottom: $space-5;
+  }
+  .section-text-image__image {
+    img {
+      display: none;
+    }
   }
 }

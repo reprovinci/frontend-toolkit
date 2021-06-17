@@ -1,5 +1,5 @@
 <div class="text {{ class }}">
-  <h2>{{ title | default: 'This is a title' }}</h2>
+  <h2>{{ text_title | default: 'This is a title' }}</h2>
   <p>{{ text | default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus deleniti dolore dolores eveniet labore laudantium modi, nihil repudiandae vero? Animi blanditiis debitis eos et minus modi nulla, quisquam repudiandae!' }}</p>
   <a href="{{ button_url | default: '#' }}" class="btn">
     {{ button_text | default: 'Primary button' }}

@@ -1,0 +1,58 @@
+---
+layout: layouts/base.html
+title: Sections
+order: 20
+tags:
+- menu
+---
+
+<main class="my-5">
+  
+  <!-- pageheader -->
+  <section id="Pageheader">
+    <h2 class="container mt-5 section-header">Pageheader</h2>
+    <h3 class="container">Pageheader without image</h3>
+    {% include components/sections/pageheader.html %}
+    <h3 class="container">Pageheader with dark overlay</h3>
+    {% include components/sections/pageheader.html, demo-image: true %}
+    <h3 class="container">Pageheader with light overlay</h3>
+    {% include components/sections/pageheader.html, overlay: 'light', demo-image: true %}
+  </section>
+
+  <!-- Single image -->
+  <section id="Single image">
+    <h2 class="container mt-5 section-header">Single image</h2>
+    <h3 class="container">Full width single image</h3>
+    {% include components/sections/image.html, container_class: 'grid__full' %}
+    <h3 class="container">Main container width image</h3>
+    {% include components/sections/image.html %}
+    <h3 class="container">Small container width image</h3>
+    {% include components/sections/image.html, container_class: 'grid__container--sm' %}
+    <h3 class="container">X-Small container width image</h3>
+    {% include components/sections/image.html, container_class: 'grid__container--xs' %}
+  </section>
+  
+  <!-- Text + image -->
+  <section id="Text + image">
+    <h2 class="container mt-5 section-header">Text + image</h2>
+    <h3 class="container"></h3>
+    {% include components/sections/text-image.html, text_title: 'Text & Image text right' %}
+    <h3 class="container"></h3>
+    {% include components/sections/text-image.html, textpos: 'left', text_title: 'Text & Image text left' %}
+    <h3 class="container"></h3>
+    {% include components/sections/text-image.html, image-width: 'extend', text_title: 'Text & Image text left <small>with extended image</small>' %}
+    <h3 class="container"></h3>
+    {% include components/sections/text-image.html, textpos: 'left', image-height: 'text', image-width: 'full', text_title: 'Text & Image text right <small>with extended image</small>' %}
+    <h3 class="container"></h3>
+    {% include components/sections/text-image.html, image-width: 'extend', text_title: 'Text & Image text left <small>with full-width image and text-based image height</small>' %}
+    <h3 class="container"></h3>
+    {% include components/sections/text-image.html, textpos: 'left', image-height: 'text', image-width: 'full', text_title: 'Text & Image text right <small>with full-width image and text-based image height</small>' %}
+  </section>
+  
+  <!-- Cards -->
+  <section id="Nav-cards">
+    <h2 id="Cards" class="container mt-5 section-header">Nav cards</h2>
+    {% include components/sections/cards.html %}
+  </section>
+
+</main>
