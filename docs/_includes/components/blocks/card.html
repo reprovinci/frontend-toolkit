@@ -1,9 +1,11 @@
-<a href="#" class="card">
-  {% include components/blocks/figure.html, class: 'card__image' %}
+<a href="#" class="card{% if background_image_url %} img-cover p-3{% endif %}"{% if background_image_url %} style="background-image: url({{ background_image_url }});"{% endif %}>
+  {% if image_url %}
+    {% include components/blocks/figure.html, class: 'card__image', src: image_url %}
+  {% endif %}
   <h3>{{ card_title | default: 'Card title lorem ipsum' }}</h3>
   <div class="card__meta meta">
-    <span class="meta__date">17 Aug 2019</span>
-    <span class="meta__author">A.U. Teur</span>
+    <span class="meta__date">{{ card_date | default: '17 Aug 2019' }}</span>
+    <span class="meta__author">{{ card_author | default: 'A.U. Teur' }}</span>
   </div>
-  <p>{{ teaser | default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed nesciunt corporis quod quasi repudiandae non.' }}</p>
+  {{ teaser | default: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed nesciunt corporis quod quasi repudiandae non.</p>' }}
 </a>

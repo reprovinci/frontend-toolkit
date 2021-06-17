@@ -7,16 +7,16 @@ tags:
 ---
 
 <main class="my-5">
-  
+
   <!-- pageheader -->
   <section id="Pageheader">
     <h2 class="container mt-5 section-header">Pageheader</h2>
     <h3 class="container">Pageheader without image</h3>
     {% include components/sections/pageheader.html %}
     <h3 class="container">Pageheader with dark overlay</h3>
-    {% include components/sections/pageheader.html, demo-image: true %}
+    {% include components/sections/pageheader.html, src: 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80' %}
     <h3 class="container">Pageheader with light overlay</h3>
-    {% include components/sections/pageheader.html, overlay: 'light', demo-image: true %}
+    {% include components/sections/pageheader.html, overlay: 'light', src: 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80' %}
   </section>
 
   <!-- Single image -->
@@ -31,7 +31,7 @@ tags:
     <h3 class="container">X-Small container width image</h3>
     {% include components/sections/image.html, container_class: 'grid__container--xs' %}
   </section>
-  
+
   <!-- Text + image -->
   <section id="Text + image">
     <h2 class="container mt-5 section-header">Text + image</h2>
@@ -48,7 +48,7 @@ tags:
     <h3 class="container"></h3>
     {% include components/sections/text-image.html, textpos: 'left', image-height: 'text', image-width: 'full', text_title: 'Text & Image text right <small>with full-width image and text-based image height</small>' %}
   </section>
-  
+
   <!-- Cards -->
   <section id="Nav-cards">
     <h2 id="Cards" class="container mt-5 section-header">Nav cards</h2>

@@ -3,9 +3,6 @@ layout: layouts/base.html
 title: News
 ---
 
-{% include components/sections/image.html, container_class: 'grid__full', src: 'https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=450&q=60' %}
+{% include components/sections/pageheader.html, height: 'sm', pageheader_title: 'News', pageheader_text: ' ', src: 'https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60' %}
 
-<section class="grid">
-  <h1 class="grid__container">News</h1>
-</section>
 {% include components/flexgrid.html, flexgrid_class: 'flexgrid-3' %}

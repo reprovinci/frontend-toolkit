@@ -1,13 +1,21 @@
 <section class="section-pageheader section-pageheader--overlay-{{ overlay | default: 'dark' }} section-pageheader--height-{{ height | default: 'md' }} grid">
-  {% if image != null or demo-image != null %}
-    {% include components/blocks/figure.html, class: 'section-pageheader__figure' %}
+  {% if src != null %}
+    {% include components/blocks/figure.html, class: 'section-pageheader__figure', src: src %}
   {% endif %}
   <div class="section-pageheader__text">
-    <h1>{{ pageheader_title | default: 'Pageheader title lorem ipsum dolor sit' }} <small>Subtitle quick fox</small></h1>
-    <p>{{ pageheader_text | default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ducimus incidunt deleniti. Quo adipisci accusantium autem ea!' }}</p>
+    <h1>{{ pageheader_title | default: 'Pageheader title lorem ipsum dolor sit' }}</h1>
+    <p class="intro">{{ pageheader_text | default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ducimus incidunt deleniti. Quo adipisci accusantium autem ea!' }}</p>
     <div class="buttons">
-      <a class="btn">The Button</a>
-      <a class="btn-secondary">The Button</a>
+      {% if button1_title %}
+        <a class="{{ button1_class | default: 'btn' }}" href="{{ button1_url | default: '#' }}">
+          {{ button1_title }}
+        </a>
+      {% endif %}
+      {% if button2_title %}
+        <a class="{{ button2_class | default: 'btn-secondary' }}" href="{{ button2_url | default: '#' }}">
+          {{ button2_title }}
+        </a>
+      {% endif %}
     </div>
   </div>
 </section>
