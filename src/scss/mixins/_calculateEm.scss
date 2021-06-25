@@ -1,11 +1,13 @@
+@use "sass:math";
+
 // given a px size returns the em variant based on the $font-size-base
 @function calculateEm($size, $base: $font-size-base) {
-  $emSize: $size / $base;
+  $emSize: math.div($size, $base);
   @return #{$emSize}em;
 }
 
 // given a px size returns the rem variant based on the $font-size-base
 @function calculateRem($size, $base: $font-size-base) {
-  $remSize: $size / $base;
+  $remSize: math.div($size, $base);
   @return #{$remSize}rem;
 }
