@@ -1,0 +1,35 @@
+---
+layout: layouts/base.html
+title: Tables
+order: 18
+tags:
+- menu
+---
+
+<main class="my-5">
+  <div class="container">
+    <h1>Tables</h1>
+    <p>
+      Tables use the basics borrowed by <a href="https://getbootstrap.com/">the bootstrap team</a>.
+    </p>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>title</th>
+        <th>author</th>
+        <th>date</th>
+      </tr>
+      </thead>
+      <tbody>
+      {%- for data in news %}
+        {% assign data_date = data.date | date %}
+        <tr>
+          <td>{{ data.title }}</td>
+          <td>{{ data.author }}</td>
+          <td>{{ data_date }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</main>

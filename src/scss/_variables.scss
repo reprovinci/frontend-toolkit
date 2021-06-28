@@ -65,7 +65,6 @@ $color-primary__headings: #fff !default;
 $color-secondary__text: #fff !default;
 $color-secondary__headings: #fff !default;
 
-
 $theme-colors: (
   'black': $color-black,
   'blue': $color-blue,
@@ -189,6 +188,37 @@ $border: $border-type $border-width $border-color !default;
 $border-radius: $space-2;
 $border-radius-lg: $space-3;
 
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+// scss-docs-start table-variables
+$table-cell-padding-y: $space-2 !default;
+$table-cell-padding-x: $space-3 !default;
+$table-cell-padding-y-sm: $space-1 !default;
+$table-cell-padding-x-sm: $space-1 !default;
+$table-cell-vertical-align: top !default;
+$table-color: $font-color !default;
+$table-bg: transparent !default;
+$table-accent-bg: transparent !default;
+$table-th-font-weight: null !default;
+$table-striped-color: $table-color !default;
+$table-striped-bg-factor: .05 !default;
+$table-striped-bg: rgba($color-black, $table-striped-bg-factor) !default;
+$table-active-color: $table-color !default;
+$table-active-bg-factor: .1 !default;
+$table-active-bg: rgba($color-black, $table-active-bg-factor) !default;
+$table-hover-color: $table-color !default;
+$table-hover-bg-factor: .075 !default;
+$table-hover-bg: rgba($color-black, $table-hover-bg-factor) !default;
+$table-border-factor: .1 !default;
+$table-border-width: $border-width !default;
+$table-border-color: $border-color !default;
+$table-striped-order: odd !default;
+$table-group-separator-color: currentColor !default;
+$table-caption-color: $color-gray-light !default;
+$table-bg-scale: -80% !default;
 
 // scss-docs-start modal-variables
 $modal-inner-padding: $space-3 !default;
