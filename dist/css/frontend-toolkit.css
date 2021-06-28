@@ -123,13 +123,23 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
   content: none;
 }
 
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
 }
 
 .section-margins {
@@ -433,6 +443,20 @@ table {
   }
 }
 
+html {
+  line-height: 1.65;
+  font-family: sans-serif;
+  color: #333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-size: clamp(14px, 1.3671875vw, 18px);
+}
+
+::selection {
+  background: rgba(107, 117, 22, 0.2);
+  text-shadow: none;
+}
+
 pre {
   border: solid 1px #ddd;
   padding: 0.6rem;
@@ -448,18 +472,12 @@ code {
   padding: 0 0.5em;
 }
 
-html {
-  line-height: 1.65;
+.font-primary {
   font-family: sans-serif;
-  color: #333;
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  font-size: clamp(14px, 1.3671875vw, 18px);
 }
 
-::selection {
-  background: rgba(107, 117, 22, 0.2);
-  text-shadow: none;
+.font-secondary {
+  font-family: sans-serif;
 }
 
 .h1,
@@ -3492,6 +3510,91 @@ h6,
 .swiper-container {
   position: relative;
   overflow-x: hidden;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #333;
+  vertical-align: top;
+  border-color: #ddd;
+}
+.table > :not(caption) > * > * {
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+  border-bottom-width: 1px;
+}
+.table > tbody {
+  vertical-align: inherit;
+}
+.table > thead {
+  vertical-align: bottom;
+}
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: currentColor;
+}
+
+.caption-top {
+  caption-side: top;
+}
+
+.table-sm > :not(caption) > * > * {
+  padding: 0.3rem 0.3rem;
+}
+
+.table-bordered > :not(caption) > * {
+  border-width: 1px 0;
+}
+.table-bordered > :not(caption) > * > * {
+  border-width: 0 1px;
+}
+
+.table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(51, 51, 51, 0.05);
+  color: #333;
+}
+
+.table-active {
+  background-color: rgba(51, 51, 51, 0.1);
+  color: #333;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: rgba(51, 51, 51, 0.075);
+  color: #333;
+}
+
+@media (max-width: 499.98px) {
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 767.98px) {
+  .table-responsive-sm {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 1023.98px) {
+  .table-responsive-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+@media (max-width: 1649.98px) {
+  .table-responsive-lg {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.table-responsive-xl {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /**
