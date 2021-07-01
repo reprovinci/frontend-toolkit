@@ -1,0 +1,44 @@
+$pagination-background-color-hover: $color-primary !default;
+$pagination-background-color-current: $color-primary !default;
+$pagination-background-color: $color-gray-extra-light !default;
+$pagination-color-hover: $color-gray-extra-light !default;
+$pagination-color-current: $color-gray-extra-light !default;
+$pagination-color: $color-primary !default;
+$pagination-padding: $space-2 $space-3 !default;
+$pagination-text-decoration: none !default;
+$pagination-margin: $space-1 !default;
+$pagination-border: null !default;
+
+.pagination {
+  .nav-links {
+    display: flex;
+    justify-content: center;
+
+    > a,
+    > span {
+      display: block;
+      background-color: $pagination-background-color;
+      color: $pagination-color;
+      text-decoration: $pagination-text-decoration;
+      padding: $pagination-padding;
+      border-radius: $border-radius;
+      margin: $pagination-margin;
+      border: $pagination-border;
+    }
+
+    > span {
+      &.current {
+        background-color: $pagination-background-color-current;
+        color: $pagination-color-current;
+      }
+    }
+
+    > a {
+      &:active,
+      &:hover {
+        background-color: $pagination-background-color-hover;
+        color: $pagination-color-hover;
+      }
+    }
+  }
+}
