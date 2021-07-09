@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/frontend-toolkit.css">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/packages.css">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/sections.css">
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
   <style type="text/css">
     .section-header {
       border-top: solid 1px #ccc;
@@ -74,6 +75,138 @@
 <body>
 
 <main class="my-5">
+  <!-- buttons -->
+<section id="buttons" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Buttons</h2>
+    <div class="flexgrid-2">
+      <div class="box">
+        <div class="box__body">
+          <h4>The main button</h4>
+          <p>Used for primary click actions like "submit" in a form.</p>
+          
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  The button
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+          <a href="#" class="btn">
+  The button
+</a>
+
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <h4>The secondary button</h4>
+          <p>Used for secondary actions like "cancel" in a form.</p>
+          
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-secondary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  The Secondary Button
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+          <a href="#" class="btn-secondary">
+  The Secondary Button
+</a>
+
+        </div>
+      </div>
+      <div class="box bg-gray-extra-dark color-white">
+        <div class="box__body">
+          <h4>The diap button</h4>
+          <p>The main button on dark backgrounds</p>
+          
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-diap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  The Diap Button
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+          <a href="#" class="btn-diap">
+  The Diap Button
+</a>
+
+        </div>
+      </div>
+      <div class="box bg-gray-extra-dark color-white">
+        <div class="box__body">
+          <h4>The secondary diap button</h4>
+          <p>The secondary button on dark backgrounds</p>
+          
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-secondary-diap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  The Alt Button
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+          <a href="#" class="btn-secondary-diap">
+  The Alt Button
+</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="button-icons" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Buttons with icons</h2>
+    <a href="#" class="btn icon-chevron-left-white-before">Lees verder</a>
+    <a href="#" class="btn icon-chevron-right-white-after">Lees verder</a>
+    <a href="#" class="btn-secondary icon-check-primary-after">Lees verder</a>
+    <a href="#" class="btn icon-check-secondary-before">Lees verder</a>
+  </div>
+</section>
+<section class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Button groups</h2>
+    <p>Buttons placed inline need to be spaced and usually the is some extra margin before and/or after the group of button. The
+      <code>.buttons</code> class does this.</p>
+    <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>buttons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Primary button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-secondary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Secondary button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+    <div class="buttons">
+  <button class="btn">Primary button</button>
+  <button class="btn-secondary">Secondary button</button>
+</div>
+
+    <h2>Buttons in a group get some top/bottom margin.</h2>
+    <p>(also: check here that <code>&lt;a&gt;</code> tag buttons and <code>&lt;button&gt;</code> buttons look similar)
+    </p>
+    <div class="flexgrid-2">
+      <div>
+        <h3><code>&lt;a&gt;</code> tag buttons</h3>
+        <div class="buttons">
+          <a class="btn">Lorem button</a>
+          <a class="btn-secondary">Quick brown fox button</a>
+          <a class="btn">Primary button</a>
+          <a class="btn-secondary">Whoot button</a>
+          <a class="btn">Lala button</a>
+          <a class="btn-secondary">Yolo button</a>
+          <a class="btn">Some button</a>
+          <a class="btn-secondary">Pressive button</a>
+          <a class="btn">Another button</a>
+          <a class="btn-secondary">Lazy dog button</a>
+        </div>
+      </div>
+      <div>
+        <h3>Real <code>&lt;button&gt;</code></h3>
+        <div class="buttons">
+          <button class="btn">Lorem button</button>
+          <button class="btn-secondary">Quick brown fox button</button>
+          <button class="btn">Primary button</button>
+          <button class="btn-secondary">Whoot button</button>
+          <button class="btn">Lala button</button>
+          <button class="btn-secondary">Yolo button</button>
+          <button class="btn">Some button</button>
+          <button class="btn-secondary">Pressive button</button>
+          <button class="btn">Another button</button>
+          <button class="btn-secondary">Lazy dog button</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <header class="grid">
   <div class="grid__container">
     <h1>Reprovinci Frontend Toolkit 🚀</h1>
@@ -365,49 +498,93 @@ $h6-size: $font-size-md !default;
         <div class="box__body">
           <h4>The main button</h4>
           <p>Used for primary click actions like "submit" in a form.</p>
-          <p><code>.btn</code></p>
-          <button class="btn">The Button</button>
+          
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  The button
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+          <a href="#" class="btn">
+  The button
+</a>
+
         </div>
       </div>
       <div class="box">
         <div class="box__body">
           <h4>The secondary button</h4>
           <p>Used for secondary actions like "cancel" in a form.</p>
-          <p><code>.btn-secondary</code></p>
-          <button class="btn-secondary">The Secondary Button</button>
+          
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-secondary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  The Secondary Button
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+          <a href="#" class="btn-secondary">
+  The Secondary Button
+</a>
+
         </div>
       </div>
       <div class="box bg-gray-extra-dark color-white">
         <div class="box__body">
           <h4>The diap button</h4>
           <p>The main button on dark backgrounds</p>
-          <p><code>.btn-diap</code></p>
-          <button class="btn-diap">The Diap Button</button>
+          
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-diap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  The Diap Button
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+          <a href="#" class="btn-diap">
+  The Diap Button
+</a>
+
         </div>
       </div>
       <div class="box bg-gray-extra-dark color-white">
         <div class="box__body">
           <h4>The secondary diap button</h4>
           <p>The secondary button on dark backgrounds</p>
-          <p><code>.btn-secondary-diap</code></p>
-          <button class="btn-secondary-diap">The Alt Button</button>
+          
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-secondary-diap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  The Alt Button
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+          <a href="#" class="btn-secondary-diap">
+  The Alt Button
+</a>
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section id="button-icons" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Buttons with icons</h2>
+    <a href="#" class="btn icon-chevron-left-white-before">Lees verder</a>
+    <a href="#" class="btn icon-chevron-right-white-after">Lees verder</a>
+    <a href="#" class="btn-secondary icon-check-primary-after">Lees verder</a>
+    <a href="#" class="btn icon-check-secondary-before">Lees verder</a>
+  </div>
+</section>
 <section class="section-margins grid">
   <div class="grid__container">
     <h2 class="section-header">Button groups</h2>
     <p>Buttons placed inline need to be spaced and usually the is some extra margin before and/or after the group of button. The
       <code>.buttons</code> class does this.</p>
+    <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>buttons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Primary button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-secondary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Secondary button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
     <div class="buttons">
-      <button class="btn">Primary button</button>
-      <button class="btn-secondary">Secondary button</button>
-    </div>
+  <button class="btn">Primary button</button>
+  <button class="btn-secondary">Secondary button</button>
+</div>
+
     <h2>Buttons in a group get some top/bottom margin.</h2>
-    <p>(also: check here that <code>&lt;a&gt;</code> tag buttons and <code>&lt;button&gt;</code> buttons look similar)</p>
+    <p>(also: check here that <code>&lt;a&gt;</code> tag buttons and <code>&lt;button&gt;</code> buttons look similar)
+    </p>
     <div class="flexgrid-2">
       <div>
         <h3><code>&lt;a&gt;</code> tag buttons</h3>
@@ -724,6 +901,8 @@ $h6-size: $font-size-md !default;
           <a class="color-white" href="/frontend-toolkit/sections/">Sections</a>
         </li><li >
           <a class="color-white" href="/frontend-toolkit/modal/">Modals</a>
+        </li><li >
+          <a class="color-white" href="/frontend-toolkit/pagination/">Pagination</a>
         </li><li >
           <a class="color-white" href="/frontend-toolkit/flexgrids/">Layouts</a>
         </li><li >

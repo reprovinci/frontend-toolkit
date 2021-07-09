@@ -1,0 +1,67 @@
+<!-- svg mixin -->
+<section id="svg" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">SVG mixin</h2>
+    <p>Place icons before/after/in elements. Common usage example:</p>
+    <h3>Common usage</h3>
+    <pre>a.mylink { @include svg--after('arrow-right', 1em, .5em) }</pre>
+    <p>places the image arrow-right.svg in the background of an inline-block element after the a.mylink</p>
+    <p><code>svg--before(img, width height)</code> places the icon inline before the element</p>
+    <p><code>svg--abs(img, width, height)</code> places it in an absolute positioned after the element.</p>
+    <p><code>svg(img, width height)</code> places the icon in the background of the element itself</p>
+    <h3>The icon source</h3>
+    <p>The icon source can either be a base64 encoded string or an icon name. Some default icons are defined in _variables/</p>
+    <p>The root folder the icons is by default ../images but can be set with the variable
+      <code>$svg__root: '../images';</code></p>
+    <div class="flexgrid-2">
+      <div class="box">
+        <div class="box__body">
+          <code>svg--before($rocket, 1.5em, 1.5em)</code>
+          <p><span class="svg-demo--before">An icon before this text</span></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg--after($rocket, 1.5em, 1.5em)</code>
+          <p><span class="svg-demo--after">An icon after this text</span></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg--abs($rocket, 1.5em, 1.5em)</code>
+          <p><span class="svg-demo--abs">An icon abs positioned</span></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg($rocket, 2em, 2em)</code>
+          <p><span class="svg-demo--main">Replace text</span></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg--after</code>
+          <p>
+            <button class="btn svg-demo--after">My Button!</button>
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg--abs</code>
+          <p>
+            <button class="btn svg-demo--abs">My Button!</button>
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box__body">
+          <code>svg($rocket, 2em, 2em)</code>
+          <p>
+            <button class="btn svg-demo--main">My Button!</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

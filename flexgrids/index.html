@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/frontend-toolkit.css">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/packages.css">
   <link rel="stylesheet" href="/frontend-toolkit/dist/css/sections.css">
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
   <style type="text/css">
     .section-header {
       border-top: solid 1px #ccc;
@@ -73,240 +74,258 @@
 </head>
 <body>
 
-
 <main class="my-5">
-  <!-- layouts -->
-<section id="layouts" class="section-margins grid">
-    <div class="grid__container">
-        <h2 class="section-header">Layouts</h2>
-        <p>We have various layouts that we use a lot. Ranging from simple card-lists to more creative collage like layouts that are nice to have at hand.</p>
-    </div>
-    <div class="grid__container">
-        <h3>Flexgrid</h3>
-        <p><code>.flexgrid-2</code></p>
-        <div class="flexgrid-2">
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-        </div>
-        <p><code>.flexgrid-3</code></p>
-        <div class="flexgrid-3">
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-        </div>
-        <p><code>.flexgrid-4</code></p>
-        <div class="flexgrid-4">
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-        </div>
-        <p><code>.flexgrid-bricks</code></p>
-        <div class="flexgrid-bricks">
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-            <div class="box flex-center">Lorem</div>
-        </div>
-    </div>
+  <!-- layouts --><section id="layouts" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Layouts</h2>
+    <p>We have various layouts that we use a lot. Ranging from simple card-lists to more creative collage like layouts that are nice to have at hand.</p>
+  </div>
+  <div class="grid__container">
+    <h3>Flex grid 2</h3>
+    <div class="flexgrid-2">
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+  </div>
+    <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flexgrid-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+    <h3>Flex grid 3</h3>
+    <div class="flexgrid-3">
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+  </div>
+    <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flexgrid-3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+    <h3>Flex grid 4</h3>
+    <div class="flexgrid-4">
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+  </div>
+    <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flexgrid-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+    <h3>Flex grid bricks</h3>
+    <div class="flexgrid-bricks">
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+  </div>
+    <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flexgrid-bricks<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>box flex-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+  </div>
 </section>
-  <section id="Flexgrid - 4" class="grid">
-    <h2 class="grid__container">Flexgrid - 4</h2>
-  </section>
+
   <div class="grid section-margins">
   <div class="grid__container">
     <div class="flexgrid-4">
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>teal superstructure</h3>
+  <h3>Alaska FTP</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Et perferendis voluptatem aut. Ipsam corporis quidem delectus sed qui incidunt totam quo. Illo animi officiis repudiandae eveniet sit non eos quia ut.</p>
+  <p>Et est sit adipisci tenetur et possimus quia optio et. Animi eligendi tempore voluptatem est aut. Cum modi excepturi animi cum illo molestiae atque placeat. Eum id error. Explicabo provident magni. Accusantium amet id aliquam consequatur sunt sit assumenda dolore placeat.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>synthesizing</h3>
+  <h3>Fresh Wyoming</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Reprehenderit qui quis magnam. Omnis voluptatem sit magni quam sint consequatur. Nostrum maxime molestiae amet. Ipsum aperiam sequi non et odio voluptates voluptatem quas. Excepturi quia architecto quia ut eaque qui.</p>
+  <p>Ullam facere modi amet necessitatibus repellat ex deleniti. Quisquam culpa sed et ab quas a et voluptatum. Possimus est quo unde et in sapiente repudiandae iure libero. Non voluptatem quam unde corporis ullam aperiam esse. Repellat nisi corrupti repellat voluptatem quae odit non ut nisi. Non labore qui odit consectetur et.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>actuating Bacon</h3>
+  <h3>Dollar Savings Legacy</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Et est esse. Doloribus quas nam cupiditate et amet enim placeat. Voluptatem est sunt asperiores at. Fuga est consequatur accusamus omnis blanditiis consequatur sint.</p>
+  <p>Aspernatur et quos officia eligendi expedita dolores ducimus fugit. Non laboriosam architecto inventore. Et molestiae et eaque sint itaque voluptatem aperiam. Quo explicabo quia explicabo. Non iste ut laboriosam dolorem est.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>networks</h3>
+  <h3>matrices</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Quidem aut natus suscipit voluptatum necessitatibus. Sunt quia et. Quod ea tenetur.</p>
+  <p>Sunt labore quia itaque delectus et fugit eos quam. Neque quaerat consequuntur aut dignissimos consequatur. Eum commodi esse.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>asymmetric</h3>
+  <h3>knowledge</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Facilis quo maiores reprehenderit sint sit. Et possimus aspernatur placeat ut ratione et quibusdam. Inventore consequatur accusantium ipsum.</p>
+  <p>Perferendis commodi eum repudiandae cupiditate. Iusto hic facilis rem sit voluptas nesciunt officia qui quas. Non voluptates fugiat quaerat.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>SSL</h3>
+  <h3>capacitor Cambridgeshire</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Iusto consequuntur id. Minus itaque facere minima. Fugiat qui pariatur et ad numquam nam quod id dolores. Ducimus consequatur praesentium. Iusto distinctio nihil harum.</p>
+  <p>Tenetur est porro voluptatum cum expedita et voluptas. Voluptas saepe ipsum nam eveniet enim sit. Veritatis repellat quisquam consequatur et.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>Intelligent</h3>
+  <h3>Orchestrator hub Lane</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>In mollitia nisi sit inventore velit molestiae vero placeat pariatur. Eum et consectetur provident ut natus voluptate repellat. Neque atque maxime et doloribus expedita molestias. Et omnis architecto est tempora fugit velit.</p>
+  <p>Ipsam odit laboriosam. Occaecati sit reiciendis illum. Eum magni voluptatem magni quasi fugit officiis velit facilis voluptas.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>deliverables sensor</h3>
+  <h3>bypassing Auto RSS</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Iusto quidem dolorem qui distinctio praesentium. Sit repellendus quis nesciunt similique similique dolores sed. Quia omnis dicta sed at quo animi. Sit ut sit et qui culpa eligendi beatae. Accusamus odit impedit laborum rerum reiciendis. Architecto ut eum hic quos rerum eligendi enim et voluptatum.</p>
+  <p>Dolor iusto autem incidunt explicabo ut officiis at excepturi sed. Qui enim asperiores doloribus dolorem temporibus. Molestias aut enim. Facere quod in.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>seize Meadow</h3>
+  <h3>Mali</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Facere architecto atque et quaerat consectetur. Quia distinctio aut impedit delectus ex. Ducimus debitis voluptas. Cumque eius corporis voluptas et nesciunt molestias ipsum. Mollitia magnam tempore impedit dolorum dolores eius doloribus aliquam. Dignissimos consequuntur aut similique magni ex magnam inventore quia et.</p>
+  <p>Sunt pariatur rerum et qui. Perferendis quod officia. Fugit eaque non dolor quisquam.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>THX Global systematic</h3>
+  <h3>Cambridgeshire leverage</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Vero exercitationem consequatur. Aliquam sed vero sint unde nemo nihil qui. Consectetur itaque sit nihil quae porro omnis dignissimos. Autem aut non.</p>
+  <p>Et suscipit eum dignissimos molestiae libero id. Sed est sit impedit ut inventore itaque. Occaecati iure qui eum.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>users Light</h3>
+  <h3>Metrics strategy Handmade</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Tempora magnam magni nihil. Ut atque aut voluptatem exercitationem. Qui natus eos molestiae velit eos eum. Aspernatur quos dolores quas quos consequuntur alias.</p>
+  <p>Repudiandae nobis fuga provident exercitationem id modi iure soluta accusantium. Facilis suscipit cumque. Tenetur voluptas nisi rerum quae ea ea odit asperiores quia.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
+    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80)">
+    <img src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80" alt="Image">
 </figure>
   
-  <h3>Chief SMS bus</h3>
+  <h3>Assistant mission-critical</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Non placeat iure officia enim omnis aut aperiam. Rerum asperiores possimus et magni eos et omnis laudantium ducimus. Aut dolor cum accusamus enim minima. Alias assumenda asperiores deleniti eum dolor sunt animi voluptatem. Recusandae blanditiis voluptatum atque commodi earum ut corporis sapiente. Tempore et dignissimos cum.</p>
+  <p>Veritatis voluptas a exercitationem. Unde eum consequuntur aut aut voluptas quis veritatis. Cum nemo esse placeat doloremque unde. Quia est beatae voluptatum odit.</p>
 </a>
 
       
@@ -323,192 +342,144 @@
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>teal superstructure</h3>
+  <h3>Alaska FTP</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Et perferendis voluptatem aut. Ipsam corporis quidem delectus sed qui incidunt totam quo. Illo animi officiis repudiandae eveniet sit non eos quia ut.</p>
+  <p>Et est sit adipisci tenetur et possimus quia optio et. Animi eligendi tempore voluptatem est aut. Cum modi excepturi animi cum illo molestiae atque placeat. Eum id error. Explicabo provident magni. Accusantium amet id aliquam consequatur sunt sit assumenda dolore placeat.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>synthesizing</h3>
+  <h3>Fresh Wyoming</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Reprehenderit qui quis magnam. Omnis voluptatem sit magni quam sint consequatur. Nostrum maxime molestiae amet. Ipsum aperiam sequi non et odio voluptates voluptatem quas. Excepturi quia architecto quia ut eaque qui.</p>
+  <p>Ullam facere modi amet necessitatibus repellat ex deleniti. Quisquam culpa sed et ab quas a et voluptatum. Possimus est quo unde et in sapiente repudiandae iure libero. Non voluptatem quam unde corporis ullam aperiam esse. Repellat nisi corrupti repellat voluptatem quae odit non ut nisi. Non labore qui odit consectetur et.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>actuating Bacon</h3>
+  <h3>Dollar Savings Legacy</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Et est esse. Doloribus quas nam cupiditate et amet enim placeat. Voluptatem est sunt asperiores at. Fuga est consequatur accusamus omnis blanditiis consequatur sint.</p>
+  <p>Aspernatur et quos officia eligendi expedita dolores ducimus fugit. Non laboriosam architecto inventore. Et molestiae et eaque sint itaque voluptatem aperiam. Quo explicabo quia explicabo. Non iste ut laboriosam dolorem est.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>networks</h3>
+  <h3>matrices</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Quidem aut natus suscipit voluptatum necessitatibus. Sunt quia et. Quod ea tenetur.</p>
+  <p>Sunt labore quia itaque delectus et fugit eos quam. Neque quaerat consequuntur aut dignissimos consequatur. Eum commodi esse.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>asymmetric</h3>
+  <h3>knowledge</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Facilis quo maiores reprehenderit sint sit. Et possimus aspernatur placeat ut ratione et quibusdam. Inventore consequatur accusantium ipsum.</p>
+  <p>Perferendis commodi eum repudiandae cupiditate. Iusto hic facilis rem sit voluptas nesciunt officia qui quas. Non voluptates fugiat quaerat.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>SSL</h3>
+  <h3>capacitor Cambridgeshire</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Iusto consequuntur id. Minus itaque facere minima. Fugiat qui pariatur et ad numquam nam quod id dolores. Ducimus consequatur praesentium. Iusto distinctio nihil harum.</p>
+  <p>Tenetur est porro voluptatum cum expedita et voluptas. Voluptas saepe ipsum nam eveniet enim sit. Veritatis repellat quisquam consequatur et.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>Intelligent</h3>
+  <h3>Orchestrator hub Lane</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>In mollitia nisi sit inventore velit molestiae vero placeat pariatur. Eum et consectetur provident ut natus voluptate repellat. Neque atque maxime et doloribus expedita molestias. Et omnis architecto est tempora fugit velit.</p>
+  <p>Ipsam odit laboriosam. Occaecati sit reiciendis illum. Eum magni voluptatem magni quasi fugit officiis velit facilis voluptas.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>deliverables sensor</h3>
+  <h3>bypassing Auto RSS</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Iusto quidem dolorem qui distinctio praesentium. Sit repellendus quis nesciunt similique similique dolores sed. Quia omnis dicta sed at quo animi. Sit ut sit et qui culpa eligendi beatae. Accusamus odit impedit laborum rerum reiciendis. Architecto ut eum hic quos rerum eligendi enim et voluptatum.</p>
+  <p>Dolor iusto autem incidunt explicabo ut officiis at excepturi sed. Qui enim asperiores doloribus dolorem temporibus. Molestias aut enim. Facere quod in.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>seize Meadow</h3>
+  <h3>Mali</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Facere architecto atque et quaerat consectetur. Quia distinctio aut impedit delectus ex. Ducimus debitis voluptas. Cumque eius corporis voluptas et nesciunt molestias ipsum. Mollitia magnam tempore impedit dolorum dolores eius doloribus aliquam. Dignissimos consequuntur aut similique magni ex magnam inventore quia et.</p>
+  <p>Sunt pariatur rerum et qui. Perferendis quod officia. Fugit eaque non dolor quisquam.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>THX Global systematic</h3>
+  <h3>Cambridgeshire leverage</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Vero exercitationem consequatur. Aliquam sed vero sint unde nemo nihil qui. Consectetur itaque sit nihil quae porro omnis dignissimos. Autem aut non.</p>
+  <p>Et suscipit eum dignissimos molestiae libero id. Sed est sit impedit ut inventore itaque. Occaecati iure qui eum.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>users Light</h3>
+  <h3>Metrics strategy Handmade</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Tempora magnam magni nihil. Ut atque aut voluptatem exercitationem. Qui natus eos molestiae velit eos eum. Aspernatur quos dolores quas quos consequuntur alias.</p>
+  <p>Repudiandae nobis fuga provident exercitationem id modi iure soluta accusantium. Facilis suscipit cumque. Tenetur voluptas nisi rerum quae ea ea odit asperiores quia.</p>
 </a>
 
       
         
         <a href="#" class="card img-cover p-3" style="background-image: url(https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=600&q=80);">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>Chief SMS bus</h3>
+  <h3>Assistant mission-critical</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Non placeat iure officia enim omnis aut aperiam. Rerum asperiores possimus et magni eos et omnis laudantium ducimus. Aut dolor cum accusamus enim minima. Alias assumenda asperiores deleniti eum dolor sunt animi voluptatem. Recusandae blanditiis voluptatum atque commodi earum ut corporis sapiente. Tempore et dignissimos cum.</p>
+  <p>Veritatis voluptas a exercitationem. Unde eum consequuntur aut aut voluptas quis veritatis. Cum nemo esse placeat doloremque unde. Quia est beatae voluptatum odit.</p>
 </a>
 
       
@@ -525,192 +496,144 @@
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>teal superstructure</h3>
+  <h3>Alaska FTP</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Et perferendis voluptatem aut. Ipsam corporis quidem delectus sed qui incidunt totam quo. Illo animi officiis repudiandae eveniet sit non eos quia ut.</p>
+  <p>Et est sit adipisci tenetur et possimus quia optio et. Animi eligendi tempore voluptatem est aut. Cum modi excepturi animi cum illo molestiae atque placeat. Eum id error. Explicabo provident magni. Accusantium amet id aliquam consequatur sunt sit assumenda dolore placeat.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>synthesizing</h3>
+  <h3>Fresh Wyoming</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Reprehenderit qui quis magnam. Omnis voluptatem sit magni quam sint consequatur. Nostrum maxime molestiae amet. Ipsum aperiam sequi non et odio voluptates voluptatem quas. Excepturi quia architecto quia ut eaque qui.</p>
+  <p>Ullam facere modi amet necessitatibus repellat ex deleniti. Quisquam culpa sed et ab quas a et voluptatum. Possimus est quo unde et in sapiente repudiandae iure libero. Non voluptatem quam unde corporis ullam aperiam esse. Repellat nisi corrupti repellat voluptatem quae odit non ut nisi. Non labore qui odit consectetur et.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>actuating Bacon</h3>
+  <h3>Dollar Savings Legacy</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Et est esse. Doloribus quas nam cupiditate et amet enim placeat. Voluptatem est sunt asperiores at. Fuga est consequatur accusamus omnis blanditiis consequatur sint.</p>
+  <p>Aspernatur et quos officia eligendi expedita dolores ducimus fugit. Non laboriosam architecto inventore. Et molestiae et eaque sint itaque voluptatem aperiam. Quo explicabo quia explicabo. Non iste ut laboriosam dolorem est.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>networks</h3>
+  <h3>matrices</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Quidem aut natus suscipit voluptatum necessitatibus. Sunt quia et. Quod ea tenetur.</p>
+  <p>Sunt labore quia itaque delectus et fugit eos quam. Neque quaerat consequuntur aut dignissimos consequatur. Eum commodi esse.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>asymmetric</h3>
+  <h3>knowledge</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Facilis quo maiores reprehenderit sint sit. Et possimus aspernatur placeat ut ratione et quibusdam. Inventore consequatur accusantium ipsum.</p>
+  <p>Perferendis commodi eum repudiandae cupiditate. Iusto hic facilis rem sit voluptas nesciunt officia qui quas. Non voluptates fugiat quaerat.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>SSL</h3>
+  <h3>capacitor Cambridgeshire</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Iusto consequuntur id. Minus itaque facere minima. Fugiat qui pariatur et ad numquam nam quod id dolores. Ducimus consequatur praesentium. Iusto distinctio nihil harum.</p>
+  <p>Tenetur est porro voluptatum cum expedita et voluptas. Voluptas saepe ipsum nam eveniet enim sit. Veritatis repellat quisquam consequatur et.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>Intelligent</h3>
+  <h3>Orchestrator hub Lane</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>In mollitia nisi sit inventore velit molestiae vero placeat pariatur. Eum et consectetur provident ut natus voluptate repellat. Neque atque maxime et doloribus expedita molestias. Et omnis architecto est tempora fugit velit.</p>
+  <p>Ipsam odit laboriosam. Occaecati sit reiciendis illum. Eum magni voluptatem magni quasi fugit officiis velit facilis voluptas.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>deliverables sensor</h3>
+  <h3>bypassing Auto RSS</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Iusto quidem dolorem qui distinctio praesentium. Sit repellendus quis nesciunt similique similique dolores sed. Quia omnis dicta sed at quo animi. Sit ut sit et qui culpa eligendi beatae. Accusamus odit impedit laborum rerum reiciendis. Architecto ut eum hic quos rerum eligendi enim et voluptatum.</p>
+  <p>Dolor iusto autem incidunt explicabo ut officiis at excepturi sed. Qui enim asperiores doloribus dolorem temporibus. Molestias aut enim. Facere quod in.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>seize Meadow</h3>
+  <h3>Mali</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Facere architecto atque et quaerat consectetur. Quia distinctio aut impedit delectus ex. Ducimus debitis voluptas. Cumque eius corporis voluptas et nesciunt molestias ipsum. Mollitia magnam tempore impedit dolorum dolores eius doloribus aliquam. Dignissimos consequuntur aut similique magni ex magnam inventore quia et.</p>
+  <p>Sunt pariatur rerum et qui. Perferendis quod officia. Fugit eaque non dolor quisquam.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>THX Global systematic</h3>
+  <h3>Cambridgeshire leverage</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Vero exercitationem consequatur. Aliquam sed vero sint unde nemo nihil qui. Consectetur itaque sit nihil quae porro omnis dignissimos. Autem aut non.</p>
+  <p>Et suscipit eum dignissimos molestiae libero id. Sed est sit impedit ut inventore itaque. Occaecati iure qui eum.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>users Light</h3>
+  <h3>Metrics strategy Handmade</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Tempora magnam magni nihil. Ut atque aut voluptatem exercitationem. Qui natus eos molestiae velit eos eum. Aspernatur quos dolores quas quos consequuntur alias.</p>
+  <p>Repudiandae nobis fuga provident exercitationem id modi iure soluta accusantium. Facilis suscipit cumque. Tenetur voluptas nisi rerum quae ea ea odit asperiores quia.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>Chief SMS bus</h3>
+  <h3>Assistant mission-critical</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Non placeat iure officia enim omnis aut aperiam. Rerum asperiores possimus et magni eos et omnis laudantium ducimus. Aut dolor cum accusamus enim minima. Alias assumenda asperiores deleniti eum dolor sunt animi voluptatem. Recusandae blanditiis voluptatum atque commodi earum ut corporis sapiente. Tempore et dignissimos cum.</p>
+  <p>Veritatis voluptas a exercitationem. Unde eum consequuntur aut aut voluptas quis veritatis. Cum nemo esse placeat doloremque unde. Quia est beatae voluptatum odit.</p>
 </a>
 
       
@@ -727,192 +650,144 @@
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>teal superstructure</h3>
+  <h3>Alaska FTP</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Et perferendis voluptatem aut. Ipsam corporis quidem delectus sed qui incidunt totam quo. Illo animi officiis repudiandae eveniet sit non eos quia ut.</p>
+  <p>Et est sit adipisci tenetur et possimus quia optio et. Animi eligendi tempore voluptatem est aut. Cum modi excepturi animi cum illo molestiae atque placeat. Eum id error. Explicabo provident magni. Accusantium amet id aliquam consequatur sunt sit assumenda dolore placeat.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>synthesizing</h3>
+  <h3>Fresh Wyoming</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Reprehenderit qui quis magnam. Omnis voluptatem sit magni quam sint consequatur. Nostrum maxime molestiae amet. Ipsum aperiam sequi non et odio voluptates voluptatem quas. Excepturi quia architecto quia ut eaque qui.</p>
+  <p>Ullam facere modi amet necessitatibus repellat ex deleniti. Quisquam culpa sed et ab quas a et voluptatum. Possimus est quo unde et in sapiente repudiandae iure libero. Non voluptatem quam unde corporis ullam aperiam esse. Repellat nisi corrupti repellat voluptatem quae odit non ut nisi. Non labore qui odit consectetur et.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>actuating Bacon</h3>
+  <h3>Dollar Savings Legacy</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Et est esse. Doloribus quas nam cupiditate et amet enim placeat. Voluptatem est sunt asperiores at. Fuga est consequatur accusamus omnis blanditiis consequatur sint.</p>
+  <p>Aspernatur et quos officia eligendi expedita dolores ducimus fugit. Non laboriosam architecto inventore. Et molestiae et eaque sint itaque voluptatem aperiam. Quo explicabo quia explicabo. Non iste ut laboriosam dolorem est.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>networks</h3>
+  <h3>matrices</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Quidem aut natus suscipit voluptatum necessitatibus. Sunt quia et. Quod ea tenetur.</p>
+  <p>Sunt labore quia itaque delectus et fugit eos quam. Neque quaerat consequuntur aut dignissimos consequatur. Eum commodi esse.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>asymmetric</h3>
+  <h3>knowledge</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Facilis quo maiores reprehenderit sint sit. Et possimus aspernatur placeat ut ratione et quibusdam. Inventore consequatur accusantium ipsum.</p>
+  <p>Perferendis commodi eum repudiandae cupiditate. Iusto hic facilis rem sit voluptas nesciunt officia qui quas. Non voluptates fugiat quaerat.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>SSL</h3>
+  <h3>capacitor Cambridgeshire</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Iusto consequuntur id. Minus itaque facere minima. Fugiat qui pariatur et ad numquam nam quod id dolores. Ducimus consequatur praesentium. Iusto distinctio nihil harum.</p>
+  <p>Tenetur est porro voluptatum cum expedita et voluptas. Voluptas saepe ipsum nam eveniet enim sit. Veritatis repellat quisquam consequatur et.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>Intelligent</h3>
+  <h3>Orchestrator hub Lane</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>In mollitia nisi sit inventore velit molestiae vero placeat pariatur. Eum et consectetur provident ut natus voluptate repellat. Neque atque maxime et doloribus expedita molestias. Et omnis architecto est tempora fugit velit.</p>
+  <p>Ipsam odit laboriosam. Occaecati sit reiciendis illum. Eum magni voluptatem magni quasi fugit officiis velit facilis voluptas.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>deliverables sensor</h3>
+  <h3>bypassing Auto RSS</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Iusto quidem dolorem qui distinctio praesentium. Sit repellendus quis nesciunt similique similique dolores sed. Quia omnis dicta sed at quo animi. Sit ut sit et qui culpa eligendi beatae. Accusamus odit impedit laborum rerum reiciendis. Architecto ut eum hic quos rerum eligendi enim et voluptatum.</p>
+  <p>Dolor iusto autem incidunt explicabo ut officiis at excepturi sed. Qui enim asperiores doloribus dolorem temporibus. Molestias aut enim. Facere quod in.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>seize Meadow</h3>
+  <h3>Mali</h3>
   <div class="card__meta meta">
-    <span class="meta__date">28 jun. 2021</span>
+    <span class="meta__date">8 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Facere architecto atque et quaerat consectetur. Quia distinctio aut impedit delectus ex. Ducimus debitis voluptas. Cumque eius corporis voluptas et nesciunt molestias ipsum. Mollitia magnam tempore impedit dolorum dolores eius doloribus aliquam. Dignissimos consequuntur aut similique magni ex magnam inventore quia et.</p>
+  <p>Sunt pariatur rerum et qui. Perferendis quod officia. Fugit eaque non dolor quisquam.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>THX Global systematic</h3>
+  <h3>Cambridgeshire leverage</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Vero exercitationem consequatur. Aliquam sed vero sint unde nemo nihil qui. Consectetur itaque sit nihil quae porro omnis dignissimos. Autem aut non.</p>
+  <p>Et suscipit eum dignissimos molestiae libero id. Sed est sit impedit ut inventore itaque. Occaecati iure qui eum.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>users Light</h3>
+  <h3>Metrics strategy Handmade</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Tempora magnam magni nihil. Ut atque aut voluptatem exercitationem. Qui natus eos molestiae velit eos eum. Aspernatur quos dolores quas quos consequuntur alias.</p>
+  <p>Repudiandae nobis fuga provident exercitationem id modi iure soluta accusantium. Facilis suscipit cumque. Tenetur voluptas nisi rerum quae ea ea odit asperiores quia.</p>
 </a>
 
       
         
         <a href="#" class="card">
   
-    <figure class="figure card__image" style="background-image: url(https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60)">
-    <img src="https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Image">
-</figure>
-  
-  <h3>Chief SMS bus</h3>
+  <h3>Assistant mission-critical</h3>
   <div class="card__meta meta">
-    <span class="meta__date">27 jun. 2021</span>
+    <span class="meta__date">9 jul. 2021</span>
     <span class="meta__author">A.U. Teur</span>
   </div>
-  <p>Non placeat iure officia enim omnis aut aperiam. Rerum asperiores possimus et magni eos et omnis laudantium ducimus. Aut dolor cum accusamus enim minima. Alias assumenda asperiores deleniti eum dolor sunt animi voluptatem. Recusandae blanditiis voluptatum atque commodi earum ut corporis sapiente. Tempore et dignissimos cum.</p>
+  <p>Veritatis voluptas a exercitationem. Unde eum consequuntur aut aut voluptas quis veritatis. Cum nemo esse placeat doloremque unde. Quia est beatae voluptatum odit.</p>
 </a>
 
       
@@ -937,6 +812,8 @@
           <a class="color-white" href="/frontend-toolkit/sections/">Sections</a>
         </li><li >
           <a class="color-white" href="/frontend-toolkit/modal/">Modals</a>
+        </li><li >
+          <a class="color-white" href="/frontend-toolkit/pagination/">Pagination</a>
         </li><li  aria-current="page" >
           <a class="color-white" href="/frontend-toolkit/flexgrids/">Layouts</a>
         </li><li >

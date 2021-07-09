@@ -1,0 +1,65 @@
+<!-- box -->
+<section id="box" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Box</h2>
+    <p>Colored boxes to place attention on content. Boxes have some padding and coloring.</p>
+    <p>Default boxes are <code>.box--soft</code> for content that needs just a bit of attention and
+      <code>.box--loud</code> for content that needs a lot of attention.</p>
+    <div class="flexgrid-2">
+      <div class="box">
+        <div class="box__body">
+          <h2>Soft box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+          <div class="buttons">
+            <a class="btn">Primary Button</a>
+            <a class="btn-secondary">Secondary Button</a>
+          </div>
+        </div>
+      </div>
+      <div class="box--loud">
+        <div class="box__body">
+          <h2>Loud box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+          <div class="buttons">
+            <a class="btn">Primary Button</a>
+            <a class="btn-secondary">Secondary Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Literal box classes</h3>
+    <p class="mt-4 mb-3">Soft and loud are more flexible to style but for quick markup the literal classes
+      <code>.box--primary</code> and <code>.box--secondary</code> are available.</p>
+    <div class="flexgrid-2">
+      <div class="box--primary">
+        <div class="box__body">
+          <h2>Primary colored box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+          <div class="buttons">
+            <a class="btn">Primary Button</a>
+            <a class="btn-secondary">Secondary Button</a>
+          </div>
+        </div>
+      </div>
+      <div class="box--secondary">
+        <div class="box__body">
+          <h2>Secondary colored box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta autem facilis optio voluptatum ab aut molestiae sint non. Quasi non nostrum in dolores eum rerum explicabo totam rem minus asperiores.</p>
+          <div class="buttons">
+            <a class="btn">Primary Button</a>
+            <a class="btn-secondary">Secondary Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3>Box mixin</h3>
+    <p>If you need more box colors create them with the mixin:</p>
+    <pre>
+// @mixin box($bgcolor, $color) {
+.black-box {
+  @include box(black, hotpink);
+}
+        </pre>
+  </div>
+  </div>
+</section>
