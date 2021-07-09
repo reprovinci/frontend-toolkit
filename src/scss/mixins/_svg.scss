@@ -13,6 +13,16 @@
 
 $svg__root: '../images' !default;
 
+@function icon-color($icon, $color, $icons: $icons) {
+  $icondata: map-get($icons, $icon);
+
+  @if $icondata {
+    @return str-replace($icondata, 'currentColor', $color);
+  }
+
+  @return '';
+}
+
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
 

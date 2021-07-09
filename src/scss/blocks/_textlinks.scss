@@ -15,11 +15,11 @@ $textlink-font-weight: bold;
 @mixin textlink(
   $text-transform: $textlink-text-transform,
   $font-weight: $textlink-font-weight,
-  $color: $textlink-color, 
-  $decoration: $textlink-decoration, 
-  $hover-color: $textlink-hover-color, 
+  $color: $textlink-color,
+  $decoration: $textlink-decoration,
+  $hover-color: $textlink-hover-color,
   $hover-decoration: $textlink-hover-decoration
-){
+) {
   text-transform: $text-transform;
   font-weight: $font-weight;
   cursor: pointer;
@@ -39,7 +39,8 @@ $textlink-font-weight: bold;
 // readmore
 .readmore {
   @include textlink();
-  @include svg--after($ic-arrow-right, $w: 1.5em, $h: 1.5em, $align: -.3em);
+  @include svg--after(icon-color('arrow-right', $textlink-color), $w: 1.5em, $h: 1.5em, $align: -.3em);
+
   &:focus,
   &:hover {
     &::after {
@@ -51,7 +52,8 @@ $textlink-font-weight: bold;
 // link forward (to a next chapter i.e.)
 .link-forward {
   @include textlink();
-  @include svg--after($ic-arrow-right, $w: 1.5em, $h: 1.5em, $align: -.3em);
+  @include svg--after(icon-color('arrow-right', $textlink-color), $w: 1.5em, $h: 1.5em, $align: -.3em);
+
   &:focus,
   &:hover {
     &::after {
@@ -63,5 +65,5 @@ $textlink-font-weight: bold;
 // link back (to a list, or the previous chapter i.e.)
 .link-back {
   @include textlink();
-  @include svg--before($ic-arrow-left, $align: -.1em);
+  @include svg--before(icon-color('arrow-left', $textlink-color), $align: -.1em);
 }

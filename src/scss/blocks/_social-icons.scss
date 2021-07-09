@@ -1,0 +1,10 @@
+@each $icon, $icondata in $social-icons {
+  .btn-#{$icon} {
+    @include svg(icon-color($icon, $social-color, $social-icons));
+
+    &:active,
+    &:hover, {
+      @include svg(icon-color($icon, $social-color-hover, $social-icons));
+    }
+  }
+}
