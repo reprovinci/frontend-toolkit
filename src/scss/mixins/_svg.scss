@@ -13,9 +13,35 @@
 
 $svg__root: '../images' !default;
 
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@function escape-svg($string) {
+  @if str-index($string, "data:image/svg+xml") {
+    @each $char, $encoded in $escaped-characters {
+      // Do not escape the url brackets
+      @if str-index($string, "url(") == 1 {
+        $string: url("#{str-replace(str-slice($string, 6, -3), $char, $encoded)}");
+      } @else {
+        $string: str-replace($string, $char, $encoded);
+      }
+    }
+  }
+
+  @return $string;
+}
+
+
 @mixin svg($filename, $w:1em, $h:1em) {
-  @if (str-index($filename, 'data:')) {
-    background-image: url($filename);
+  @if (str-index($filename, 'data:image/svg+xml')) {
+    background-image: url(escape-svg($filename));
   } @else {
     background-image: url('#{$svg__root}/#{$filename}.svg');
   }
@@ -60,12 +86,15 @@ $svg__root: '../images' !default;
 .svg-demo--before {
   @include svg--before($ic-rocket, 1.5em, 1.5em);
 }
+
 .svg-demo--after {
   @include svg--after($ic-rocket, 1.5em, 1.5em);
 }
+
 .svg-demo--abs {
   @include svg--abs($ic-rocket, 1.5em, 1.5em);
 }
+
 .svg-demo--main {
   @include svg($ic-rocket, 3em, 3em);
 }

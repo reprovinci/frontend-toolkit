@@ -3,7 +3,7 @@
     <div class="{{ flexgrid_class | default: 'flexgrid-4' }}">
       {%- for data in news %}
         {% assign card_date = data.date | date %}
-        {% include components/blocks/card.html, card_title: data.title, teaser: data.intro, card_date: card_date, image_url: 'https://images.unsplash.com/photo-1429704658776-3d38c9990511?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhbmRzY2FwZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&h=1080&q=60' %}
+        {% include components/blocks/card.html, card_title: data.title, teaser: data.intro, card_date: card_date %}
       {% endfor %}
     </div>
   </div>

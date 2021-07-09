@@ -1,0 +1,52 @@
+<!-- layouts -->
+{%- capture flexgrid2 -%}
+  <div class="flexgrid-2">
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+  </div>
+{%- endcapture -%}
+{%- capture flexgrid3 -%}
+  <div class="flexgrid-3">
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+  </div>
+{%- endcapture -%}
+{%- capture flexgrid4 -%}
+  <div class="flexgrid-4">
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+  </div>
+{%- endcapture -%}
+{%- capture flexgridbricks -%}
+  <div class="flexgrid-bricks">
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+    <div class="box flex-center">Lorem</div>
+  </div>
+{%- endcapture -%}
+<section id="layouts" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Layouts</h2>
+    <p>We have various layouts that we use a lot. Ranging from simple card-lists to more creative collage like layouts that are nice to have at hand.</p>
+  </div>
+  <div class="grid__container">
+    <h3>Flex grid 2</h3>
+    {{ flexgrid2 }}
+    {{ flexgrid2 | highlight: 'html' }}
+    <h3>Flex grid 3</h3>
+    {{ flexgrid3 }}
+    {{ flexgrid3 | highlight: 'html' }}
+    <h3>Flex grid 4</h3>
+    {{ flexgrid4 }}
+    {{ flexgrid4 | highlight: 'html' }}
+    <h3>Flex grid bricks</h3>
+    {{ flexgridbricks }}
+    {{ flexgridbricks | highlight: 'html' }}
+  </div>
+</section>

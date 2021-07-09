@@ -266,6 +266,15 @@ $modal-scale-transform: scale(1.02) !default;
  *
  */
 
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+    ("<", "%3c"),
+    (">", "%3e"),
+    ("#", "%23"),
+    ("(", "%28"),
+    (")", "%29"),
+) !default;
+
 // some icons to work with.
 // overwrite with your own
 // the svg mixin also works with icons from an icon folder.

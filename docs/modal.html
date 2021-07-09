@@ -6,36 +6,38 @@ tags:
 - menu
 ---
 
+{% capture modal %}
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"> &times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem commodi dicta ea est facere iste laboriosam magni molestiae nam optio praesentium quae quia, sapiente sed similique soluta vero.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam cupiditate dignissimos, est facilis ipsa minima, natus odio odit pariatur perspiciatis quam, quia quidem sed sequi ullam vero voluptatem voluptates.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endcapture %}
 <main class="my-5">
   <div class="container">
     <h1>Modals</h1>
     <p>
       Modals use the basics borrowed by <a href="https://getbootstrap.com/">the bootstrap team</a>. Check the documentation <a href="https://getbootstrap.com/">here</a>.
     </p>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Launch demo modal
-    </button>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"> &times;</button>
-          </div>
-          <div class="modal-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem commodi dicta ea est facere iste laboriosam magni molestiae nam optio praesentium quae quia, sapiente sed similique soluta vero.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam cupiditate dignissimos, est facilis ipsa minima, natus odio odit pariatur perspiciatis quam, quia quidem sed sequi ullam vero voluptatem voluptates.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    {{ modal }}
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#fullModal">
@@ -60,5 +62,7 @@ tags:
         </div>
       </div>
     </div>
+
+    {{ modal | highlight: 'html' }}
   </div>
 </main>

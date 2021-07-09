@@ -7,49 +7,71 @@
         <div class="box__body">
           <h4>The main button</h4>
           <p>Used for primary click actions like "submit" in a form.</p>
-          <p><code>.btn</code></p>
-          <button class="btn">The Button</button>
+          {% capture button -%}
+            {% include components/blocks/button.html, text: 'The button' %}
+          {%- endcapture %}
+          {{ button | highlight: 'html' }}
+          {{ button }}
         </div>
       </div>
       <div class="box">
         <div class="box__body">
           <h4>The secondary button</h4>
           <p>Used for secondary actions like "cancel" in a form.</p>
-          <p><code>.btn-secondary</code></p>
-          <button class="btn-secondary">The Secondary Button</button>
+          {% capture button -%}
+            {% include components/blocks/button.html, class: 'btn-secondary', text: 'The Secondary Button' %}
+          {%- endcapture %}
+          {{ button | highlight: 'html' }}
+          {{ button }}
         </div>
       </div>
       <div class="box bg-gray-extra-dark color-white">
         <div class="box__body">
           <h4>The diap button</h4>
           <p>The main button on dark backgrounds</p>
-          <p><code>.btn-diap</code></p>
-          <button class="btn-diap">The Diap Button</button>
+          {% capture button -%}
+            {% include components/blocks/button.html, class: 'btn-diap', text: 'The Diap Button' %}
+          {%- endcapture %}
+          {{ button | highlight: 'html' }}
+          {{ button }}
         </div>
       </div>
       <div class="box bg-gray-extra-dark color-white">
         <div class="box__body">
           <h4>The secondary diap button</h4>
           <p>The secondary button on dark backgrounds</p>
-          <p><code>.btn-secondary-diap</code></p>
-          <button class="btn-secondary-diap">The Alt Button</button>
+          {% capture button -%}
+            {% include components/blocks/button.html, class: 'btn-secondary-diap', text: 'The Alt Button' %}
+          {%- endcapture %}
+          {{ button | highlight: 'html' }}
+          {{ button }}
         </div>
       </div>
     </div>
   </div>
 </section>
-
+{% capture button -%}
+  {% include docs/_buttons.html %}
+{%- endcapture %}
+<section id="button-icons" class="section-margins grid">
+  <div class="grid__container">
+    <h2 class="section-header">Buttons with icons</h2>
+    <a href="#" class="btn icon-chevron-left-white-before">Lees verder</a>
+    <a href="#" class="btn icon-chevron-right-white-after">Lees verder</a>
+    <a href="#" class="btn-secondary icon-check-primary-after">Lees verder</a>
+    <a href="#" class="btn icon-check-secondary-before">Lees verder</a>
+  </div>
+</section>
 <section class="section-margins grid">
   <div class="grid__container">
     <h2 class="section-header">Button groups</h2>
     <p>Buttons placed inline need to be spaced and usually the is some extra margin before and/or after the group of button. The
       <code>.buttons</code> class does this.</p>
-    <div class="buttons">
-      <button class="btn">Primary button</button>
-      <button class="btn-secondary">Secondary button</button>
-    </div>
+    {{ button | highlight: 'html' }}
+    {{ button }}
     <h2>Buttons in a group get some top/bottom margin.</h2>
-    <p>(also: check here that <code>&lt;a&gt;</code> tag buttons and <code>&lt;button&gt;</code> buttons look similar)</p>
+    <p>(also: check here that <code>&lt;a&gt;</code> tag buttons and <code>&lt;button&gt;</code> buttons look similar)
+    </p>
     <div class="flexgrid-2">
       <div>
         <h3><code>&lt;a&gt;</code> tag buttons</h3>
