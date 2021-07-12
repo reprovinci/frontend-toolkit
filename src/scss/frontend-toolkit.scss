@@ -7,11 +7,10 @@
 @import 'variables';
 
 // toolkit
-@import 'mixins/index';
-@import 'scaffolding/index';
-@import 'grids/index';
-@import 'layouts/index';
-@import 'typography/index';
-@import 'utilities/index';
-@import 'blocks/index';
-@import 'sections/index';
+@import 'mixins';
+@import 'scaffolding';
+@import 'grids';
+@import 'layouts';
+@import 'typography';
+@import 'utilities';
+@import 'blocks';
