@@ -189,6 +189,70 @@ $border-radius: $space-2;
 $border-radius-lg: $space-3;
 
 
+/**
+ * buttons
+ */
+
+// primary button
+$btn-font-family: $font-family-base !default;
+$btn-font-size: 1rem !default;
+$btn-font-weight: bolder !default;
+$btn-line-height: $line-height-condensed !default;
+$btn-padding: $space-2 $space-3 !default;
+$btn-text-transform: none !default;
+$btn-border-radius: $space-1 !default;
+$btn-background: $color-loud !default;
+$btn-color: $color-loud__text !default;
+$btn-border: none !default;
+$btn-hover-color: $color-loud__text !default;
+$btn-hover-background: darken($color-loud,10%) !default;
+
+// secondary button
+$btn-secondary-font-family: $btn-font-family !default;
+$btn-secondary-font-size: $btn-font-size !default;
+$btn-secondary-font-weight: $btn-font-weight !default;
+$btn-secondary-line-height: $btn-line-height !default;
+$btn-secondary-padding: $btn-padding !default;
+$btn-secondary-text-transform: $btn-text-transform !default;
+$btn-secondary-border-radius: $btn-border-radius !default;
+$btn-secondary-background: $color-secondary !default;
+$btn-secondary-color: $btn-color !default;
+$btn-secondary-border: $btn-border !default;
+$btn-secondary-hover-color: $btn-hover-color !default;
+$btn-secondary-hover-background: $btn-hover-background !default;
+
+// btn-diap, the button on dark backgrounds
+$btn-diap-font-family: $btn-font-family !default;
+$btn-diap-font-size: $btn-font-size !default;
+$btn-diap-font-weight: $btn-font-weight !default;
+$btn-diap-line-height: $btn-line-height !default;
+$btn-diap-padding: $btn-padding !default;
+$btn-diap-text-transform: $btn-text-transform !default;
+$btn-diap-border-radius: $btn-border-radius !default;
+$btn-diap-background: $color-white !default;
+$btn-diap-color: $font-color !default;
+$btn-diap-border: $btn-border !default;
+$btn-diap-hover-color: $color-white !default;
+$btn-diap-hover-background: rgba(255,255,255,.5) !default;
+
+// seconadary diap button
+$btn-secondary-diap-font-family: $btn-diap-font-family !default;
+$btn-secondary-diap-font-size: $btn-diap-font-size !default;
+$btn-secondary-diap-font-weight: $btn-diap-font-weight !default;
+$btn-secondary-diap-line-height: $btn-diap-line-height !default;
+$btn-secondary-diap-padding: $btn-diap-padding !default;
+$btn-secondary-diap-text-transform: $btn-diap-text-transform !default;
+$btn-secondary-diap-border-radius: $btn-diap-border-radius !default;
+$btn-secondary-diap-background: $btn-diap-hover-background !default;
+$btn-secondary-diap-color: $btn-diap-hover-color !default;
+$btn-secondary-diap-border: $btn-diap-border !default;
+$btn-secondary-diap-hover-color: $btn-diap-hover-color !default;
+$btn-secondary-diap-hover-background: rgba(255,255,255,.25) !default;
+
+// the buttons group
+$buttons-margin: $space-3 (0 - $space-1) !default; // the margin on the group
+$buttons__button-margin: $space-1 !default; // the margin between the buttons
+
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
@@ -258,6 +322,23 @@ $modal-fade-transform: translate(0, -50px) !default;
 $modal-show-transform: none !default;
 $modal-transition: transform .3s ease-out !default;
 $modal-scale-transform: scale(1.02) !default;
+
+// Pagination
+
+$pagination-background-color-hover: $color-primary !default;
+$pagination-background-color-current: $color-primary !default;
+$pagination-background-color: $color-gray-extra-light !default;
+$pagination-color-hover: $color-gray-extra-light !default;
+$pagination-color-current: $color-gray-extra-light !default;
+$pagination-color: $color-primary !default;
+$pagination-padding: $space-2 $space-3 !default;
+$pagination-text-decoration: none !default;
+$pagination-margin: $space-1 !default;
+$pagination-border: null !default;
+$pagination-border-current: $pagination-border !default;
+$pagination-border-hover: $pagination-border !default;
+$pagination-border-radius: $border-radius !default;
+
 
 
 /**
